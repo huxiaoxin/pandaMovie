@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A5EB1AF2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1AE2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m */; };
+		4A5EB1B52642E28600573BF3 /* GuoJiQihuoNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1B32642E28600573BF3 /* GuoJiQihuoNewsModel.m */; };
+		4A5EB1BB2642E29F00573BF3 /* PandaBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1BA2642E29F00573BF3 /* PandaBaseModel.m */; };
+		4A5EB1C12642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1C02642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m */; };
+		4A5EB1C72642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1C62642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.m */; };
+		4A5EB1CD2642E33B00573BF3 /* GuoJiQihuoNewsSizeTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1CC2642E33B00573BF3 /* GuoJiQihuoNewsSizeTools.m */; };
+		4A5EB1D32642E38200573BF3 /* LYHSTockHttpRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1D12642E38200573BF3 /* LYHSTockHttpRequestTool.m */; };
+		4A5EB1D92642E3AE00573BF3 /* NSDictionary+DeleteNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1D72642E3AD00573BF3 /* NSDictionary+DeleteNull.m */; };
 		8A4826932640DFB800C385C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826922640DFB800C385C6 /* AppDelegate.m */; };
 		8A4826992640DFB800C385C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826982640DFB800C385C6 /* ViewController.m */; };
 		8A48269C2640DFB800C385C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A48269A2640DFB800C385C6 /* Main.storyboard */; };
@@ -76,6 +84,22 @@
 
 /* Begin PBXFileReference section */
 		0A2C849B2C9782A02C8F1A4B /* Pods_PandaMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PandaMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A5EB1AD2642E26D00573BF3 /* GuoJiQiqhuoNewsViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuoJiQiqhuoNewsViewLayout.h; sourceTree = "<group>"; };
+		4A5EB1AE2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuoJiQiqhuoNewsViewLayout.m; sourceTree = "<group>"; };
+		4A5EB1B32642E28600573BF3 /* GuoJiQihuoNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuoJiQihuoNewsModel.m; sourceTree = "<group>"; };
+		4A5EB1B42642E28600573BF3 /* GuoJiQihuoNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuoJiQihuoNewsModel.h; sourceTree = "<group>"; };
+		4A5EB1B92642E29F00573BF3 /* PandaBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaBaseModel.h; sourceTree = "<group>"; };
+		4A5EB1BA2642E29F00573BF3 /* PandaBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaBaseModel.m; sourceTree = "<group>"; };
+		4A5EB1BF2642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuoJiQihuoNewsCollectionCell.h; sourceTree = "<group>"; };
+		4A5EB1C02642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuoJiQihuoNewsCollectionCell.m; sourceTree = "<group>"; };
+		4A5EB1C52642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuoJiQIhuoNewsDetailViewController.h; sourceTree = "<group>"; };
+		4A5EB1C62642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuoJiQIhuoNewsDetailViewController.m; sourceTree = "<group>"; };
+		4A5EB1CB2642E33B00573BF3 /* GuoJiQihuoNewsSizeTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuoJiQihuoNewsSizeTools.h; sourceTree = "<group>"; };
+		4A5EB1CC2642E33B00573BF3 /* GuoJiQihuoNewsSizeTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuoJiQihuoNewsSizeTools.m; sourceTree = "<group>"; };
+		4A5EB1D12642E38200573BF3 /* LYHSTockHttpRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHSTockHttpRequestTool.m; sourceTree = "<group>"; };
+		4A5EB1D22642E38200573BF3 /* LYHSTockHttpRequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHSTockHttpRequestTool.h; sourceTree = "<group>"; };
+		4A5EB1D72642E3AD00573BF3 /* NSDictionary+DeleteNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DeleteNull.m"; sourceTree = "<group>"; };
+		4A5EB1D82642E3AE00573BF3 /* NSDictionary+DeleteNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DeleteNull.h"; sourceTree = "<group>"; };
 		4EA80DFCE09BC6B8022D22E7 /* Pods-PandaMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaMovie.release.xcconfig"; path = "Target Support Files/Pods-PandaMovie/Pods-PandaMovie.release.xcconfig"; sourceTree = "<group>"; };
 		8A48268E2640DFB800C385C6 /* PandaMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4826912640DFB800C385C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -251,6 +275,8 @@
 				8A4826A32640DFBA00C385C6 /* main.m */,
 				8A4826EA2640E37900C385C6 /* Header.h */,
 				8A4826EE2640E3B300C385C6 /* PrefixHeader.pch */,
+				4A5EB1B92642E29F00573BF3 /* PandaBaseModel.h */,
+				4A5EB1BA2642E29F00573BF3 /* PandaBaseModel.m */,
 			);
 			path = PandaMovie;
 			sourceTree = "<group>";
@@ -276,6 +302,10 @@
 		8A4826F22640E3E400C385C6 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				4A5EB1D82642E3AE00573BF3 /* NSDictionary+DeleteNull.h */,
+				4A5EB1D72642E3AD00573BF3 /* NSDictionary+DeleteNull.m */,
+				4A5EB1D22642E38200573BF3 /* LYHSTockHttpRequestTool.h */,
+				4A5EB1D12642E38200573BF3 /* LYHSTockHttpRequestTool.m */,
 				8A4827682640ECBF00C385C6 /* CHCardView */,
 				8A4826F32640E3E400C385C6 /* WWStarView.m */,
 				8A4826F42640E3E400C385C6 /* UITextField+AddPlaceholder.m */,
@@ -429,6 +459,16 @@
 			children = (
 				8ADB8F8E2642895300C61A29 /* PandaHotNewsViewController.h */,
 				8ADB8F8F2642895300C61A29 /* PandaHotNewsViewController.m */,
+				4A5EB1AD2642E26D00573BF3 /* GuoJiQiqhuoNewsViewLayout.h */,
+				4A5EB1AE2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m */,
+				4A5EB1B42642E28600573BF3 /* GuoJiQihuoNewsModel.h */,
+				4A5EB1B32642E28600573BF3 /* GuoJiQihuoNewsModel.m */,
+				4A5EB1BF2642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.h */,
+				4A5EB1C02642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m */,
+				4A5EB1C52642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.h */,
+				4A5EB1C62642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.m */,
+				4A5EB1CB2642E33B00573BF3 /* GuoJiQihuoNewsSizeTools.h */,
+				4A5EB1CC2642E33B00573BF3 /* GuoJiQihuoNewsSizeTools.m */,
 			);
 			path = Panda_News;
 			sourceTree = "<group>";
@@ -633,18 +673,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A4826992640DFB800C385C6 /* ViewController.m in Sources */,
+				4A5EB1CD2642E33B00573BF3 /* GuoJiQihuoNewsSizeTools.m in Sources */,
 				8A4827552640E6AC00C385C6 /* PandaMsgViewController.m in Sources */,
+				4A5EB1B52642E28600573BF3 /* GuoJiQihuoNewsModel.m in Sources */,
 				8ADB8F9A2642899700C61A29 /* PandaGoodFilmViewController.m in Sources */,
 				8A4827492640E69E00C385C6 /* PandaCatagoryViewController.m in Sources */,
 				8ADB8F6826426AF700C61A29 /* PandaKefuTableViewCell.m in Sources */,
 				8A4827102640E3E400C385C6 /* UILabel+CDGPSpaceLb.m in Sources */,
 				8ADB8FA326428CED00C61A29 /* PandaHotingCollectionViewCell.m in Sources */,
 				8ADB8F832642813600C61A29 /* PandaBangdanTableViewCell.m in Sources */,
+				4A5EB1D32642E38200573BF3 /* LYHSTockHttpRequestTool.m in Sources */,
 				8ADB8F7D26426FFA00C61A29 /* FilmChatZoneChatDetailToolsView.m in Sources */,
 				8A48271E2640E4BE00C385C6 /* PandaBaseTabbarViewController.m in Sources */,
 				8ADB8F582642693600C61A29 /* PandaBangdanViewController.m in Sources */,
 				8A4826932640DFB800C385C6 /* AppDelegate.m in Sources */,
 				8A48270D2640E3E400C385C6 /* UIButton+CHRegex.m in Sources */,
+				4A5EB1AF2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m in Sources */,
 				8A4827072640E3E400C385C6 /* WWStarView.m in Sources */,
 				8A48270C2640E3E400C385C6 /* UIView+frame.m in Sources */,
 				8A4827722640ECBF00C385C6 /* CHCardItemModel.m in Sources */,
@@ -660,15 +704,19 @@
 				8A48272D2640E4F700C385C6 /* AppDelegate+PandaSafe.m in Sources */,
 				8ADB8FB526429EEC00C61A29 /* PandaHomeNewsTableViewCell.m in Sources */,
 				8A48274F2640E6A500C385C6 /* PandaZoneViewController.m in Sources */,
+				4A5EB1C12642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m in Sources */,
 				8ADB8F7726426B6300C61A29 /* FilmChatDetailMoel.m in Sources */,
 				8ADB8F902642895300C61A29 /* PandaHotNewsViewController.m in Sources */,
 				8ADB8FAF26429B6C00C61A29 /* PandaCommonCollectionViewCell.m in Sources */,
 				8A4827342640E55A00C385C6 /* PandaLoginViewController.m in Sources */,
+				4A5EB1C72642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.m in Sources */,
 				8A4827862640F77F00C385C6 /* PandaHomeBtn.m in Sources */,
 				8A48270B2640E3E400C385C6 /* NSString+CHRegex.m in Sources */,
 				8A4827742640ECBF00C385C6 /* NSString+MD5.m in Sources */,
 				8A4827272640E4D200C385C6 /* PandaBaseViewController.m in Sources */,
+				4A5EB1D92642E3AE00573BF3 /* NSDictionary+DeleteNull.m in Sources */,
 				8A4827732640ECBF00C385C6 /* CHCardItemView.m in Sources */,
+				4A5EB1BB2642E29F00573BF3 /* PandaBaseModel.m in Sources */,
 				8ADB8F622642694D00C61A29 /* PandaHotComentViewController.m in Sources */,
 				8ADB8F4E2642691E00C61A29 /* PandaKefuViewController.m in Sources */,
 				8A48275B2640E6B300C385C6 /* PandaCenterViewController.m in Sources */,

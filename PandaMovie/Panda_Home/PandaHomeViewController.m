@@ -13,11 +13,13 @@
 #import "PandaHotNewsViewController.h"
 #import "PandaGoodFilmViewController.h"
 #import "PandaHomeNewsTableViewCell.h"
+#import "GuoJiQihuoNewsModel.h"
+#import "LYHSTockHttpRequestTool.h"
 @interface PandaHomeViewController ()<UITableViewDelegate,UITableViewDataSource,PandaHomeHeaderViewDelegate>
 @property(nonatomic,strong) UITableView * PandaHomeTableView;
 @property(nonatomic,strong) PandaHomeHeaderView * PandaHeader;
 @property(nonatomic,strong) PandaHomeNavView              * PandaNavView;
-
+@property(nonatomic,strong) NSMutableArray * PandaDataArr;
 @end
 
 @implementation PandaHomeViewController
@@ -58,7 +60,7 @@
     return _PandaHomeTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.PandaDataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * PandaHomeIdentifer  = @"PandaHomeNewsTableViewCell";
@@ -66,17 +68,32 @@
     if (pandaCell == nil) {
         pandaCell = [[PandaHomeNewsTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:PandaHomeIdentifer];
     }
+    pandaCell.windtrendItem  = self.PandaDataArr[indexPath.row];
     return pandaCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return RealWidth(150);
+    return RealWidth(100);
 }
 #pragma mark--刷新
 -(void)PandaHomeTableViewHeaderClick{
     MJWeakSelf;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    NSMutableDictionary * WindWoundHomeParmter = [[NSMutableDictionary alloc]initWithDictionary:@{@"channel":@"科技",@"num":@"10",@"start":@"0"}];
+    [LYHSTockHttpRequestTool NewpostHttpRequestWithURL:@"http://jisunews.market.alicloudapi.com/news/get" Parameters:WindWoundHomeParmter Success:^(id  _Nonnull object) {
+        NSArray * WindWoundHomeData =[[object objectForKey:@"result"]  objectForKey:@"list"];
+        NSMutableArray * WindWoundHomeTemp= [[NSMutableArray alloc]init];
+        for (NSDictionary * WindWoundHomeDics in WindWoundHomeData) {
+            GuoJiQihuoNewsModel * WindWoundHomeItem = [GuoJiQihuoNewsModel BaseinitWithDic:WindWoundHomeDics];
+            if (![WindWoundHomeItem.content containsString:@"https://interface.sina.cn/wap_api/video_location.d.html"]) {
+                [WindWoundHomeTemp addObject:WindWoundHomeItem];
+            }
+        }
+        weakSelf.PandaDataArr = WindWoundHomeTemp;
+        [weakSelf.PandaHomeTableView reloadData];
         [weakSelf.PandaHomeTableView.mj_header endRefreshing];
-    });
+    } Failure:^(id  _Nonnull fail) {
+        [LCProgressHUD showFailure:fail];
+        [weakSelf.PandaHomeTableView.mj_header endRefreshing];
+    }];
 }
 #pragma mark--PandaHomeHeaderViewDelegate
 -(void)PandaHomeHeaderViewWithBtnClickIndex:(NSInteger)btnIndex{
