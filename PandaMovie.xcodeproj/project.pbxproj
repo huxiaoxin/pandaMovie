@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8A4826932640DFB800C385C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826922640DFB800C385C6 /* AppDelegate.m */; };
-		8A4826962640DFB800C385C6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826952640DFB800C385C6 /* SceneDelegate.m */; };
 		8A4826992640DFB800C385C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826982640DFB800C385C6 /* ViewController.m */; };
 		8A48269C2640DFB800C385C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A48269A2640DFB800C385C6 /* Main.storyboard */; };
 		8A48269E2640DFBA00C385C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A48269D2640DFBA00C385C6 /* Assets.xcassets */; };
@@ -16,6 +15,46 @@
 		8A4826A42640DFBA00C385C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826A32640DFBA00C385C6 /* main.m */; };
 		8A4826AE2640DFBA00C385C6 /* PandaMovieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826AD2640DFBA00C385C6 /* PandaMovieTests.m */; };
 		8A4826B92640DFBA00C385C6 /* PandaMovieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826B82640DFBA00C385C6 /* PandaMovieUITests.m */; };
+		8A4827072640E3E400C385C6 /* WWStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826F32640E3E400C385C6 /* WWStarView.m */; };
+		8A4827082640E3E400C385C6 /* UITextField+AddPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826F42640E3E400C385C6 /* UITextField+AddPlaceholder.m */; };
+		8A4827092640E3E400C385C6 /* UIView+shadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826F62640E3E400C385C6 /* UIView+shadowPath.m */; };
+		8A48270A2640E3E400C385C6 /* UIViewController+IOS13.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826F82640E3E400C385C6 /* UIViewController+IOS13.m */; };
+		8A48270B2640E3E400C385C6 /* NSString+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826F92640E3E400C385C6 /* NSString+CHRegex.m */; };
+		8A48270C2640E3E400C385C6 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826FA2640E3E400C385C6 /* UIView+frame.m */; };
+		8A48270D2640E3E400C385C6 /* UIButton+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826FD2640E3E400C385C6 /* UIButton+CHRegex.m */; };
+		8A48270E2640E3E400C385C6 /* UIColor+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826FF2640E3E400C385C6 /* UIColor+CHRegex.m */; };
+		8A48270F2640E3E400C385C6 /* LMJHorizontalScrollText.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827042640E3E400C385C6 /* LMJHorizontalScrollText.m */; };
+		8A4827102640E3E400C385C6 /* UILabel+CDGPSpaceLb.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827062640E3E400C385C6 /* UILabel+CDGPSpaceLb.m */; };
+		8A48271E2640E4BE00C385C6 /* PandaBaseTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48271D2640E4BE00C385C6 /* PandaBaseTabbarViewController.m */; };
+		8A4827272640E4D200C385C6 /* PandaBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827262640E4D200C385C6 /* PandaBaseViewController.m */; };
+		8A48272D2640E4F700C385C6 /* AppDelegate+PandaSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48272C2640E4F700C385C6 /* AppDelegate+PandaSafe.m */; };
+		8A4827342640E55A00C385C6 /* PandaLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827332640E55A00C385C6 /* PandaLoginViewController.m */; };
+		8A4827432640E69400C385C6 /* PandaHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827422640E69400C385C6 /* PandaHomeViewController.m */; };
+		8A4827492640E69E00C385C6 /* PandaCatagoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827482640E69E00C385C6 /* PandaCatagoryViewController.m */; };
+		8A48274F2640E6A500C385C6 /* PandaZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48274E2640E6A500C385C6 /* PandaZoneViewController.m */; };
+		8A4827552640E6AC00C385C6 /* PandaMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827542640E6AC00C385C6 /* PandaMsgViewController.m */; };
+		8A48275B2640E6B300C385C6 /* PandaCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48275A2640E6B300C385C6 /* PandaCenterViewController.m */; };
+		8A4827612640EB0000C385C6 /* PandaHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827602640EB0000C385C6 /* PandaHomeHeaderView.m */; };
+		8A4827712640ECBF00C385C6 /* CHCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48276D2640ECBF00C385C6 /* CHCardView.m */; };
+		8A4827722640ECBF00C385C6 /* CHCardItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48276E2640ECBF00C385C6 /* CHCardItemModel.m */; };
+		8A4827732640ECBF00C385C6 /* CHCardItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48276F2640ECBF00C385C6 /* CHCardItemView.m */; };
+		8A4827742640ECBF00C385C6 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827702640ECBF00C385C6 /* NSString+MD5.m */; };
+		8A48277A2640ECDA00C385C6 /* CHCardItemCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827782640ECDA00C385C6 /* CHCardItemCustomView.m */; };
+		8A4827802640F42C00C385C6 /* PandaHomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48277F2640F42C00C385C6 /* PandaHomeNavView.m */; };
+		8A4827862640F77F00C385C6 /* PandaHomeBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827852640F77F00C385C6 /* PandaHomeBtn.m */; };
+		8ADB8F4E2642691E00C61A29 /* PandaKefuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F4D2642691E00C61A29 /* PandaKefuViewController.m */; };
+		8ADB8F582642693600C61A29 /* PandaBangdanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F572642693600C61A29 /* PandaBangdanViewController.m */; };
+		8ADB8F622642694D00C61A29 /* PandaHotComentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F612642694D00C61A29 /* PandaHotComentViewController.m */; };
+		8ADB8F6826426AF700C61A29 /* PandaKefuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F6726426AF700C61A29 /* PandaKefuTableViewCell.m */; };
+		8ADB8F7726426B6300C61A29 /* FilmChatDetailMoel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F7626426B6300C61A29 /* FilmChatDetailMoel.m */; };
+		8ADB8F7D26426FFA00C61A29 /* FilmChatZoneChatDetailToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F7B26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.m */; };
+		8ADB8F832642813600C61A29 /* PandaBangdanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F822642813600C61A29 /* PandaBangdanTableViewCell.m */; };
+		8ADB8F902642895300C61A29 /* PandaHotNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F8F2642895300C61A29 /* PandaHotNewsViewController.m */; };
+		8ADB8F9A2642899700C61A29 /* PandaGoodFilmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F992642899700C61A29 /* PandaGoodFilmViewController.m */; };
+		8ADB8FA326428CED00C61A29 /* PandaHotingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8FA226428CED00C61A29 /* PandaHotingCollectionViewCell.m */; };
+		8ADB8FAF26429B6C00C61A29 /* PandaCommonCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8FAE26429B6C00C61A29 /* PandaCommonCollectionViewCell.m */; };
+		8ADB8FB526429EEC00C61A29 /* PandaHomeNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8FB426429EEC00C61A29 /* PandaHomeNewsTableViewCell.m */; };
+		BE9F35FD020603D40EF3F4D5 /* Pods_PandaMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2C849B2C9782A02C8F1A4B /* Pods_PandaMovie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +75,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2C849B2C9782A02C8F1A4B /* Pods_PandaMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PandaMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EA80DFCE09BC6B8022D22E7 /* Pods-PandaMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaMovie.release.xcconfig"; path = "Target Support Files/Pods-PandaMovie/Pods-PandaMovie.release.xcconfig"; sourceTree = "<group>"; };
 		8A48268E2640DFB800C385C6 /* PandaMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4826912640DFB800C385C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A4826922640DFB800C385C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8A4826942640DFB800C385C6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		8A4826952640DFB800C385C6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		8A4826972640DFB800C385C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8A4826982640DFB800C385C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A48269B2640DFB800C385C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +93,87 @@
 		8A4826B42640DFBA00C385C6 /* PandaMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PandaMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4826B82640DFBA00C385C6 /* PandaMovieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaMovieUITests.m; sourceTree = "<group>"; };
 		8A4826BA2640DFBA00C385C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A4826EA2640E37900C385C6 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		8A4826EE2640E3B300C385C6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8A4826F32640E3E400C385C6 /* WWStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWStarView.m; sourceTree = "<group>"; };
+		8A4826F42640E3E400C385C6 /* UITextField+AddPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AddPlaceholder.m"; sourceTree = "<group>"; };
+		8A4826F52640E3E400C385C6 /* UIColor+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CHRegex.h"; sourceTree = "<group>"; };
+		8A4826F62640E3E400C385C6 /* UIView+shadowPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+shadowPath.m"; sourceTree = "<group>"; };
+		8A4826F72640E3E400C385C6 /* UIButton+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CHRegex.h"; sourceTree = "<group>"; };
+		8A4826F82640E3E400C385C6 /* UIViewController+IOS13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+IOS13.m"; sourceTree = "<group>"; };
+		8A4826F92640E3E400C385C6 /* NSString+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHRegex.m"; sourceTree = "<group>"; };
+		8A4826FA2640E3E400C385C6 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		8A4826FB2640E3E400C385C6 /* LMJHorizontalScrollText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJHorizontalScrollText.h; sourceTree = "<group>"; };
+		8A4826FC2640E3E400C385C6 /* UILabel+CDGPSpaceLb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CDGPSpaceLb.h"; sourceTree = "<group>"; };
+		8A4826FD2640E3E400C385C6 /* UIButton+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CHRegex.m"; sourceTree = "<group>"; };
+		8A4826FE2640E3E400C385C6 /* UIView+shadowPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+shadowPath.h"; sourceTree = "<group>"; };
+		8A4826FF2640E3E400C385C6 /* UIColor+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CHRegex.m"; sourceTree = "<group>"; };
+		8A4827002640E3E400C385C6 /* UITextField+AddPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+AddPlaceholder.h"; sourceTree = "<group>"; };
+		8A4827012640E3E400C385C6 /* WWStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWStarView.h; sourceTree = "<group>"; };
+		8A4827022640E3E400C385C6 /* NSString+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CHRegex.h"; sourceTree = "<group>"; };
+		8A4827032640E3E400C385C6 /* UIViewController+IOS13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+IOS13.h"; sourceTree = "<group>"; };
+		8A4827042640E3E400C385C6 /* LMJHorizontalScrollText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJHorizontalScrollText.m; sourceTree = "<group>"; };
+		8A4827052640E3E400C385C6 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		8A4827062640E3E400C385C6 /* UILabel+CDGPSpaceLb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CDGPSpaceLb.m"; sourceTree = "<group>"; };
+		8A48271C2640E4BE00C385C6 /* PandaBaseTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaBaseTabbarViewController.h; sourceTree = "<group>"; };
+		8A48271D2640E4BE00C385C6 /* PandaBaseTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaBaseTabbarViewController.m; sourceTree = "<group>"; };
+		8A4827252640E4D200C385C6 /* PandaBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaBaseViewController.h; sourceTree = "<group>"; };
+		8A4827262640E4D200C385C6 /* PandaBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaBaseViewController.m; sourceTree = "<group>"; };
+		8A48272B2640E4F700C385C6 /* AppDelegate+PandaSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+PandaSafe.h"; sourceTree = "<group>"; };
+		8A48272C2640E4F700C385C6 /* AppDelegate+PandaSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+PandaSafe.m"; sourceTree = "<group>"; };
+		8A4827322640E55A00C385C6 /* PandaLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaLoginViewController.h; sourceTree = "<group>"; };
+		8A4827332640E55A00C385C6 /* PandaLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaLoginViewController.m; sourceTree = "<group>"; };
+		8A4827412640E69400C385C6 /* PandaHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHomeViewController.h; sourceTree = "<group>"; };
+		8A4827422640E69400C385C6 /* PandaHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHomeViewController.m; sourceTree = "<group>"; };
+		8A4827472640E69E00C385C6 /* PandaCatagoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaCatagoryViewController.h; sourceTree = "<group>"; };
+		8A4827482640E69E00C385C6 /* PandaCatagoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaCatagoryViewController.m; sourceTree = "<group>"; };
+		8A48274D2640E6A500C385C6 /* PandaZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaZoneViewController.h; sourceTree = "<group>"; };
+		8A48274E2640E6A500C385C6 /* PandaZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaZoneViewController.m; sourceTree = "<group>"; };
+		8A4827532640E6AC00C385C6 /* PandaMsgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaMsgViewController.h; sourceTree = "<group>"; };
+		8A4827542640E6AC00C385C6 /* PandaMsgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaMsgViewController.m; sourceTree = "<group>"; };
+		8A4827592640E6B300C385C6 /* PandaCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaCenterViewController.h; sourceTree = "<group>"; };
+		8A48275A2640E6B300C385C6 /* PandaCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaCenterViewController.m; sourceTree = "<group>"; };
+		8A48275F2640EB0000C385C6 /* PandaHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHomeHeaderView.h; sourceTree = "<group>"; };
+		8A4827602640EB0000C385C6 /* PandaHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHomeHeaderView.m; sourceTree = "<group>"; };
+		8A4827692640ECBF00C385C6 /* CHCardItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCardItemModel.h; sourceTree = "<group>"; };
+		8A48276A2640ECBF00C385C6 /* CHCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCardView.h; sourceTree = "<group>"; };
+		8A48276B2640ECBF00C385C6 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		8A48276C2640ECBF00C385C6 /* CHCardItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCardItemView.h; sourceTree = "<group>"; };
+		8A48276D2640ECBF00C385C6 /* CHCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCardView.m; sourceTree = "<group>"; };
+		8A48276E2640ECBF00C385C6 /* CHCardItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCardItemModel.m; sourceTree = "<group>"; };
+		8A48276F2640ECBF00C385C6 /* CHCardItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCardItemView.m; sourceTree = "<group>"; };
+		8A4827702640ECBF00C385C6 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		8A4827782640ECDA00C385C6 /* CHCardItemCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCardItemCustomView.m; sourceTree = "<group>"; };
+		8A4827792640ECDA00C385C6 /* CHCardItemCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCardItemCustomView.h; sourceTree = "<group>"; };
+		8A48277E2640F42C00C385C6 /* PandaHomeNavView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHomeNavView.h; sourceTree = "<group>"; };
+		8A48277F2640F42C00C385C6 /* PandaHomeNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHomeNavView.m; sourceTree = "<group>"; };
+		8A4827842640F77F00C385C6 /* PandaHomeBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHomeBtn.h; sourceTree = "<group>"; };
+		8A4827852640F77F00C385C6 /* PandaHomeBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHomeBtn.m; sourceTree = "<group>"; };
+		8ADB8F4C2642691E00C61A29 /* PandaKefuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaKefuViewController.h; sourceTree = "<group>"; };
+		8ADB8F4D2642691E00C61A29 /* PandaKefuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaKefuViewController.m; sourceTree = "<group>"; };
+		8ADB8F562642693600C61A29 /* PandaBangdanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaBangdanViewController.h; sourceTree = "<group>"; };
+		8ADB8F572642693600C61A29 /* PandaBangdanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaBangdanViewController.m; sourceTree = "<group>"; };
+		8ADB8F602642694D00C61A29 /* PandaHotComentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHotComentViewController.h; sourceTree = "<group>"; };
+		8ADB8F612642694D00C61A29 /* PandaHotComentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHotComentViewController.m; sourceTree = "<group>"; };
+		8ADB8F6626426AF700C61A29 /* PandaKefuTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaKefuTableViewCell.h; sourceTree = "<group>"; };
+		8ADB8F6726426AF700C61A29 /* PandaKefuTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaKefuTableViewCell.m; sourceTree = "<group>"; };
+		8ADB8F7526426B6300C61A29 /* FilmChatDetailMoel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmChatDetailMoel.h; sourceTree = "<group>"; };
+		8ADB8F7626426B6300C61A29 /* FilmChatDetailMoel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmChatDetailMoel.m; sourceTree = "<group>"; };
+		8ADB8F7B26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmChatZoneChatDetailToolsView.m; sourceTree = "<group>"; };
+		8ADB8F7C26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmChatZoneChatDetailToolsView.h; sourceTree = "<group>"; };
+		8ADB8F812642813600C61A29 /* PandaBangdanTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaBangdanTableViewCell.h; sourceTree = "<group>"; };
+		8ADB8F822642813600C61A29 /* PandaBangdanTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaBangdanTableViewCell.m; sourceTree = "<group>"; };
+		8ADB8F8E2642895300C61A29 /* PandaHotNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHotNewsViewController.h; sourceTree = "<group>"; };
+		8ADB8F8F2642895300C61A29 /* PandaHotNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHotNewsViewController.m; sourceTree = "<group>"; };
+		8ADB8F982642899700C61A29 /* PandaGoodFilmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaGoodFilmViewController.h; sourceTree = "<group>"; };
+		8ADB8F992642899700C61A29 /* PandaGoodFilmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaGoodFilmViewController.m; sourceTree = "<group>"; };
+		8ADB8FA126428CED00C61A29 /* PandaHotingCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHotingCollectionViewCell.h; sourceTree = "<group>"; };
+		8ADB8FA226428CED00C61A29 /* PandaHotingCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHotingCollectionViewCell.m; sourceTree = "<group>"; };
+		8ADB8FAD26429B6C00C61A29 /* PandaCommonCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaCommonCollectionViewCell.h; sourceTree = "<group>"; };
+		8ADB8FAE26429B6C00C61A29 /* PandaCommonCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaCommonCollectionViewCell.m; sourceTree = "<group>"; };
+		8ADB8FB326429EEC00C61A29 /* PandaHomeNewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHomeNewsTableViewCell.h; sourceTree = "<group>"; };
+		8ADB8FB426429EEC00C61A29 /* PandaHomeNewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHomeNewsTableViewCell.m; sourceTree = "<group>"; };
+		FD9B8581B943B5AA76F259DC /* Pods-PandaMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaMovie.debug.xcconfig"; path = "Target Support Files/Pods-PandaMovie/Pods-PandaMovie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9F35FD020603D40EF3F4D5 /* Pods_PandaMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +209,8 @@
 				8A4826AC2640DFBA00C385C6 /* PandaMovieTests */,
 				8A4826B72640DFBA00C385C6 /* PandaMovieUITests */,
 				8A48268F2640DFB800C385C6 /* Products */,
+				93C113C0CF0F460680139174 /* Pods */,
+				F2527F76188711472E1DC9F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +227,30 @@
 		8A4826902640DFB800C385C6 /* PandaMovie */ = {
 			isa = PBXGroup;
 			children = (
+				8A4827312640E54C00C385C6 /* Pandan_Login */,
+				8A48271B2640E49000C385C6 /* Panda_Center */,
+				8A48271A2640E48200C385C6 /* Panda_Msg */,
+				8A4827192640E47700C385C6 /* Panda_Zone */,
+				8A4827182640E46D00C385C6 /* Panda_Catagroy */,
+				8A4827172640E46300C385C6 /* Panda_Home */,
+				8A4826F22640E3E400C385C6 /* 工具 */,
 				8A4826912640DFB800C385C6 /* AppDelegate.h */,
 				8A4826922640DFB800C385C6 /* AppDelegate.m */,
-				8A4826942640DFB800C385C6 /* SceneDelegate.h */,
-				8A4826952640DFB800C385C6 /* SceneDelegate.m */,
 				8A4826972640DFB800C385C6 /* ViewController.h */,
 				8A4826982640DFB800C385C6 /* ViewController.m */,
+				8A48271C2640E4BE00C385C6 /* PandaBaseTabbarViewController.h */,
+				8A48271D2640E4BE00C385C6 /* PandaBaseTabbarViewController.m */,
+				8A4827252640E4D200C385C6 /* PandaBaseViewController.h */,
+				8A4827262640E4D200C385C6 /* PandaBaseViewController.m */,
+				8A48272B2640E4F700C385C6 /* AppDelegate+PandaSafe.h */,
+				8A48272C2640E4F700C385C6 /* AppDelegate+PandaSafe.m */,
 				8A48269A2640DFB800C385C6 /* Main.storyboard */,
 				8A48269D2640DFBA00C385C6 /* Assets.xcassets */,
 				8A48269F2640DFBA00C385C6 /* LaunchScreen.storyboard */,
 				8A4826A22640DFBA00C385C6 /* Info.plist */,
 				8A4826A32640DFBA00C385C6 /* main.m */,
+				8A4826EA2640E37900C385C6 /* Header.h */,
+				8A4826EE2640E3B300C385C6 /* PrefixHeader.pch */,
 			);
 			path = PandaMovie;
 			sourceTree = "<group>";
@@ -137,6 +273,192 @@
 			path = PandaMovieUITests;
 			sourceTree = "<group>";
 		};
+		8A4826F22640E3E400C385C6 /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				8A4827682640ECBF00C385C6 /* CHCardView */,
+				8A4826F32640E3E400C385C6 /* WWStarView.m */,
+				8A4826F42640E3E400C385C6 /* UITextField+AddPlaceholder.m */,
+				8A4826F52640E3E400C385C6 /* UIColor+CHRegex.h */,
+				8A4826F62640E3E400C385C6 /* UIView+shadowPath.m */,
+				8A4826F72640E3E400C385C6 /* UIButton+CHRegex.h */,
+				8A4826F82640E3E400C385C6 /* UIViewController+IOS13.m */,
+				8A4826F92640E3E400C385C6 /* NSString+CHRegex.m */,
+				8A4826FA2640E3E400C385C6 /* UIView+frame.m */,
+				8A4826FB2640E3E400C385C6 /* LMJHorizontalScrollText.h */,
+				8A4826FC2640E3E400C385C6 /* UILabel+CDGPSpaceLb.h */,
+				8A4826FD2640E3E400C385C6 /* UIButton+CHRegex.m */,
+				8A4826FE2640E3E400C385C6 /* UIView+shadowPath.h */,
+				8A4826FF2640E3E400C385C6 /* UIColor+CHRegex.m */,
+				8A4827002640E3E400C385C6 /* UITextField+AddPlaceholder.h */,
+				8A4827012640E3E400C385C6 /* WWStarView.h */,
+				8A4827022640E3E400C385C6 /* NSString+CHRegex.h */,
+				8A4827032640E3E400C385C6 /* UIViewController+IOS13.h */,
+				8A4827042640E3E400C385C6 /* LMJHorizontalScrollText.m */,
+				8A4827052640E3E400C385C6 /* UIView+frame.h */,
+				8A4827062640E3E400C385C6 /* UILabel+CDGPSpaceLb.m */,
+				8ADB8F7C26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.h */,
+				8ADB8F7B26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.m */,
+			);
+			path = "工具";
+			sourceTree = "<group>";
+		};
+		8A4827172640E46300C385C6 /* Panda_Home */ = {
+			isa = PBXGroup;
+			children = (
+				8ADB8F972642898300C61A29 /* Panda_GoodFilm */,
+				8ADB8F8D2642893200C61A29 /* Panda_News */,
+				8ADB8F5F2642693F00C61A29 /* Pandan_HotComent */,
+				8ADB8F552642692500C61A29 /* Pandan_Bangda */,
+				8ADB8F4B2642690900C61A29 /* Pandan_kefu */,
+				8A4827412640E69400C385C6 /* PandaHomeViewController.h */,
+				8A4827422640E69400C385C6 /* PandaHomeViewController.m */,
+				8A48275F2640EB0000C385C6 /* PandaHomeHeaderView.h */,
+				8A4827602640EB0000C385C6 /* PandaHomeHeaderView.m */,
+				8A48277E2640F42C00C385C6 /* PandaHomeNavView.h */,
+				8A48277F2640F42C00C385C6 /* PandaHomeNavView.m */,
+				8A4827842640F77F00C385C6 /* PandaHomeBtn.h */,
+				8A4827852640F77F00C385C6 /* PandaHomeBtn.m */,
+				8ADB8FA126428CED00C61A29 /* PandaHotingCollectionViewCell.h */,
+				8ADB8FA226428CED00C61A29 /* PandaHotingCollectionViewCell.m */,
+				8ADB8FAD26429B6C00C61A29 /* PandaCommonCollectionViewCell.h */,
+				8ADB8FAE26429B6C00C61A29 /* PandaCommonCollectionViewCell.m */,
+				8ADB8FB326429EEC00C61A29 /* PandaHomeNewsTableViewCell.h */,
+				8ADB8FB426429EEC00C61A29 /* PandaHomeNewsTableViewCell.m */,
+			);
+			path = Panda_Home;
+			sourceTree = "<group>";
+		};
+		8A4827182640E46D00C385C6 /* Panda_Catagroy */ = {
+			isa = PBXGroup;
+			children = (
+				8A4827472640E69E00C385C6 /* PandaCatagoryViewController.h */,
+				8A4827482640E69E00C385C6 /* PandaCatagoryViewController.m */,
+			);
+			path = Panda_Catagroy;
+			sourceTree = "<group>";
+		};
+		8A4827192640E47700C385C6 /* Panda_Zone */ = {
+			isa = PBXGroup;
+			children = (
+				8A48274D2640E6A500C385C6 /* PandaZoneViewController.h */,
+				8A48274E2640E6A500C385C6 /* PandaZoneViewController.m */,
+			);
+			path = Panda_Zone;
+			sourceTree = "<group>";
+		};
+		8A48271A2640E48200C385C6 /* Panda_Msg */ = {
+			isa = PBXGroup;
+			children = (
+				8A4827532640E6AC00C385C6 /* PandaMsgViewController.h */,
+				8A4827542640E6AC00C385C6 /* PandaMsgViewController.m */,
+			);
+			path = Panda_Msg;
+			sourceTree = "<group>";
+		};
+		8A48271B2640E49000C385C6 /* Panda_Center */ = {
+			isa = PBXGroup;
+			children = (
+				8A4827592640E6B300C385C6 /* PandaCenterViewController.h */,
+				8A48275A2640E6B300C385C6 /* PandaCenterViewController.m */,
+			);
+			path = Panda_Center;
+			sourceTree = "<group>";
+		};
+		8A4827312640E54C00C385C6 /* Pandan_Login */ = {
+			isa = PBXGroup;
+			children = (
+				8A4827322640E55A00C385C6 /* PandaLoginViewController.h */,
+				8A4827332640E55A00C385C6 /* PandaLoginViewController.m */,
+			);
+			path = Pandan_Login;
+			sourceTree = "<group>";
+		};
+		8A4827682640ECBF00C385C6 /* CHCardView */ = {
+			isa = PBXGroup;
+			children = (
+				8A4827792640ECDA00C385C6 /* CHCardItemCustomView.h */,
+				8A4827782640ECDA00C385C6 /* CHCardItemCustomView.m */,
+				8A4827692640ECBF00C385C6 /* CHCardItemModel.h */,
+				8A48276A2640ECBF00C385C6 /* CHCardView.h */,
+				8A48276B2640ECBF00C385C6 /* NSString+MD5.h */,
+				8A48276C2640ECBF00C385C6 /* CHCardItemView.h */,
+				8A48276D2640ECBF00C385C6 /* CHCardView.m */,
+				8A48276E2640ECBF00C385C6 /* CHCardItemModel.m */,
+				8A48276F2640ECBF00C385C6 /* CHCardItemView.m */,
+				8A4827702640ECBF00C385C6 /* NSString+MD5.m */,
+			);
+			path = CHCardView;
+			sourceTree = "<group>";
+		};
+		8ADB8F4B2642690900C61A29 /* Pandan_kefu */ = {
+			isa = PBXGroup;
+			children = (
+				8ADB8F4C2642691E00C61A29 /* PandaKefuViewController.h */,
+				8ADB8F4D2642691E00C61A29 /* PandaKefuViewController.m */,
+				8ADB8F6626426AF700C61A29 /* PandaKefuTableViewCell.h */,
+				8ADB8F6726426AF700C61A29 /* PandaKefuTableViewCell.m */,
+				8ADB8F7526426B6300C61A29 /* FilmChatDetailMoel.h */,
+				8ADB8F7626426B6300C61A29 /* FilmChatDetailMoel.m */,
+			);
+			path = Pandan_kefu;
+			sourceTree = "<group>";
+		};
+		8ADB8F552642692500C61A29 /* Pandan_Bangda */ = {
+			isa = PBXGroup;
+			children = (
+				8ADB8F562642693600C61A29 /* PandaBangdanViewController.h */,
+				8ADB8F572642693600C61A29 /* PandaBangdanViewController.m */,
+				8ADB8F812642813600C61A29 /* PandaBangdanTableViewCell.h */,
+				8ADB8F822642813600C61A29 /* PandaBangdanTableViewCell.m */,
+			);
+			path = Pandan_Bangda;
+			sourceTree = "<group>";
+		};
+		8ADB8F5F2642693F00C61A29 /* Pandan_HotComent */ = {
+			isa = PBXGroup;
+			children = (
+				8ADB8F602642694D00C61A29 /* PandaHotComentViewController.h */,
+				8ADB8F612642694D00C61A29 /* PandaHotComentViewController.m */,
+			);
+			path = Pandan_HotComent;
+			sourceTree = "<group>";
+		};
+		8ADB8F8D2642893200C61A29 /* Panda_News */ = {
+			isa = PBXGroup;
+			children = (
+				8ADB8F8E2642895300C61A29 /* PandaHotNewsViewController.h */,
+				8ADB8F8F2642895300C61A29 /* PandaHotNewsViewController.m */,
+			);
+			path = Panda_News;
+			sourceTree = "<group>";
+		};
+		8ADB8F972642898300C61A29 /* Panda_GoodFilm */ = {
+			isa = PBXGroup;
+			children = (
+				8ADB8F982642899700C61A29 /* PandaGoodFilmViewController.h */,
+				8ADB8F992642899700C61A29 /* PandaGoodFilmViewController.m */,
+			);
+			path = Panda_GoodFilm;
+			sourceTree = "<group>";
+		};
+		93C113C0CF0F460680139174 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD9B8581B943B5AA76F259DC /* Pods-PandaMovie.debug.xcconfig */,
+				4EA80DFCE09BC6B8022D22E7 /* Pods-PandaMovie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F2527F76188711472E1DC9F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A2C849B2C9782A02C8F1A4B /* Pods_PandaMovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +466,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A4826BD2640DFBA00C385C6 /* Build configuration list for PBXNativeTarget "PandaMovie" */;
 			buildPhases = (
+				C3A8CAB374A3EC789627168A /* [CP] Check Pods Manifest.lock */,
 				8A48268A2640DFB800C385C6 /* Sources */,
 				8A48268B2640DFB800C385C6 /* Frameworks */,
 				8A48268C2640DFB800C385C6 /* Resources */,
+				1BC5CA815334F229834E05A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,15 +585,95 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BC5CA815334F229834E05A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaMovie/Pods-PandaMovie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PandaMovie/Pods-PandaMovie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PandaMovie/Pods-PandaMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3A8CAB374A3EC789627168A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PandaMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A48268A2640DFB800C385C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8A4826992640DFB800C385C6 /* ViewController.m in Sources */,
+				8A4827552640E6AC00C385C6 /* PandaMsgViewController.m in Sources */,
+				8ADB8F9A2642899700C61A29 /* PandaGoodFilmViewController.m in Sources */,
+				8A4827492640E69E00C385C6 /* PandaCatagoryViewController.m in Sources */,
+				8ADB8F6826426AF700C61A29 /* PandaKefuTableViewCell.m in Sources */,
+				8A4827102640E3E400C385C6 /* UILabel+CDGPSpaceLb.m in Sources */,
+				8ADB8FA326428CED00C61A29 /* PandaHotingCollectionViewCell.m in Sources */,
+				8ADB8F832642813600C61A29 /* PandaBangdanTableViewCell.m in Sources */,
+				8ADB8F7D26426FFA00C61A29 /* FilmChatZoneChatDetailToolsView.m in Sources */,
+				8A48271E2640E4BE00C385C6 /* PandaBaseTabbarViewController.m in Sources */,
+				8ADB8F582642693600C61A29 /* PandaBangdanViewController.m in Sources */,
 				8A4826932640DFB800C385C6 /* AppDelegate.m in Sources */,
+				8A48270D2640E3E400C385C6 /* UIButton+CHRegex.m in Sources */,
+				8A4827072640E3E400C385C6 /* WWStarView.m in Sources */,
+				8A48270C2640E3E400C385C6 /* UIView+frame.m in Sources */,
+				8A4827722640ECBF00C385C6 /* CHCardItemModel.m in Sources */,
+				8A48270F2640E3E400C385C6 /* LMJHorizontalScrollText.m in Sources */,
+				8A48277A2640ECDA00C385C6 /* CHCardItemCustomView.m in Sources */,
 				8A4826A42640DFBA00C385C6 /* main.m in Sources */,
-				8A4826962640DFB800C385C6 /* SceneDelegate.m in Sources */,
+				8A4827802640F42C00C385C6 /* PandaHomeNavView.m in Sources */,
+				8A4827612640EB0000C385C6 /* PandaHomeHeaderView.m in Sources */,
+				8A48270E2640E3E400C385C6 /* UIColor+CHRegex.m in Sources */,
+				8A4827082640E3E400C385C6 /* UITextField+AddPlaceholder.m in Sources */,
+				8A4827092640E3E400C385C6 /* UIView+shadowPath.m in Sources */,
+				8A4827432640E69400C385C6 /* PandaHomeViewController.m in Sources */,
+				8A48272D2640E4F700C385C6 /* AppDelegate+PandaSafe.m in Sources */,
+				8ADB8FB526429EEC00C61A29 /* PandaHomeNewsTableViewCell.m in Sources */,
+				8A48274F2640E6A500C385C6 /* PandaZoneViewController.m in Sources */,
+				8ADB8F7726426B6300C61A29 /* FilmChatDetailMoel.m in Sources */,
+				8ADB8F902642895300C61A29 /* PandaHotNewsViewController.m in Sources */,
+				8ADB8FAF26429B6C00C61A29 /* PandaCommonCollectionViewCell.m in Sources */,
+				8A4827342640E55A00C385C6 /* PandaLoginViewController.m in Sources */,
+				8A4827862640F77F00C385C6 /* PandaHomeBtn.m in Sources */,
+				8A48270B2640E3E400C385C6 /* NSString+CHRegex.m in Sources */,
+				8A4827742640ECBF00C385C6 /* NSString+MD5.m in Sources */,
+				8A4827272640E4D200C385C6 /* PandaBaseViewController.m in Sources */,
+				8A4827732640ECBF00C385C6 /* CHCardItemView.m in Sources */,
+				8ADB8F622642694D00C61A29 /* PandaHotComentViewController.m in Sources */,
+				8ADB8F4E2642691E00C61A29 /* PandaKefuViewController.m in Sources */,
+				8A48275B2640E6B300C385C6 /* PandaCenterViewController.m in Sources */,
+				8A48270A2640E3E400C385C6 /* UIViewController+IOS13.m in Sources */,
+				8A4827712640ECBF00C385C6 /* CHCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,35 +842,45 @@
 		};
 		8A4826BE2640DFBA00C385C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9B8581B943B5AA76F259DC /* Pods-PandaMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PandaMovie/PrefixHeader.pch";
 				INFOPLIST_FILE = PandaMovie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com-.PandaMovie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8A4826BF2640DFBA00C385C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA80DFCE09BC6B8022D22E7 /* Pods-PandaMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PandaMovie/PrefixHeader.pch";
 				INFOPLIST_FILE = PandaMovie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com-.PandaMovie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

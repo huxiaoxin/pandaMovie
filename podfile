@@ -1,0 +1,31 @@
+platform :ios, '10.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+target 'PandaMovie' do
+
+pod 'AFNetworking'
+pod 'Masonry'
+pod 'YYModel'
+pod 'DZNEmptyDataSet', '~> 1.8.1'
+pod 'MJRefresh', '~> 3.1.15.1'
+pod 'GKNavigationBarViewController', '~> 2.7.0'
+pod 'SPPageMenu', '~> 3.5.0'
+pod 'SDWebImage'
+pod 'SCIndexView', '~> 2.2.4'
+pod 'JXPagingView/Pager'
+pod 'JXCategoryView'
+pod 'KJBannerView' # 轮播图
+pod 'KJBannerView/Downloader'
+pod 'SDCycleScrollView','~> 1.80'
+pod 'LCProgressHUD'
+pod 'ZWLimitCounter',         '~> 0.0.4'
+pod 'ZWPlaceHolder', '~> 0.0.2'
+pod 'WHC_ModelSqliteKit', '~> 1.3.0'
+pod 'HUPhotoBrowser', '~> 1.4.5'
+pod 'LYEmptyView'
+pod 'RITLPhotos', '~> 2.3.3'
+pod 'XHInputView', '~> 1.1.1'
+pod 'IQKeyboardManager'
+end 

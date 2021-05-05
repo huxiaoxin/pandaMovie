@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  PandaMovie
+//
+//  Created by zjlk03 on 2021/5/4.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import <UIKit/UIKit.h>
+#import "Header.h"
+#import <Foundation/Foundation.h>
+#import <objc/runtime.h>
+#import <GKNavigationBarViewController-umbrella.h>
+#import "UIColor+CHRegex.h"
+#import "NSString+CHRegex.h"
+#import "UIView+shadowPath.h"
+#import <MJRefresh/MJRefresh.h>
+#import <LCProgressHUD-umbrella.h>
+#import <WHC_ModelSqliteKit-umbrella.h>
+#import <UIImageView+WebCache.h>
+#import "UILabel+CDGPSpaceLb.h"
+#import "UIView+frame.h"
+#import <LYEmptyView-umbrella.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
