@@ -21,7 +21,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gk_navTitle = @"熊猫好片----";
+    self.gk_navTitle = @"熊猫好片";
     [self.view addSubview:self.PandaHotTableView];
     // Do any additional setup after loading the view.
 }

@@ -16,7 +16,11 @@
 #import "GuoJiQihuoNewsModel.h"
 #import "LYHSTockHttpRequestTool.h"
 #import "PandaHotComentViewController.h"
-@interface PandaHomeViewController ()<UITableViewDelegate,UITableViewDataSource,PandaHomeHeaderViewDelegate>
+#import "QRCodeReaderViewController.h"
+@interface PandaHomeViewController ()<UITableViewDelegate,UITableViewDataSource,PandaHomeHeaderViewDelegate,PandaHomeNavViewDelegate,QRCodeReaderDelegate>
+{
+    QRCodeReaderViewController * _reader;
+}
 @property(nonatomic,strong) UITableView * PandaHomeTableView;
 @property(nonatomic,strong) PandaHomeHeaderView * PandaHeader;
 @property(nonatomic,strong) PandaHomeNavView              * PandaNavView;
@@ -29,6 +33,7 @@
     if (!_PandaNavView) {
         _PandaNavView = [[PandaHomeNavView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, NaviH)];
         _PandaNavView.backgroundColor = [UIColor clearColor];
+        _PandaNavView.delegate = self;
     }
     return _PandaNavView;
 }
@@ -116,14 +121,38 @@
         [self.navigationController pushViewController:pandaKefuVc animated:YES];
     }
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark--PandaHomeNavViewDelegate
+-(void)PandaHomeNavViewWithScanAction{
+    NSArray *types = @[AVMetadataObjectTypeQRCode];
+    _reader        = [QRCodeReaderViewController readerWithMetadataObjectTypes:types];
+    _reader.delegate = self;
+    [_reader setCompletionWithBlock:^(NSString *resultAsString) {
+    [self dismissViewControllerAnimated:YES completion:^{
+    NSLog(@"%@", resultAsString);
+    }];
+    }];
+    
+    [self presentViewController:_reader animated:YES completion:NULL];
 }
-*/
+#pragma mark - QRCodeReader Delegate Methods
+
+- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
+}
+- (void)readerDidCancel:(QRCodeReaderViewController *)reader
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

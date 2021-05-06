@@ -36,18 +36,27 @@
         TextFieldsearchiView.layer.cornerRadius = CGRectGetHeight(TextFieldsearchiView.frame)/2;
         TextFieldsearchiView.layer.masksToBounds = YES;
         [_pandaSearchView addSubview:TextFieldsearchiView];
+        
+        UILabel * Textholderlb = [[UILabel alloc]initWithFrame:CGRectMake(RealWidth(10), 0, CGRectGetWidth(TextFieldsearchiView.frame)-RealWidth(10), CGRectGetHeight(TextFieldsearchiView.frame))];
+        Textholderlb.textColor = [UIColor colorWithHexString:@"9F9FA5"];
+        Textholderlb.font = [UIFont systemFontOfSize:12];
+        Textholderlb.text = @"搜你所搜，看你所看";
+        [TextFieldsearchiView addSubview:Textholderlb];
+        
+        
     }
     return _pandaSearchView;
 }
 - (UIButton *)pandaRightbtn{
     if (!_pandaRightbtn) {
         _pandaRightbtn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_pandaSearchView.frame)+RealWidth(5), GK_STATUSBAR_HEIGHT+RealWidth(5), RealWidth(30), RealWidth(30))];
-        [_pandaRightbtn setBackgroundColor:[UIColor whiteColor]];
+        [_pandaRightbtn setBackgroundImage:[UIImage imageNamed:@"scan"] forState:UIControlStateNormal];
         [_pandaRightbtn addTarget:self action:@selector(pandaRightbtnClick) forControlEvents:UIControlEventTouchUpInside];
+        _pandaRightbtn.adjustsImageWhenHighlighted = NO;
     }
     return _pandaRightbtn;
 }
 -(void)pandaRightbtnClick{
-    
+    [self.delegate PandaHomeNavViewWithScanAction];
 }
 @end

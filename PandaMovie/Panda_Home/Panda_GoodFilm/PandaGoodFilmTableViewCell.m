@@ -10,17 +10,22 @@
 @property(nonatomic,strong) UIImageView * PandaThubImgView;
 @property(nonatomic,strong) UILabel     * PandaToplb;
 @property(nonatomic,strong) UILabel     * PandaEngilshNamelb;
-
 @property(nonatomic,strong) UILabel     * PandaTimeComminglb;
+@property(nonatomic,strong) UILabel     * PandaArticlb;
+@property(nonatomic,strong) UILabel     * PandaWatchNumlb;
 @end
 @implementation PandaGoodFilmTableViewCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.PandaThubImgView];
         [self.contentView addSubview:self.PandaToplb];
         [self.contentView addSubview:self.PandaEngilshNamelb];
+        [self.contentView addSubview:self.PandaTimeComminglb];
+        [self.contentView addSubview:self.PandaArticlb];
 
+        [self.contentView addSubview:self.PandaWatchNumlb];
     }
     return self;
 }
@@ -36,7 +41,7 @@
 }
 - (UILabel *)PandaToplb{
     if (!_PandaToplb) {
-        _PandaToplb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandaThubImgView.frame)+RealWidth(5), CGRectGetMinY(_PandaThubImgView.frame)+RealWidth(5), GK_SCREEN_WIDTH-CGRectGetMaxX(_PandaThubImgView.frame)-RealWidth(10), RealWidth(17))];
+        _PandaToplb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandaThubImgView.frame)+RealWidth(5), CGRectGetMinY(_PandaThubImgView.frame)+RealWidth(0), GK_SCREEN_WIDTH-CGRectGetMaxX(_PandaThubImgView.frame)-RealWidth(10), RealWidth(17))];
         _PandaToplb.text = @"速度与激情9--特别行动";
         _PandaToplb.font = [UIFont systemFontOfSize:16];
         _PandaToplb.textColor = [UIColor whiteColor];
@@ -51,5 +56,54 @@
         _PandaEngilshNamelb.textColor = [UIColor colorWithHexString:@"9F9FA5"];
     }
     return _PandaEngilshNamelb;
+}
+- (UILabel *)PandaTimeComminglb{
+    if (!_PandaTimeComminglb) {
+        _PandaTimeComminglb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandaThubImgView.frame)+RealWidth(5), CGRectGetMaxY(_PandaEngilshNamelb.frame)+RealWidth(5), GK_SCREEN_WIDTH-CGRectGetMaxX(_PandaThubImgView.frame)-RealWidth(10), RealWidth(15))];
+        _PandaEngilshNamelb.font = [UIFont systemFontOfSize:13];
+        _PandaEngilshNamelb.textColor = [UIColor colorWithHexString:@"9F9FA5"];
+        NSString * PandaFirstStr = @"还有";
+        NSString * PandaSeconStr = @"3";
+        NSString * PandaThreeStr = @"天上映";
+        NSString * PandaFoureStr = @" 中国大陆";
+        NSString * pandaTotaolStr = [NSString stringWithFormat:@"%@%@%@%@",PandaFirstStr,PandaSeconStr,PandaThreeStr,PandaFoureStr];
+        NSMutableAttributedString * PandaMutableAttbure = [[NSMutableAttributedString alloc]initWithString:pandaTotaolStr];
+        [PandaMutableAttbure addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(0, pandaTotaolStr.length)];
+        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(0, PandaFirstStr.length)];
+        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"FD8007"] range:NSMakeRange(PandaFirstStr.length, PandaSeconStr.length)];
+        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(PandaFirstStr.length+PandaSeconStr.length, PandaThreeStr.length)];
+        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(PandaFirstStr.length+PandaSeconStr.length+PandaThreeStr.length, PandaFoureStr.length)];
+        _PandaTimeComminglb.attributedText = PandaMutableAttbure;
+    }
+    return _PandaTimeComminglb;
+}
+- (UILabel *)PandaArticlb{
+    if (!_PandaArticlb) {
+        _PandaArticlb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandaThubImgView.frame)+RealWidth(5), CGRectGetMaxY(_PandaTimeComminglb.frame)+RealWidth(5), GK_SCREEN_WIDTH-CGRectGetMaxX(_PandaThubImgView.frame)-RealWidth(10), RealWidth(15))];
+        _PandaArticlb.font = [UIFont systemFontOfSize:13];
+        _PandaArticlb.textColor = [UIColor colorWithHexString:@"9F9FA5"];
+        _PandaArticlb.text = @"吴京、张三丰、吴凯家、牙真疼、好家伙、吴玉生";
+    }
+    return _PandaArticlb;
+}
+- (UILabel *)PandaWatchNumlb{
+    if (!_PandaWatchNumlb) {
+        _PandaWatchNumlb = [[UILabel alloc]initWithFrame:CGRectMake(GK_SCREEN_WIDTH-RealWidth(120), CGRectGetMinY(_PandaThubImgView.frame)+RealWidth(5), RealWidth(110), RealWidth(15))];
+        _PandaWatchNumlb.textAlignment = NSTextAlignmentRight;
+      
+        NSString * PandaFirstStr =  @"3亿";
+        NSString * PandaSecondStr = @"  想看";
+        NSString * pandaThreeStr = [NSString stringWithFormat:@"%@%@",PandaFirstStr,PandaSecondStr];
+        NSMutableAttributedString * PandaAtttbure = [[NSMutableAttributedString alloc]initWithString:pandaThreeStr];
+        [PandaAtttbure addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:16] range:NSMakeRange(0, PandaFirstStr.length)];
+        [PandaAtttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"FD8007"] range:NSMakeRange(0, PandaFirstStr.length)];
+
+        [PandaAtttbure addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(PandaFirstStr.length, PandaSecondStr.length)];
+        [PandaAtttbure addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(PandaFirstStr.length, PandaSecondStr.length)];
+
+        _PandaWatchNumlb.attributedText = PandaAtttbure;
+        
+    }
+    return _PandaWatchNumlb;
 }
 @end
