@@ -28,7 +28,7 @@
         
         
         UILabel * WindwoundNewsTypeonelb = [[UILabel alloc]initWithFrame:CGRectMake(K(10), K(70), K(70), K(18))];
-        WindwoundNewsTypeonelb.text = @"信管家期货宝";
+        WindwoundNewsTypeonelb.text = @"熊猫追剧";
         WindwoundNewsTypeonelb.layer.cornerRadius = K(4);
         WindwoundNewsTypeonelb.layer.masksToBounds = YES;
         WindwoundNewsTypeonelb.textColor = LGDGaryColor;
@@ -47,8 +47,8 @@
         _WindwoundTimelb = WindwoundTimelb;
         
         
-        UIView * WindwoundNewsline = [[UIView alloc]initWithFrame:CGRectMake(K(10), K(99), SCREEN_Width-K(20), K(1))];
-        WindwoundNewsline.backgroundColor = LGDLightGaryColor;
+        UIView * WindwoundNewsline = [[UIView alloc]initWithFrame:CGRectMake(K(10), K(99), SCREEN_Width-K(20), K(0.5))];
+        WindwoundNewsline.backgroundColor = [UIColor colorWithHexString:@"#2D2259"];
         [self.contentView addSubview:WindwoundNewsline];
     }
     return self;

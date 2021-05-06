@@ -50,6 +50,9 @@
 		8A48277A2640ECDA00C385C6 /* CHCardItemCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827782640ECDA00C385C6 /* CHCardItemCustomView.m */; };
 		8A4827802640F42C00C385C6 /* PandaHomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48277F2640F42C00C385C6 /* PandaHomeNavView.m */; };
 		8A4827862640F77F00C385C6 /* PandaHomeBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827852640F77F00C385C6 /* PandaHomeBtn.m */; };
+		8A51347A26438E9000C492F0 /* UIView+ACSLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A51347926438E9000C492F0 /* UIView+ACSLayer.m */; };
+		8A5134802643BB9D00C492F0 /* PandaHotComentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A51347F2643BB9D00C492F0 /* PandaHotComentTableViewCell.m */; };
+		8A5134862643BD7900C492F0 /* PandaGoodFilmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5134852643BD7900C492F0 /* PandaGoodFilmTableViewCell.m */; };
 		8ADB8F4E2642691E00C61A29 /* PandaKefuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F4D2642691E00C61A29 /* PandaKefuViewController.m */; };
 		8ADB8F582642693600C61A29 /* PandaBangdanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F572642693600C61A29 /* PandaBangdanViewController.m */; };
 		8ADB8F622642694D00C61A29 /* PandaHotComentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F612642694D00C61A29 /* PandaHotComentViewController.m */; };
@@ -173,6 +176,12 @@
 		8A48277F2640F42C00C385C6 /* PandaHomeNavView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHomeNavView.m; sourceTree = "<group>"; };
 		8A4827842640F77F00C385C6 /* PandaHomeBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHomeBtn.h; sourceTree = "<group>"; };
 		8A4827852640F77F00C385C6 /* PandaHomeBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHomeBtn.m; sourceTree = "<group>"; };
+		8A51347826438E9000C492F0 /* UIView+ACSLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ACSLayer.h"; sourceTree = "<group>"; };
+		8A51347926438E9000C492F0 /* UIView+ACSLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ACSLayer.m"; sourceTree = "<group>"; };
+		8A51347E2643BB9D00C492F0 /* PandaHotComentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHotComentTableViewCell.h; sourceTree = "<group>"; };
+		8A51347F2643BB9D00C492F0 /* PandaHotComentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHotComentTableViewCell.m; sourceTree = "<group>"; };
+		8A5134842643BD7900C492F0 /* PandaGoodFilmTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaGoodFilmTableViewCell.h; sourceTree = "<group>"; };
+		8A5134852643BD7900C492F0 /* PandaGoodFilmTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaGoodFilmTableViewCell.m; sourceTree = "<group>"; };
 		8ADB8F4C2642691E00C61A29 /* PandaKefuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaKefuViewController.h; sourceTree = "<group>"; };
 		8ADB8F4D2642691E00C61A29 /* PandaKefuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaKefuViewController.m; sourceTree = "<group>"; };
 		8ADB8F562642693600C61A29 /* PandaBangdanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaBangdanViewController.h; sourceTree = "<group>"; };
@@ -302,6 +311,8 @@
 		8A4826F22640E3E400C385C6 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				8A51347826438E9000C492F0 /* UIView+ACSLayer.h */,
+				8A51347926438E9000C492F0 /* UIView+ACSLayer.m */,
 				4A5EB1D82642E3AE00573BF3 /* NSDictionary+DeleteNull.h */,
 				4A5EB1D72642E3AD00573BF3 /* NSDictionary+DeleteNull.m */,
 				4A5EB1D22642E38200573BF3 /* LYHSTockHttpRequestTool.h */,
@@ -450,6 +461,8 @@
 			children = (
 				8ADB8F602642694D00C61A29 /* PandaHotComentViewController.h */,
 				8ADB8F612642694D00C61A29 /* PandaHotComentViewController.m */,
+				8A51347E2643BB9D00C492F0 /* PandaHotComentTableViewCell.h */,
+				8A51347F2643BB9D00C492F0 /* PandaHotComentTableViewCell.m */,
 			);
 			path = Pandan_HotComent;
 			sourceTree = "<group>";
@@ -478,6 +491,8 @@
 			children = (
 				8ADB8F982642899700C61A29 /* PandaGoodFilmViewController.h */,
 				8ADB8F992642899700C61A29 /* PandaGoodFilmViewController.m */,
+				8A5134842643BD7900C492F0 /* PandaGoodFilmTableViewCell.h */,
+				8A5134852643BD7900C492F0 /* PandaGoodFilmTableViewCell.m */,
 			);
 			path = Panda_GoodFilm;
 			sourceTree = "<group>";
@@ -683,6 +698,7 @@
 				8ADB8FA326428CED00C61A29 /* PandaHotingCollectionViewCell.m in Sources */,
 				8ADB8F832642813600C61A29 /* PandaBangdanTableViewCell.m in Sources */,
 				4A5EB1D32642E38200573BF3 /* LYHSTockHttpRequestTool.m in Sources */,
+				8A5134862643BD7900C492F0 /* PandaGoodFilmTableViewCell.m in Sources */,
 				8ADB8F7D26426FFA00C61A29 /* FilmChatZoneChatDetailToolsView.m in Sources */,
 				8A48271E2640E4BE00C385C6 /* PandaBaseTabbarViewController.m in Sources */,
 				8ADB8F582642693600C61A29 /* PandaBangdanViewController.m in Sources */,
@@ -698,11 +714,13 @@
 				8A4827802640F42C00C385C6 /* PandaHomeNavView.m in Sources */,
 				8A4827612640EB0000C385C6 /* PandaHomeHeaderView.m in Sources */,
 				8A48270E2640E3E400C385C6 /* UIColor+CHRegex.m in Sources */,
+				8A51347A26438E9000C492F0 /* UIView+ACSLayer.m in Sources */,
 				8A4827082640E3E400C385C6 /* UITextField+AddPlaceholder.m in Sources */,
 				8A4827092640E3E400C385C6 /* UIView+shadowPath.m in Sources */,
 				8A4827432640E69400C385C6 /* PandaHomeViewController.m in Sources */,
 				8A48272D2640E4F700C385C6 /* AppDelegate+PandaSafe.m in Sources */,
 				8ADB8FB526429EEC00C61A29 /* PandaHomeNewsTableViewCell.m in Sources */,
+				8A5134802643BB9D00C492F0 /* PandaHotComentTableViewCell.m in Sources */,
 				8A48274F2640E6A500C385C6 /* PandaZoneViewController.m in Sources */,
 				4A5EB1C12642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m in Sources */,
 				8ADB8F7726426B6300C61A29 /* FilmChatDetailMoel.m in Sources */,

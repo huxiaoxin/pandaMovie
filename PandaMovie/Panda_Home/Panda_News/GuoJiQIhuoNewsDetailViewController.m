@@ -13,7 +13,7 @@
     [super viewDidLoad];
     self.gk_navTitle = _GuoJiItem.title;
     
-    NSString *html2 = [NSString stringWithFormat:@"<html><head><style>div{font-size:20px;}img{width: 75%%;height: auto;</style></head><body>%@</body></html>",self.GuoJiItem.content];
+    NSString *html2 = [NSString stringWithFormat:@"<html><head><style>div{font-size:20px;}img{width: 100%%;height: auto;</style></head><body>%@</body></html>",self.GuoJiItem.content];
     
     WKUserContentController *userContentController = [[WKUserContentController alloc] init];
     
@@ -31,6 +31,8 @@
     WKWebViewConfiguration *wkWebConfig = [[WKWebViewConfiguration alloc] init];
     wkWebConfig.userContentController = userContentController;
     WKWebView * web = [[WKWebView alloc]initWithFrame:CGRectMake(0, NaviH, SCREEN_Width, SCREEN_Height-NaviH-GK_SAFEAREA_BTM) configuration:wkWebConfig];
+    web.opaque =  NO;
+    web.backgroundColor = [UIColor clearColor];
     web.navigationDelegate =self;
     [self.view addSubview:web];
     
@@ -38,7 +40,7 @@
     self.activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:(UIActivityIndicatorViewStyleGray)];
     [self.view addSubview:self.activityIndicator];
     self.activityIndicator.frame= CGRectMake(SCREEN_Width/2-K(15),K(250), K(30), K(30));
-    self.activityIndicator.color = [UIColor lightGrayColor];
+    self.activityIndicator.color = [UIColor whiteColor];
     self.activityIndicator.backgroundColor = [UIColor clearColor];
     self.activityIndicator.hidesWhenStopped = YES;
     [self.activityIndicator startAnimating];
@@ -46,7 +48,10 @@
 - (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation{
     [self.activityIndicator stopAnimating];
     self.activityIndicator.hidesWhenStopped = YES;
+       [ webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextFillColor= '#ffffff'"completionHandler:nil];
+    //     [ webView evaluateJavaScript:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '200%'"completionHandler:nil];
 }
+
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error{
     [self.activityIndicator stopAnimating];
     self.activityIndicator.hidesWhenStopped = YES;

@@ -15,6 +15,7 @@
 #import "PandaHomeNewsTableViewCell.h"
 #import "GuoJiQihuoNewsModel.h"
 #import "LYHSTockHttpRequestTool.h"
+#import "PandaHotComentViewController.h"
 @interface PandaHomeViewController ()<UITableViewDelegate,UITableViewDataSource,PandaHomeHeaderViewDelegate>
 @property(nonatomic,strong) UITableView * PandaHomeTableView;
 @property(nonatomic,strong) PandaHomeHeaderView * PandaHeader;

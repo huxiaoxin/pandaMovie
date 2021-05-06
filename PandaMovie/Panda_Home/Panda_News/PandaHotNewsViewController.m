@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gk_navTitle = @"热点资讯";
+    self.gk_navTitle = @"影视资讯";
     [self.view addSubview:self.GuoJiQihuoNewsCollectionViews];
     [_GuoJiQihuoNewsCollectionViews registerClass:[GuoJiQihuoNewsCollectionCell class] forCellWithReuseIdentifier:@"GuoJiQihuoNewsCollectionCell"];
     // Do any additional setup after loading the view.
