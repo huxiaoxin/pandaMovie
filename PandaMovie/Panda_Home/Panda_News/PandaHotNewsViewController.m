@@ -2,7 +2,7 @@
 #import "PandaHotNewsViewController.h"
 #import "GuoJiQiqhuoNewsViewLayout.h"
 #import "GuoJiQihuoNewsCollectionCell.h"
-#import "GuoJiQihuoNewsModel.h"
+#import "ShuyunHomeNewsModel.h"
 #import "GuoJiQihuoNewsSizeTools.h"
 #import "GuoJiQIhuoNewsDetailViewController.h"
 #import "LYHSTockHttpRequestTool.h"
@@ -49,7 +49,7 @@
     return  self.GuoJiQihuoNewsCollectionDataArr.count;
 }
 - (CGFloat)waterFallLayout:(GuoJiQiqhuoNewsViewLayout *)waterFallLayout heightForItemAtIndexPath:(NSUInteger)indexPath itemWidth:(CGFloat)itemWidth{
-    GuoJiQihuoNewsModel * GuoJiQihuoNewsItem = self.GuoJiQihuoNewsCollectionDataArr[indexPath];
+    ShuyunHomeNewsModel * GuoJiQihuoNewsItem = self.GuoJiQihuoNewsCollectionDataArr[indexPath];
     return itemWidth*GuoJiQihuoNewsItem.height/GuoJiQihuoNewsItem.width+K(100);
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -70,10 +70,10 @@
         NSArray * GuoJiQihuoNewsDataArr =[[[object objectForKey:@"result"] objectForKey:@"result"] objectForKey:@"list"];
         NSMutableArray * GuoJiQihuoNewstempArr= [[NSMutableArray alloc]init];
         for (NSDictionary * GuoJiQihuoNewstDics in GuoJiQihuoNewsDataArr) {
-            GuoJiQihuoNewsModel * GuoJiQihuoNewsItem = [GuoJiQihuoNewsModel BaseinitWithDic:GuoJiQihuoNewstDics];
-            if (![GuoJiQihuoNewsItem.content containsString:@"https://interface.sina.cn/wap_api/video_location.d.html"]) {
-                if (![GuoJiQihuoNewsItem.pic containsString:@"https://n.sinaimg.cn/default/2fb77759/20151125/320X320.png"]) {
-                    CGSize GuoJiQihuoNewsSize = [GuoJiQihuoNewsSizeTools getImageSizeWithURL:GuoJiQihuoNewsItem.pic];
+            ShuyunHomeNewsModel * GuoJiQihuoNewsItem = [ShuyunHomeNewsModel BaseinitWithDic:GuoJiQihuoNewstDics];
+            if (![GuoJiQihuoNewsItem.imgUrl containsString:@"https://interface.sina.cn/wap_api/video_location.d.html"]) {
+                if (![GuoJiQihuoNewsItem.imgUrl containsString:@"https://n.sinaimg.cn/default/2fb77759/20151125/320X320.png"]) {
+                    CGSize GuoJiQihuoNewsSize = [GuoJiQihuoNewsSizeTools getImageSizeWithURL:GuoJiQihuoNewsItem.imgUrl];
                     GuoJiQihuoNewsItem.height = GuoJiQihuoNewsSize.height;
                     GuoJiQihuoNewsItem.width = GuoJiQihuoNewsSize.width;
                     [GuoJiQihuoNewstempArr addObject:GuoJiQihuoNewsItem];

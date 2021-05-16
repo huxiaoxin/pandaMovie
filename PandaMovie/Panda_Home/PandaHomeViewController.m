@@ -13,10 +13,11 @@
 #import "PandaHotNewsViewController.h"
 #import "PandaGoodFilmViewController.h"
 #import "PandaHomeNewsTableViewCell.h"
-#import "GuoJiQihuoNewsModel.h"
 #import "LYHSTockHttpRequestTool.h"
 #import "PandaHotComentViewController.h"
 #import "QRCodeReaderViewController.h"
+#import "ShuyunHomeNewsModel.h"
+#import "GuoJiQIhuoNewsDetailViewController.h"
 @interface PandaHomeViewController ()<UITableViewDelegate,UITableViewDataSource,PandaHomeHeaderViewDelegate,PandaHomeNavViewDelegate,QRCodeReaderDelegate>
 {
     QRCodeReaderViewController * _reader;
@@ -29,6 +30,12 @@
 
 @implementation PandaHomeViewController
 
+- (NSMutableArray *)PandaDataArr{
+    if (!_PandaDataArr) {
+        _PandaDataArr = [NSMutableArray array];
+    }
+    return _PandaDataArr;
+}
 - (PandaHomeNavView *)PandaNavView{
     if (!_PandaNavView) {
         _PandaNavView = [[PandaHomeNavView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, NaviH)];
@@ -62,6 +69,7 @@
         _PandaHomeTableView.separatorStyle = UITableViewCellSelectionStyleNone;
         _PandaHomeTableView.backgroundColor = [UIColor clearColor];
         _PandaHomeTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(PandaHomeTableViewHeaderClick)];
+        [_PandaHomeTableView.mj_header beginRefreshing];
     }
     return _PandaHomeTableView;
 }
@@ -80,6 +88,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return RealWidth(100);
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    GuoJiQIhuoNewsDetailViewController * GuoJiDetialVc = [[GuoJiQIhuoNewsDetailViewController alloc]init];
+    GuoJiDetialVc.GuoJiItem = self.PandaDataArr[indexPath.row];
+    [self.navigationController pushViewController:GuoJiDetialVc animated:YES];
+}
 #pragma mark--刷新
 -(void)PandaHomeTableViewHeaderClick{
     MJWeakSelf;
@@ -88,7 +101,7 @@
         NSArray * WindWoundHomeData =[[object objectForKey:@"result"]  objectForKey:@"list"];
         NSMutableArray * WindWoundHomeTemp= [[NSMutableArray alloc]init];
         for (NSDictionary * WindWoundHomeDics in WindWoundHomeData) {
-            GuoJiQihuoNewsModel * WindWoundHomeItem = [GuoJiQihuoNewsModel BaseinitWithDic:WindWoundHomeDics];
+            ShuyunHomeNewsModel * WindWoundHomeItem = [ShuyunHomeNewsModel BaseinitWithDic:WindWoundHomeDics];
             if (![WindWoundHomeItem.content containsString:@"https://interface.sina.cn/wap_api/video_location.d.html"]) {
                 [WindWoundHomeTemp addObject:WindWoundHomeItem];
             }

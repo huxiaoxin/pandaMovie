@@ -41,11 +41,11 @@
     }
     return self;
 }
--(void)setGuoJiNewsItem:(GuoJiQihuoNewsModel *)GuoJiNewsItem{
+- (void)setGuoJiNewsItem:(ShuyunHomeNewsModel *)GuoJiNewsItem{
     _GuoJiNewsItem = GuoJiNewsItem;
-    [_GuoJiNewsImgViews sd_setImageWithURL:[NSURL URLWithString:GuoJiNewsItem.pic]];
-    _GuoJiNewsTitlelbs.text =  GuoJiNewsItem.title;
-    _GuoJiNewsDetailbs.text = [self removeHtmlWithString:GuoJiNewsItem.content];
+    [_GuoJiNewsImgViews sd_setImageWithURL:[NSURL URLWithString:GuoJiNewsItem.imgUrl]];
+       _GuoJiNewsTitlelbs.text =  GuoJiNewsItem.title;
+       _GuoJiNewsDetailbs.text = [self removeHtmlWithString:GuoJiNewsItem.content];
 }
 -(void)layoutSubviews{
     _GuoJiNewsViews.frame = self.bounds;

@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GuoJiQihuoNewsModel.h"
+#import "ShuyunHomeNewsModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PandaHomeNewsTableViewCell : UITableViewCell
-@property(nonatomic,strong) GuoJiQihuoNewsModel * windtrendItem;
+@property(nonatomic,strong) ShuyunHomeNewsModel * windtrendItem;
 
 @end
 

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3427E3264F966A008DAF39 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A3427E2264F966A008DAF39 /* city.json */; };
+		4A3427E9264F968D008DAF39 /* ShuyunHomeNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3427E7264F968D008DAF39 /* ShuyunHomeNewsModel.m */; };
+		4A3427F2264FA1CE008DAF39 /* PandanCatagroyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3427F1264FA1CE008DAF39 /* PandanCatagroyTableViewCell.m */; };
+		4A3427F9264FA79F008DAF39 /* PandaSystemMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3427F8264FA79F008DAF39 /* PandaSystemMsgViewController.m */; };
+		4A342801264FA7EF008DAF39 /* PandasystemInfoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3427FE264FA7EF008DAF39 /* PandasystemInfoDetailController.m */; };
+		4A342802264FA7EF008DAF39 /* PandaSysTemMsgDetailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A3427FF264FA7EF008DAF39 /* PandaSysTemMsgDetailTableCell.m */; };
 		4A5EB1AF2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1AE2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m */; };
-		4A5EB1B52642E28600573BF3 /* GuoJiQihuoNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1B32642E28600573BF3 /* GuoJiQihuoNewsModel.m */; };
 		4A5EB1BB2642E29F00573BF3 /* PandaBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1BA2642E29F00573BF3 /* PandaBaseModel.m */; };
 		4A5EB1C12642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1C02642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m */; };
 		4A5EB1C72642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A5EB1C62642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.m */; };
@@ -87,10 +92,19 @@
 
 /* Begin PBXFileReference section */
 		0A2C849B2C9782A02C8F1A4B /* Pods_PandaMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PandaMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A3427E2264F966A008DAF39 /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		4A3427E7264F968D008DAF39 /* ShuyunHomeNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShuyunHomeNewsModel.m; sourceTree = "<group>"; };
+		4A3427E8264F968D008DAF39 /* ShuyunHomeNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShuyunHomeNewsModel.h; sourceTree = "<group>"; };
+		4A3427F0264FA1CE008DAF39 /* PandanCatagroyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandanCatagroyTableViewCell.h; sourceTree = "<group>"; };
+		4A3427F1264FA1CE008DAF39 /* PandanCatagroyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandanCatagroyTableViewCell.m; sourceTree = "<group>"; };
+		4A3427F7264FA79F008DAF39 /* PandaSystemMsgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaSystemMsgViewController.h; sourceTree = "<group>"; };
+		4A3427F8264FA79F008DAF39 /* PandaSystemMsgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaSystemMsgViewController.m; sourceTree = "<group>"; };
+		4A3427FD264FA7EF008DAF39 /* PandaSysTemMsgDetailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaSysTemMsgDetailTableCell.h; sourceTree = "<group>"; };
+		4A3427FE264FA7EF008DAF39 /* PandasystemInfoDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandasystemInfoDetailController.m; sourceTree = "<group>"; };
+		4A3427FF264FA7EF008DAF39 /* PandaSysTemMsgDetailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaSysTemMsgDetailTableCell.m; sourceTree = "<group>"; };
+		4A34280D264FA819008DAF39 /* PandasystemInfoDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandasystemInfoDetailController.h; sourceTree = "<group>"; };
 		4A5EB1AD2642E26D00573BF3 /* GuoJiQiqhuoNewsViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuoJiQiqhuoNewsViewLayout.h; sourceTree = "<group>"; };
 		4A5EB1AE2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuoJiQiqhuoNewsViewLayout.m; sourceTree = "<group>"; };
-		4A5EB1B32642E28600573BF3 /* GuoJiQihuoNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuoJiQihuoNewsModel.m; sourceTree = "<group>"; };
-		4A5EB1B42642E28600573BF3 /* GuoJiQihuoNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuoJiQihuoNewsModel.h; sourceTree = "<group>"; };
 		4A5EB1B92642E29F00573BF3 /* PandaBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaBaseModel.h; sourceTree = "<group>"; };
 		4A5EB1BA2642E29F00573BF3 /* PandaBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaBaseModel.m; sourceTree = "<group>"; };
 		4A5EB1BF2642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuoJiQihuoNewsCollectionCell.h; sourceTree = "<group>"; };
@@ -235,6 +249,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A3427F6264FA787008DAF39 /* Panda_systemMsg */ = {
+			isa = PBXGroup;
+			children = (
+				4A3427F7264FA79F008DAF39 /* PandaSystemMsgViewController.h */,
+				4A3427F8264FA79F008DAF39 /* PandaSystemMsgViewController.m */,
+				4A34280D264FA819008DAF39 /* PandasystemInfoDetailController.h */,
+				4A3427FE264FA7EF008DAF39 /* PandasystemInfoDetailController.m */,
+				4A3427FD264FA7EF008DAF39 /* PandaSysTemMsgDetailTableCell.h */,
+				4A3427FF264FA7EF008DAF39 /* PandaSysTemMsgDetailTableCell.m */,
+			);
+			path = Panda_systemMsg;
+			sourceTree = "<group>";
+		};
 		8A4826852640DFB800C385C6 = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +393,9 @@
 				8ADB8FAE26429B6C00C61A29 /* PandaCommonCollectionViewCell.m */,
 				8ADB8FB326429EEC00C61A29 /* PandaHomeNewsTableViewCell.h */,
 				8ADB8FB426429EEC00C61A29 /* PandaHomeNewsTableViewCell.m */,
+				4A3427E8264F968D008DAF39 /* ShuyunHomeNewsModel.h */,
+				4A3427E7264F968D008DAF39 /* ShuyunHomeNewsModel.m */,
+				4A3427E2264F966A008DAF39 /* city.json */,
 			);
 			path = Panda_Home;
 			sourceTree = "<group>";
@@ -373,8 +403,11 @@
 		8A4827182640E46D00C385C6 /* Panda_Catagroy */ = {
 			isa = PBXGroup;
 			children = (
+				4A3427F6264FA787008DAF39 /* Panda_systemMsg */,
 				8A4827472640E69E00C385C6 /* PandaCatagoryViewController.h */,
 				8A4827482640E69E00C385C6 /* PandaCatagoryViewController.m */,
+				4A3427F0264FA1CE008DAF39 /* PandanCatagroyTableViewCell.h */,
+				4A3427F1264FA1CE008DAF39 /* PandanCatagroyTableViewCell.m */,
 			);
 			path = Panda_Catagroy;
 			sourceTree = "<group>";
@@ -474,8 +507,6 @@
 				8ADB8F8F2642895300C61A29 /* PandaHotNewsViewController.m */,
 				4A5EB1AD2642E26D00573BF3 /* GuoJiQiqhuoNewsViewLayout.h */,
 				4A5EB1AE2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m */,
-				4A5EB1B42642E28600573BF3 /* GuoJiQihuoNewsModel.h */,
-				4A5EB1B32642E28600573BF3 /* GuoJiQihuoNewsModel.m */,
 				4A5EB1BF2642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.h */,
 				4A5EB1C02642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m */,
 				4A5EB1C52642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.h */,
@@ -620,6 +651,7 @@
 			files = (
 				8A4826A12640DFBA00C385C6 /* LaunchScreen.storyboard in Resources */,
 				8A48269E2640DFBA00C385C6 /* Assets.xcassets in Resources */,
+				4A3427E3264F966A008DAF39 /* city.json in Resources */,
 				8A48269C2640DFB800C385C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,7 +722,6 @@
 				8A4826992640DFB800C385C6 /* ViewController.m in Sources */,
 				4A5EB1CD2642E33B00573BF3 /* GuoJiQihuoNewsSizeTools.m in Sources */,
 				8A4827552640E6AC00C385C6 /* PandaMsgViewController.m in Sources */,
-				4A5EB1B52642E28600573BF3 /* GuoJiQihuoNewsModel.m in Sources */,
 				8ADB8F9A2642899700C61A29 /* PandaGoodFilmViewController.m in Sources */,
 				8A4827492640E69E00C385C6 /* PandaCatagoryViewController.m in Sources */,
 				8ADB8F6826426AF700C61A29 /* PandaKefuTableViewCell.m in Sources */,
@@ -701,6 +732,7 @@
 				8A5134862643BD7900C492F0 /* PandaGoodFilmTableViewCell.m in Sources */,
 				8ADB8F7D26426FFA00C61A29 /* FilmChatZoneChatDetailToolsView.m in Sources */,
 				8A48271E2640E4BE00C385C6 /* PandaBaseTabbarViewController.m in Sources */,
+				4A342802264FA7EF008DAF39 /* PandaSysTemMsgDetailTableCell.m in Sources */,
 				8ADB8F582642693600C61A29 /* PandaBangdanViewController.m in Sources */,
 				8A4826932640DFB800C385C6 /* AppDelegate.m in Sources */,
 				8A48270D2640E3E400C385C6 /* UIButton+CHRegex.m in Sources */,
@@ -709,6 +741,7 @@
 				8A48270C2640E3E400C385C6 /* UIView+frame.m in Sources */,
 				8A4827722640ECBF00C385C6 /* CHCardItemModel.m in Sources */,
 				8A48270F2640E3E400C385C6 /* LMJHorizontalScrollText.m in Sources */,
+				4A3427F2264FA1CE008DAF39 /* PandanCatagroyTableViewCell.m in Sources */,
 				8A48277A2640ECDA00C385C6 /* CHCardItemCustomView.m in Sources */,
 				8A4826A42640DFBA00C385C6 /* main.m in Sources */,
 				8A4827802640F42C00C385C6 /* PandaHomeNavView.m in Sources */,
@@ -717,6 +750,7 @@
 				8A51347A26438E9000C492F0 /* UIView+ACSLayer.m in Sources */,
 				8A4827082640E3E400C385C6 /* UITextField+AddPlaceholder.m in Sources */,
 				8A4827092640E3E400C385C6 /* UIView+shadowPath.m in Sources */,
+				4A3427F9264FA79F008DAF39 /* PandaSystemMsgViewController.m in Sources */,
 				8A4827432640E69400C385C6 /* PandaHomeViewController.m in Sources */,
 				8A48272D2640E4F700C385C6 /* AppDelegate+PandaSafe.m in Sources */,
 				8ADB8FB526429EEC00C61A29 /* PandaHomeNewsTableViewCell.m in Sources */,
@@ -726,6 +760,7 @@
 				8ADB8F7726426B6300C61A29 /* FilmChatDetailMoel.m in Sources */,
 				8ADB8F902642895300C61A29 /* PandaHotNewsViewController.m in Sources */,
 				8ADB8FAF26429B6C00C61A29 /* PandaCommonCollectionViewCell.m in Sources */,
+				4A3427E9264F968D008DAF39 /* ShuyunHomeNewsModel.m in Sources */,
 				8A4827342640E55A00C385C6 /* PandaLoginViewController.m in Sources */,
 				4A5EB1C72642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.m in Sources */,
 				8A4827862640F77F00C385C6 /* PandaHomeBtn.m in Sources */,
@@ -734,6 +769,7 @@
 				8A4827272640E4D200C385C6 /* PandaBaseViewController.m in Sources */,
 				4A5EB1D92642E3AE00573BF3 /* NSDictionary+DeleteNull.m in Sources */,
 				8A4827732640ECBF00C385C6 /* CHCardItemView.m in Sources */,
+				4A342801264FA7EF008DAF39 /* PandasystemInfoDetailController.m in Sources */,
 				4A5EB1BB2642E29F00573BF3 /* PandaBaseModel.m in Sources */,
 				8ADB8F622642694D00C61A29 /* PandaHotComentViewController.m in Sources */,
 				8ADB8F4E2642691E00C61A29 /* PandaKefuViewController.m in Sources */,

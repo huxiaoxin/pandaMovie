@@ -53,11 +53,11 @@
     }
     return self;
 }
--(void)setWindtrendItem:(GuoJiQihuoNewsModel *)windtrendItem{
-    _windtrendItem  = windtrendItem;
-    _WindwoundNewsTitle.text = windtrendItem.title;
-    _WindwoundTimelb.text = windtrendItem.time;
-    [_WindwoundNewsImgView sd_setImageWithURL:[NSURL URLWithString:windtrendItem.pic]];
+- (void)setWindtrendItem:(ShuyunHomeNewsModel *)windtrendItem{
+    _windtrendItem =  windtrendItem;
+        _WindwoundNewsTitle.text = windtrendItem.title;
+        _WindwoundTimelb.text = windtrendItem.time;
+        [_WindwoundNewsImgView sd_setImageWithURL:[NSURL URLWithString:windtrendItem.imgUrl]];
 }
 @end
 
