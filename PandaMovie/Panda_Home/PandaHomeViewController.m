@@ -49,7 +49,7 @@
     self.gk_navigationBar.hidden = YES;
     [self.view addSubview:self.PandaNavView];
     [self.view addSubview:self.PandaHomeTableView];
-    self.PandaHeader.kheight = self.PandaHeader.PandanHeaderHeight;
+    self.PandaHeader.height = self.PandaHeader.PandanHeaderHeight;
     _PandaHomeTableView.tableHeaderView  = self.PandaHeader;
 }
 - (PandaHomeHeaderView *)PandaHeader{

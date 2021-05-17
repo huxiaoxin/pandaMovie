@@ -33,7 +33,6 @@
 		8A4827092640E3E400C385C6 /* UIView+shadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826F62640E3E400C385C6 /* UIView+shadowPath.m */; };
 		8A48270A2640E3E400C385C6 /* UIViewController+IOS13.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826F82640E3E400C385C6 /* UIViewController+IOS13.m */; };
 		8A48270B2640E3E400C385C6 /* NSString+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826F92640E3E400C385C6 /* NSString+CHRegex.m */; };
-		8A48270C2640E3E400C385C6 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826FA2640E3E400C385C6 /* UIView+frame.m */; };
 		8A48270D2640E3E400C385C6 /* UIButton+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826FD2640E3E400C385C6 /* UIButton+CHRegex.m */; };
 		8A48270E2640E3E400C385C6 /* UIColor+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826FF2640E3E400C385C6 /* UIColor+CHRegex.m */; };
 		8A48270F2640E3E400C385C6 /* LMJHorizontalScrollText.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4827042640E3E400C385C6 /* LMJHorizontalScrollText.m */; };
@@ -70,6 +69,37 @@
 		8ADB8FA326428CED00C61A29 /* PandaHotingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8FA226428CED00C61A29 /* PandaHotingCollectionViewCell.m */; };
 		8ADB8FAF26429B6C00C61A29 /* PandaCommonCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8FAE26429B6C00C61A29 /* PandaCommonCollectionViewCell.m */; };
 		8ADB8FB526429EEC00C61A29 /* PandaHomeNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8FB426429EEC00C61A29 /* PandaHomeNewsTableViewCell.m */; };
+		8AF3B6D92651FB3E00C0408D /* ZLCollectionBaseDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6C72651FB3E00C0408D /* ZLCollectionBaseDecorationView.m */; };
+		8AF3B6DA2651FB3E00C0408D /* ZLCellFakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6C82651FB3E00C0408D /* ZLCellFakeView.m */; };
+		8AF3B6DB2651FB3E00C0408D /* ZLCollectionViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6C92651FB3E00C0408D /* ZLCollectionViewLayoutAttributes.m */; };
+		8AF3B6DC2651FB3E00C0408D /* ZLCollectionViewHorzontalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6CD2651FB3E00C0408D /* ZLCollectionViewHorzontalLayout.m */; };
+		8AF3B6DD2651FB3E00C0408D /* ZLCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6CE2651FB3E00C0408D /* ZLCollectionReusableView.m */; };
+		8AF3B6DE2651FB3E00C0408D /* ZLCollectionViewBaseFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6CF2651FB3E00C0408D /* ZLCollectionViewBaseFlowLayout.m */; };
+		8AF3B6DF2651FB3E00C0408D /* ZLCollectionViewBackgroundViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6D32651FB3E00C0408D /* ZLCollectionViewBackgroundViewLayoutAttributes.m */; };
+		8AF3B6E02651FB3E00C0408D /* ZLBaseEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6D42651FB3E00C0408D /* ZLBaseEventModel.m */; };
+		8AF3B6E12651FB3E00C0408D /* ZLCollectionViewVerticalLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6D72651FB3E00C0408D /* ZLCollectionViewVerticalLayout.m */; };
+		8AF3B6E72651FC5300C0408D /* PandaZoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6E62651FC5300C0408D /* PandaZoneModel.m */; };
+		8AF3B6ED2651FC7700C0408D /* PandaZoneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6EC2651FC7700C0408D /* PandaZoneCollectionViewCell.m */; };
+		8AF3B6F626520DCF00C0408D /* UIView+HZXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B6F526520DCF00C0408D /* UIView+HZXFrame.m */; };
+		8AF3B72B265241D400C0408D /* JRWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B72A265241D400C0408D /* JRWaterFallLayout.m */; };
+		8AF3B73B2652452000C0408D /* PandaZoneJubaoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7302652452000C0408D /* PandaZoneJubaoTableViewCell.m */; };
+		8AF3B73C2652452000C0408D /* PandaZoneJubaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7312652452000C0408D /* PandaZoneJubaoModel.m */; };
+		8AF3B73D2652452000C0408D /* PandaZoneJubaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7332652452000C0408D /* PandaZoneJubaoController.m */; };
+		8AF3B73E2652452000C0408D /* PandaSendZoneToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7372652452000C0408D /* PandaSendZoneToolController.m */; };
+		8AF3B73F2652452000C0408D /* PandaSedZoneCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7382652452000C0408D /* PandaSedZoneCollectionCell.m */; };
+		8AF3B7502652457600C0408D /* PandaZoneDetaolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B74C2652457600C0408D /* PandaZoneDetaolCell.m */; };
+		8AF3B7512652457600C0408D /* PandaZoneDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B74D2652457600C0408D /* PandaZoneDetailController.m */; };
+		8AF3B7522652457600C0408D /* PandaZoneDetailheadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B74E2652457600C0408D /* PandaZoneDetailheadeView.m */; };
+		8AF3B75B2652464E00C0408D /* PandaComentListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B75A2652464E00C0408D /* PandaComentListModel.m */; };
+		8AF3B76726524FBB00C0408D /* PandaMsgTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B76626524FBB00C0408D /* PandaMsgTableViewCell.m */; };
+		8AF3B76D2652567200C0408D /* PandaCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B76C2652567200C0408D /* PandaCenterHeaderView.m */; };
+		8AF3B7732652584100C0408D /* PandaCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7722652584100C0408D /* PandaCenterTableViewCell.m */; };
+		8AF3B799265269E700C0408D /* PandaSugedtionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B798265269E700C0408D /* PandaSugedtionViewController.m */; };
+		8AF3B7A3265269F900C0408D /* PandaAboutusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7A2265269F900C0408D /* PandaAboutusViewController.m */; };
+		8AF3B7AD26526A1A00C0408D /* PandaMyCollecedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7AC26526A1A00C0408D /* PandaMyCollecedViewController.m */; };
+		8AF3B7B726526A3600C0408D /* PandaMyyuYueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7B626526A3600C0408D /* PandaMyyuYueViewController.m */; };
+		8AF3B7BE26526A5C00C0408D /* PandaMySendZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7BD26526A5C00C0408D /* PandaMySendZoneViewController.m */; };
+		8AF3B7C926526DA000C0408D /* PandaCenterChangeInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3B7C726526DA000C0408D /* PandaCenterChangeInfoController.m */; };
 		BE9F35FD020603D40EF3F4D5 /* Pods_PandaMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2C849B2C9782A02C8F1A4B /* Pods_PandaMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,7 +173,6 @@
 		8A4826F72640E3E400C385C6 /* UIButton+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CHRegex.h"; sourceTree = "<group>"; };
 		8A4826F82640E3E400C385C6 /* UIViewController+IOS13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+IOS13.m"; sourceTree = "<group>"; };
 		8A4826F92640E3E400C385C6 /* NSString+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHRegex.m"; sourceTree = "<group>"; };
-		8A4826FA2640E3E400C385C6 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		8A4826FB2640E3E400C385C6 /* LMJHorizontalScrollText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJHorizontalScrollText.h; sourceTree = "<group>"; };
 		8A4826FC2640E3E400C385C6 /* UILabel+CDGPSpaceLb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CDGPSpaceLb.h"; sourceTree = "<group>"; };
 		8A4826FD2640E3E400C385C6 /* UIButton+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CHRegex.m"; sourceTree = "<group>"; };
@@ -154,7 +183,6 @@
 		8A4827022640E3E400C385C6 /* NSString+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CHRegex.h"; sourceTree = "<group>"; };
 		8A4827032640E3E400C385C6 /* UIViewController+IOS13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+IOS13.h"; sourceTree = "<group>"; };
 		8A4827042640E3E400C385C6 /* LMJHorizontalScrollText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJHorizontalScrollText.m; sourceTree = "<group>"; };
-		8A4827052640E3E400C385C6 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		8A4827062640E3E400C385C6 /* UILabel+CDGPSpaceLb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CDGPSpaceLb.m"; sourceTree = "<group>"; };
 		8A48271C2640E4BE00C385C6 /* PandaBaseTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaBaseTabbarViewController.h; sourceTree = "<group>"; };
 		8A48271D2640E4BE00C385C6 /* PandaBaseTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaBaseTabbarViewController.m; sourceTree = "<group>"; };
@@ -220,6 +248,68 @@
 		8ADB8FAE26429B6C00C61A29 /* PandaCommonCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaCommonCollectionViewCell.m; sourceTree = "<group>"; };
 		8ADB8FB326429EEC00C61A29 /* PandaHomeNewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaHomeNewsTableViewCell.h; sourceTree = "<group>"; };
 		8ADB8FB426429EEC00C61A29 /* PandaHomeNewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHomeNewsTableViewCell.m; sourceTree = "<group>"; };
+		8AF3B6C72651FB3E00C0408D /* ZLCollectionBaseDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCollectionBaseDecorationView.m; sourceTree = "<group>"; };
+		8AF3B6C82651FB3E00C0408D /* ZLCellFakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCellFakeView.m; sourceTree = "<group>"; };
+		8AF3B6C92651FB3E00C0408D /* ZLCollectionViewLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCollectionViewLayoutAttributes.m; sourceTree = "<group>"; };
+		8AF3B6CA2651FB3E00C0408D /* ZLBaseEventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLBaseEventModel.h; sourceTree = "<group>"; };
+		8AF3B6CB2651FB3E00C0408D /* ZLCollectionViewBackgroundViewLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCollectionViewBackgroundViewLayoutAttributes.h; sourceTree = "<group>"; };
+		8AF3B6CC2651FB3E00C0408D /* ZLCollectionViewVerticalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCollectionViewVerticalLayout.h; sourceTree = "<group>"; };
+		8AF3B6CD2651FB3E00C0408D /* ZLCollectionViewHorzontalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCollectionViewHorzontalLayout.m; sourceTree = "<group>"; };
+		8AF3B6CE2651FB3E00C0408D /* ZLCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCollectionReusableView.m; sourceTree = "<group>"; };
+		8AF3B6CF2651FB3E00C0408D /* ZLCollectionViewBaseFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCollectionViewBaseFlowLayout.m; sourceTree = "<group>"; };
+		8AF3B6D02651FB3E00C0408D /* ZLCollectionViewLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCollectionViewLayoutAttributes.h; sourceTree = "<group>"; };
+		8AF3B6D12651FB3E00C0408D /* ZLCellFakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCellFakeView.h; sourceTree = "<group>"; };
+		8AF3B6D22651FB3E00C0408D /* ZLCollectionBaseDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCollectionBaseDecorationView.h; sourceTree = "<group>"; };
+		8AF3B6D32651FB3E00C0408D /* ZLCollectionViewBackgroundViewLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCollectionViewBackgroundViewLayoutAttributes.m; sourceTree = "<group>"; };
+		8AF3B6D42651FB3E00C0408D /* ZLBaseEventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLBaseEventModel.m; sourceTree = "<group>"; };
+		8AF3B6D52651FB3E00C0408D /* ZLCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCollectionReusableView.h; sourceTree = "<group>"; };
+		8AF3B6D62651FB3E00C0408D /* ZLCollectionViewHorzontalLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCollectionViewHorzontalLayout.h; sourceTree = "<group>"; };
+		8AF3B6D72651FB3E00C0408D /* ZLCollectionViewVerticalLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCollectionViewVerticalLayout.m; sourceTree = "<group>"; };
+		8AF3B6D82651FB3E00C0408D /* ZLCollectionViewBaseFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCollectionViewBaseFlowLayout.h; sourceTree = "<group>"; };
+		8AF3B6E52651FC5300C0408D /* PandaZoneModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaZoneModel.h; sourceTree = "<group>"; };
+		8AF3B6E62651FC5300C0408D /* PandaZoneModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaZoneModel.m; sourceTree = "<group>"; };
+		8AF3B6EB2651FC7700C0408D /* PandaZoneCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaZoneCollectionViewCell.h; sourceTree = "<group>"; };
+		8AF3B6EC2651FC7700C0408D /* PandaZoneCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaZoneCollectionViewCell.m; sourceTree = "<group>"; };
+		8AF3B6F426520DCF00C0408D /* UIView+HZXFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HZXFrame.h"; sourceTree = "<group>"; };
+		8AF3B6F526520DCF00C0408D /* UIView+HZXFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HZXFrame.m"; sourceTree = "<group>"; };
+		8AF3B729265241D400C0408D /* JRWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRWaterFallLayout.h; sourceTree = "<group>"; };
+		8AF3B72A265241D400C0408D /* JRWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRWaterFallLayout.m; sourceTree = "<group>"; };
+		8AF3B7302652452000C0408D /* PandaZoneJubaoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaZoneJubaoTableViewCell.m; sourceTree = "<group>"; };
+		8AF3B7312652452000C0408D /* PandaZoneJubaoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaZoneJubaoModel.m; sourceTree = "<group>"; };
+		8AF3B7322652452000C0408D /* PandaZoneJubaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaZoneJubaoController.h; sourceTree = "<group>"; };
+		8AF3B7332652452000C0408D /* PandaZoneJubaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaZoneJubaoController.m; sourceTree = "<group>"; };
+		8AF3B7342652452000C0408D /* PandaZoneJubaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaZoneJubaoModel.h; sourceTree = "<group>"; };
+		8AF3B7352652452000C0408D /* PandaZoneJubaoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaZoneJubaoTableViewCell.h; sourceTree = "<group>"; };
+		8AF3B7372652452000C0408D /* PandaSendZoneToolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaSendZoneToolController.m; sourceTree = "<group>"; wrapsLines = 0; };
+		8AF3B7382652452000C0408D /* PandaSedZoneCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaSedZoneCollectionCell.m; sourceTree = "<group>"; };
+		8AF3B7392652452000C0408D /* PandaSendZoneToolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaSendZoneToolController.h; sourceTree = "<group>"; };
+		8AF3B73A2652452000C0408D /* PandaSedZoneCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaSedZoneCollectionCell.h; sourceTree = "<group>"; };
+		8AF3B74A2652457600C0408D /* PandaZoneDetailheadeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaZoneDetailheadeView.h; sourceTree = "<group>"; };
+		8AF3B74B2652457600C0408D /* PandaZoneDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaZoneDetailController.h; sourceTree = "<group>"; };
+		8AF3B74C2652457600C0408D /* PandaZoneDetaolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaZoneDetaolCell.m; sourceTree = "<group>"; };
+		8AF3B74D2652457600C0408D /* PandaZoneDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaZoneDetailController.m; sourceTree = "<group>"; };
+		8AF3B74E2652457600C0408D /* PandaZoneDetailheadeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaZoneDetailheadeView.m; sourceTree = "<group>"; };
+		8AF3B74F2652457600C0408D /* PandaZoneDetaolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaZoneDetaolCell.h; sourceTree = "<group>"; };
+		8AF3B7592652464E00C0408D /* PandaComentListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaComentListModel.h; sourceTree = "<group>"; };
+		8AF3B75A2652464E00C0408D /* PandaComentListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaComentListModel.m; sourceTree = "<group>"; };
+		8AF3B76526524FBB00C0408D /* PandaMsgTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaMsgTableViewCell.h; sourceTree = "<group>"; };
+		8AF3B76626524FBB00C0408D /* PandaMsgTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaMsgTableViewCell.m; sourceTree = "<group>"; };
+		8AF3B76B2652567200C0408D /* PandaCenterHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaCenterHeaderView.h; sourceTree = "<group>"; };
+		8AF3B76C2652567200C0408D /* PandaCenterHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaCenterHeaderView.m; sourceTree = "<group>"; };
+		8AF3B7712652584100C0408D /* PandaCenterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaCenterTableViewCell.h; sourceTree = "<group>"; };
+		8AF3B7722652584100C0408D /* PandaCenterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaCenterTableViewCell.m; sourceTree = "<group>"; };
+		8AF3B797265269E700C0408D /* PandaSugedtionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaSugedtionViewController.h; sourceTree = "<group>"; };
+		8AF3B798265269E700C0408D /* PandaSugedtionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaSugedtionViewController.m; sourceTree = "<group>"; };
+		8AF3B7A1265269F900C0408D /* PandaAboutusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaAboutusViewController.h; sourceTree = "<group>"; };
+		8AF3B7A2265269F900C0408D /* PandaAboutusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaAboutusViewController.m; sourceTree = "<group>"; };
+		8AF3B7AB26526A1A00C0408D /* PandaMyCollecedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaMyCollecedViewController.h; sourceTree = "<group>"; };
+		8AF3B7AC26526A1A00C0408D /* PandaMyCollecedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaMyCollecedViewController.m; sourceTree = "<group>"; };
+		8AF3B7B526526A3600C0408D /* PandaMyyuYueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaMyyuYueViewController.h; sourceTree = "<group>"; };
+		8AF3B7B626526A3600C0408D /* PandaMyyuYueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaMyyuYueViewController.m; sourceTree = "<group>"; };
+		8AF3B7BC26526A5C00C0408D /* PandaMySendZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaMySendZoneViewController.h; sourceTree = "<group>"; };
+		8AF3B7BD26526A5C00C0408D /* PandaMySendZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaMySendZoneViewController.m; sourceTree = "<group>"; };
+		8AF3B7C726526DA000C0408D /* PandaCenterChangeInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaCenterChangeInfoController.m; sourceTree = "<group>"; };
+		8AF3B7C826526DA000C0408D /* PandaCenterChangeInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaCenterChangeInfoController.h; sourceTree = "<group>"; };
 		FD9B8581B943B5AA76F259DC /* Pods-PandaMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaMovie.debug.xcconfig"; path = "Target Support Files/Pods-PandaMovie/Pods-PandaMovie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,7 +357,6 @@
 			children = (
 				8A4826902640DFB800C385C6 /* PandaMovie */,
 				8A4826AC2640DFBA00C385C6 /* PandaMovieTests */,
-				8A4826B72640DFBA00C385C6 /* PandaMovieUITests */,
 				8A48268F2640DFB800C385C6 /* Products */,
 				93C113C0CF0F460680139174 /* Pods */,
 				F2527F76188711472E1DC9F4 /* Frameworks */,
@@ -313,6 +402,7 @@
 				8A4826EE2640E3B300C385C6 /* PrefixHeader.pch */,
 				4A5EB1B92642E29F00573BF3 /* PandaBaseModel.h */,
 				4A5EB1BA2642E29F00573BF3 /* PandaBaseModel.m */,
+				8A4826B72640DFBA00C385C6 /* PandaMovieUITests */,
 			);
 			path = PandaMovie;
 			sourceTree = "<group>";
@@ -338,6 +428,11 @@
 		8A4826F22640E3E400C385C6 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				8AF3B729265241D400C0408D /* JRWaterFallLayout.h */,
+				8AF3B72A265241D400C0408D /* JRWaterFallLayout.m */,
+				8AF3B6F426520DCF00C0408D /* UIView+HZXFrame.h */,
+				8AF3B6F526520DCF00C0408D /* UIView+HZXFrame.m */,
+				8AF3B6C62651FB3E00C0408D /* ZLCollectionFlowLayout */,
 				8A51347826438E9000C492F0 /* UIView+ACSLayer.h */,
 				8A51347926438E9000C492F0 /* UIView+ACSLayer.m */,
 				4A5EB1D82642E3AE00573BF3 /* NSDictionary+DeleteNull.h */,
@@ -352,7 +447,6 @@
 				8A4826F72640E3E400C385C6 /* UIButton+CHRegex.h */,
 				8A4826F82640E3E400C385C6 /* UIViewController+IOS13.m */,
 				8A4826F92640E3E400C385C6 /* NSString+CHRegex.m */,
-				8A4826FA2640E3E400C385C6 /* UIView+frame.m */,
 				8A4826FB2640E3E400C385C6 /* LMJHorizontalScrollText.h */,
 				8A4826FC2640E3E400C385C6 /* UILabel+CDGPSpaceLb.h */,
 				8A4826FD2640E3E400C385C6 /* UIButton+CHRegex.m */,
@@ -363,7 +457,6 @@
 				8A4827022640E3E400C385C6 /* NSString+CHRegex.h */,
 				8A4827032640E3E400C385C6 /* UIViewController+IOS13.h */,
 				8A4827042640E3E400C385C6 /* LMJHorizontalScrollText.m */,
-				8A4827052640E3E400C385C6 /* UIView+frame.h */,
 				8A4827062640E3E400C385C6 /* UILabel+CDGPSpaceLb.m */,
 				8ADB8F7C26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.h */,
 				8ADB8F7B26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.m */,
@@ -415,8 +508,15 @@
 		8A4827192640E47700C385C6 /* Panda_Zone */ = {
 			isa = PBXGroup;
 			children = (
+				8AF3B7492652457600C0408D /* 详情 */,
+				8AF3B7362652452000C0408D /* 发布 */,
+				8AF3B72F2652452000C0408D /* 举报 */,
 				8A48274D2640E6A500C385C6 /* PandaZoneViewController.h */,
 				8A48274E2640E6A500C385C6 /* PandaZoneViewController.m */,
+				8AF3B6EB2651FC7700C0408D /* PandaZoneCollectionViewCell.h */,
+				8AF3B6EC2651FC7700C0408D /* PandaZoneCollectionViewCell.m */,
+				8AF3B6E52651FC5300C0408D /* PandaZoneModel.h */,
+				8AF3B6E62651FC5300C0408D /* PandaZoneModel.m */,
 			);
 			path = Panda_Zone;
 			sourceTree = "<group>";
@@ -426,6 +526,8 @@
 			children = (
 				8A4827532640E6AC00C385C6 /* PandaMsgViewController.h */,
 				8A4827542640E6AC00C385C6 /* PandaMsgViewController.m */,
+				8AF3B76526524FBB00C0408D /* PandaMsgTableViewCell.h */,
+				8AF3B76626524FBB00C0408D /* PandaMsgTableViewCell.m */,
 			);
 			path = Panda_Msg;
 			sourceTree = "<group>";
@@ -433,8 +535,18 @@
 		8A48271B2640E49000C385C6 /* Panda_Center */ = {
 			isa = PBXGroup;
 			children = (
+				8AF3B7C626526D7500C0408D /* Panda_个人资料 */,
+				8AF3B7BB26526A4300C0408D /* Panda_我的发布 */,
+				8AF3B7B426526A2400C0408D /* Panda_我的预约 */,
+				8AF3B7AA26526A0700C0408D /* Panda_我的收藏 */,
+				8AF3B7A0265269ED00C0408D /* Panda_关于我们 */,
+				8AF3B796265269CD00C0408D /* Panda_意见反馈 */,
 				8A4827592640E6B300C385C6 /* PandaCenterViewController.h */,
 				8A48275A2640E6B300C385C6 /* PandaCenterViewController.m */,
+				8AF3B76B2652567200C0408D /* PandaCenterHeaderView.h */,
+				8AF3B76C2652567200C0408D /* PandaCenterHeaderView.m */,
+				8AF3B7712652584100C0408D /* PandaCenterTableViewCell.h */,
+				8AF3B7722652584100C0408D /* PandaCenterTableViewCell.m */,
 			);
 			path = Panda_Center;
 			sourceTree = "<group>";
@@ -526,6 +638,124 @@
 				8A5134852643BD7900C492F0 /* PandaGoodFilmTableViewCell.m */,
 			);
 			path = Panda_GoodFilm;
+			sourceTree = "<group>";
+		};
+		8AF3B6C62651FB3E00C0408D /* ZLCollectionFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B6C72651FB3E00C0408D /* ZLCollectionBaseDecorationView.m */,
+				8AF3B6C82651FB3E00C0408D /* ZLCellFakeView.m */,
+				8AF3B6C92651FB3E00C0408D /* ZLCollectionViewLayoutAttributes.m */,
+				8AF3B6CA2651FB3E00C0408D /* ZLBaseEventModel.h */,
+				8AF3B6CB2651FB3E00C0408D /* ZLCollectionViewBackgroundViewLayoutAttributes.h */,
+				8AF3B6CC2651FB3E00C0408D /* ZLCollectionViewVerticalLayout.h */,
+				8AF3B6CD2651FB3E00C0408D /* ZLCollectionViewHorzontalLayout.m */,
+				8AF3B6CE2651FB3E00C0408D /* ZLCollectionReusableView.m */,
+				8AF3B6CF2651FB3E00C0408D /* ZLCollectionViewBaseFlowLayout.m */,
+				8AF3B6D02651FB3E00C0408D /* ZLCollectionViewLayoutAttributes.h */,
+				8AF3B6D12651FB3E00C0408D /* ZLCellFakeView.h */,
+				8AF3B6D22651FB3E00C0408D /* ZLCollectionBaseDecorationView.h */,
+				8AF3B6D32651FB3E00C0408D /* ZLCollectionViewBackgroundViewLayoutAttributes.m */,
+				8AF3B6D42651FB3E00C0408D /* ZLBaseEventModel.m */,
+				8AF3B6D52651FB3E00C0408D /* ZLCollectionReusableView.h */,
+				8AF3B6D62651FB3E00C0408D /* ZLCollectionViewHorzontalLayout.h */,
+				8AF3B6D72651FB3E00C0408D /* ZLCollectionViewVerticalLayout.m */,
+				8AF3B6D82651FB3E00C0408D /* ZLCollectionViewBaseFlowLayout.h */,
+			);
+			path = ZLCollectionFlowLayout;
+			sourceTree = "<group>";
+		};
+		8AF3B72F2652452000C0408D /* 举报 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B7352652452000C0408D /* PandaZoneJubaoTableViewCell.h */,
+				8AF3B7302652452000C0408D /* PandaZoneJubaoTableViewCell.m */,
+				8AF3B7342652452000C0408D /* PandaZoneJubaoModel.h */,
+				8AF3B7312652452000C0408D /* PandaZoneJubaoModel.m */,
+				8AF3B7322652452000C0408D /* PandaZoneJubaoController.h */,
+				8AF3B7332652452000C0408D /* PandaZoneJubaoController.m */,
+			);
+			path = "举报";
+			sourceTree = "<group>";
+		};
+		8AF3B7362652452000C0408D /* 发布 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B7392652452000C0408D /* PandaSendZoneToolController.h */,
+				8AF3B7372652452000C0408D /* PandaSendZoneToolController.m */,
+				8AF3B73A2652452000C0408D /* PandaSedZoneCollectionCell.h */,
+				8AF3B7382652452000C0408D /* PandaSedZoneCollectionCell.m */,
+			);
+			path = "发布";
+			sourceTree = "<group>";
+		};
+		8AF3B7492652457600C0408D /* 详情 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B74A2652457600C0408D /* PandaZoneDetailheadeView.h */,
+				8AF3B74E2652457600C0408D /* PandaZoneDetailheadeView.m */,
+				8AF3B74B2652457600C0408D /* PandaZoneDetailController.h */,
+				8AF3B74D2652457600C0408D /* PandaZoneDetailController.m */,
+				8AF3B74F2652457600C0408D /* PandaZoneDetaolCell.h */,
+				8AF3B74C2652457600C0408D /* PandaZoneDetaolCell.m */,
+				8AF3B7592652464E00C0408D /* PandaComentListModel.h */,
+				8AF3B75A2652464E00C0408D /* PandaComentListModel.m */,
+			);
+			path = "详情";
+			sourceTree = "<group>";
+		};
+		8AF3B796265269CD00C0408D /* Panda_意见反馈 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B797265269E700C0408D /* PandaSugedtionViewController.h */,
+				8AF3B798265269E700C0408D /* PandaSugedtionViewController.m */,
+			);
+			path = "Panda_意见反馈";
+			sourceTree = "<group>";
+		};
+		8AF3B7A0265269ED00C0408D /* Panda_关于我们 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B7A1265269F900C0408D /* PandaAboutusViewController.h */,
+				8AF3B7A2265269F900C0408D /* PandaAboutusViewController.m */,
+			);
+			path = "Panda_关于我们";
+			sourceTree = "<group>";
+		};
+		8AF3B7AA26526A0700C0408D /* Panda_我的收藏 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B7AB26526A1A00C0408D /* PandaMyCollecedViewController.h */,
+				8AF3B7AC26526A1A00C0408D /* PandaMyCollecedViewController.m */,
+			);
+			path = "Panda_我的收藏";
+			sourceTree = "<group>";
+		};
+		8AF3B7B426526A2400C0408D /* Panda_我的预约 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B7B526526A3600C0408D /* PandaMyyuYueViewController.h */,
+				8AF3B7B626526A3600C0408D /* PandaMyyuYueViewController.m */,
+			);
+			path = "Panda_我的预约";
+			sourceTree = "<group>";
+		};
+		8AF3B7BB26526A4300C0408D /* Panda_我的发布 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B7BC26526A5C00C0408D /* PandaMySendZoneViewController.h */,
+				8AF3B7BD26526A5C00C0408D /* PandaMySendZoneViewController.m */,
+			);
+			path = "Panda_我的发布";
+			sourceTree = "<group>";
+		};
+		8AF3B7C626526D7500C0408D /* Panda_个人资料 */ = {
+			isa = PBXGroup;
+			children = (
+				8AF3B7C826526DA000C0408D /* PandaCenterChangeInfoController.h */,
+				8AF3B7C726526DA000C0408D /* PandaCenterChangeInfoController.m */,
+			);
+			path = "Panda_个人资料";
 			sourceTree = "<group>";
 		};
 		93C113C0CF0F460680139174 /* Pods */ = {
@@ -719,6 +949,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF3B72B265241D400C0408D /* JRWaterFallLayout.m in Sources */,
 				8A4826992640DFB800C385C6 /* ViewController.m in Sources */,
 				4A5EB1CD2642E33B00573BF3 /* GuoJiQihuoNewsSizeTools.m in Sources */,
 				8A4827552640E6AC00C385C6 /* PandaMsgViewController.m in Sources */,
@@ -727,41 +958,68 @@
 				8ADB8F6826426AF700C61A29 /* PandaKefuTableViewCell.m in Sources */,
 				8A4827102640E3E400C385C6 /* UILabel+CDGPSpaceLb.m in Sources */,
 				8ADB8FA326428CED00C61A29 /* PandaHotingCollectionViewCell.m in Sources */,
+				8AF3B73B2652452000C0408D /* PandaZoneJubaoTableViewCell.m in Sources */,
 				8ADB8F832642813600C61A29 /* PandaBangdanTableViewCell.m in Sources */,
+				8AF3B7A3265269F900C0408D /* PandaAboutusViewController.m in Sources */,
 				4A5EB1D32642E38200573BF3 /* LYHSTockHttpRequestTool.m in Sources */,
+				8AF3B73F2652452000C0408D /* PandaSedZoneCollectionCell.m in Sources */,
 				8A5134862643BD7900C492F0 /* PandaGoodFilmTableViewCell.m in Sources */,
+				8AF3B6DB2651FB3E00C0408D /* ZLCollectionViewLayoutAttributes.m in Sources */,
+				8AF3B6DA2651FB3E00C0408D /* ZLCellFakeView.m in Sources */,
+				8AF3B799265269E700C0408D /* PandaSugedtionViewController.m in Sources */,
+				8AF3B73D2652452000C0408D /* PandaZoneJubaoController.m in Sources */,
 				8ADB8F7D26426FFA00C61A29 /* FilmChatZoneChatDetailToolsView.m in Sources */,
 				8A48271E2640E4BE00C385C6 /* PandaBaseTabbarViewController.m in Sources */,
+				8AF3B7C926526DA000C0408D /* PandaCenterChangeInfoController.m in Sources */,
 				4A342802264FA7EF008DAF39 /* PandaSysTemMsgDetailTableCell.m in Sources */,
 				8ADB8F582642693600C61A29 /* PandaBangdanViewController.m in Sources */,
 				8A4826932640DFB800C385C6 /* AppDelegate.m in Sources */,
 				8A48270D2640E3E400C385C6 /* UIButton+CHRegex.m in Sources */,
 				4A5EB1AF2642E26E00573BF3 /* GuoJiQiqhuoNewsViewLayout.m in Sources */,
 				8A4827072640E3E400C385C6 /* WWStarView.m in Sources */,
-				8A48270C2640E3E400C385C6 /* UIView+frame.m in Sources */,
 				8A4827722640ECBF00C385C6 /* CHCardItemModel.m in Sources */,
+				8AF3B73C2652452000C0408D /* PandaZoneJubaoModel.m in Sources */,
+				8AF3B7502652457600C0408D /* PandaZoneDetaolCell.m in Sources */,
 				8A48270F2640E3E400C385C6 /* LMJHorizontalScrollText.m in Sources */,
+				8AF3B6E72651FC5300C0408D /* PandaZoneModel.m in Sources */,
+				8AF3B6DF2651FB3E00C0408D /* ZLCollectionViewBackgroundViewLayoutAttributes.m in Sources */,
 				4A3427F2264FA1CE008DAF39 /* PandanCatagroyTableViewCell.m in Sources */,
 				8A48277A2640ECDA00C385C6 /* CHCardItemCustomView.m in Sources */,
 				8A4826A42640DFBA00C385C6 /* main.m in Sources */,
 				8A4827802640F42C00C385C6 /* PandaHomeNavView.m in Sources */,
+				8AF3B7522652457600C0408D /* PandaZoneDetailheadeView.m in Sources */,
 				8A4827612640EB0000C385C6 /* PandaHomeHeaderView.m in Sources */,
+				8AF3B6E12651FB3E00C0408D /* ZLCollectionViewVerticalLayout.m in Sources */,
 				8A48270E2640E3E400C385C6 /* UIColor+CHRegex.m in Sources */,
 				8A51347A26438E9000C492F0 /* UIView+ACSLayer.m in Sources */,
 				8A4827082640E3E400C385C6 /* UITextField+AddPlaceholder.m in Sources */,
 				8A4827092640E3E400C385C6 /* UIView+shadowPath.m in Sources */,
+				8AF3B7732652584100C0408D /* PandaCenterTableViewCell.m in Sources */,
+				8AF3B73E2652452000C0408D /* PandaSendZoneToolController.m in Sources */,
+				8AF3B76726524FBB00C0408D /* PandaMsgTableViewCell.m in Sources */,
+				8AF3B7BE26526A5C00C0408D /* PandaMySendZoneViewController.m in Sources */,
 				4A3427F9264FA79F008DAF39 /* PandaSystemMsgViewController.m in Sources */,
 				8A4827432640E69400C385C6 /* PandaHomeViewController.m in Sources */,
+				8AF3B6DE2651FB3E00C0408D /* ZLCollectionViewBaseFlowLayout.m in Sources */,
 				8A48272D2640E4F700C385C6 /* AppDelegate+PandaSafe.m in Sources */,
 				8ADB8FB526429EEC00C61A29 /* PandaHomeNewsTableViewCell.m in Sources */,
 				8A5134802643BB9D00C492F0 /* PandaHotComentTableViewCell.m in Sources */,
 				8A48274F2640E6A500C385C6 /* PandaZoneViewController.m in Sources */,
 				4A5EB1C12642E2F500573BF3 /* GuoJiQihuoNewsCollectionCell.m in Sources */,
+				8AF3B7512652457600C0408D /* PandaZoneDetailController.m in Sources */,
 				8ADB8F7726426B6300C61A29 /* FilmChatDetailMoel.m in Sources */,
 				8ADB8F902642895300C61A29 /* PandaHotNewsViewController.m in Sources */,
+				8AF3B6F626520DCF00C0408D /* UIView+HZXFrame.m in Sources */,
 				8ADB8FAF26429B6C00C61A29 /* PandaCommonCollectionViewCell.m in Sources */,
 				4A3427E9264F968D008DAF39 /* ShuyunHomeNewsModel.m in Sources */,
 				8A4827342640E55A00C385C6 /* PandaLoginViewController.m in Sources */,
+				8AF3B76D2652567200C0408D /* PandaCenterHeaderView.m in Sources */,
+				8AF3B75B2652464E00C0408D /* PandaComentListModel.m in Sources */,
+				8AF3B6E02651FB3E00C0408D /* ZLBaseEventModel.m in Sources */,
+				8AF3B6DD2651FB3E00C0408D /* ZLCollectionReusableView.m in Sources */,
+				8AF3B7B726526A3600C0408D /* PandaMyyuYueViewController.m in Sources */,
+				8AF3B6ED2651FC7700C0408D /* PandaZoneCollectionViewCell.m in Sources */,
+				8AF3B6DC2651FB3E00C0408D /* ZLCollectionViewHorzontalLayout.m in Sources */,
 				4A5EB1C72642E31900573BF3 /* GuoJiQIhuoNewsDetailViewController.m in Sources */,
 				8A4827862640F77F00C385C6 /* PandaHomeBtn.m in Sources */,
 				8A48270B2640E3E400C385C6 /* NSString+CHRegex.m in Sources */,
@@ -773,8 +1031,10 @@
 				4A5EB1BB2642E29F00573BF3 /* PandaBaseModel.m in Sources */,
 				8ADB8F622642694D00C61A29 /* PandaHotComentViewController.m in Sources */,
 				8ADB8F4E2642691E00C61A29 /* PandaKefuViewController.m in Sources */,
+				8AF3B6D92651FB3E00C0408D /* ZLCollectionBaseDecorationView.m in Sources */,
 				8A48275B2640E6B300C385C6 /* PandaCenterViewController.m in Sources */,
 				8A48270A2640E3E400C385C6 /* UIViewController+IOS13.m in Sources */,
+				8AF3B7AD26526A1A00C0408D /* PandaMyCollecedViewController.m in Sources */,
 				8A4827712640ECBF00C385C6 /* CHCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
