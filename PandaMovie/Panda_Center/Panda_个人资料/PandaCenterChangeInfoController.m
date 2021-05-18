@@ -80,6 +80,7 @@
     [[GKNavigationBarConfigure sharedInstance] updateConfigure:^(GKNavigationBarConfigure *configure) {
         configure.backgroundColor = LGDViewBJColor;
         configure.backStyle = GKNavigationBarBackStyleWhite;
+        configure.titleColor = [UIColor whiteColor];
     }];
 }
 /*

@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
-#import "PandaZoneModel.h"
+#import "PandaComentListModel.h"
 NS_ASSUME_NONNULL_BEGIN
 @protocol PandaZoneDetaolCellDelegate <NSObject>
 
@@ -7,7 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 @interface PandaZoneDetaolCell : UITableViewCell
-@property(nonatomic,strong) PandaZoneModel * comentModel;
+@property(nonatomic,strong) PandaComentListModel * comentModel;
 @property(nonatomic,weak) id <PandaZoneDetaolCellDelegate>delegate;
 @end
 

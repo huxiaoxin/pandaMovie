@@ -82,7 +82,8 @@
         }
     }else if (indexPath.section == 2){
         if (indexPath.row == 1) {
-            _PandaRightlb.hidden = @"V_1.0.0";
+            _PandaRightlb.text = @"V_1.0.0";
+            _PandaRightlb.hidden = NO;
         }else{
             _PandaRightlb.hidden = YES;
         }

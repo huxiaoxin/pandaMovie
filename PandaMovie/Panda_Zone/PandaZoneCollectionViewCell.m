@@ -12,7 +12,7 @@
 @property(nonatomic,strong) UILabel     * PandaTitle;
 @property(nonatomic,strong) UILabel     * PandaComentlb;
 @property(nonatomic,strong) UILabel     * PandaZanlb;
-
+@property(nonatomic,strong) UIImageView * PamdauserImgView;
 @end
 @implementation PandaZoneCollectionViewCell
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -23,6 +23,7 @@
         [_PandaZoneView addSubview:self.PandaTitle];
         [_PandaZoneView addSubview:self.PandaComentlb];
         [_PandaZoneView addSubview:self.PandaZanlb];
+        [_PandaZoneView addSubview:self.PamdauserImgView];
 
     }
     return self;
@@ -35,9 +36,7 @@
         _PandaZoneView.layer.cornerRadius = RealWidth(5);
         _PandaZoneView.layer.masksToBounds = YES;
         _PandaZoneView.userInteractionEnabled = YES;
-
-        
-        
+ 
     }
     return _PandaZoneView;
 }
@@ -46,14 +45,27 @@
         _PandaZoneThubImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, RealWidth(170), RealWidth(150))];
         _PandaZoneThubImgView.userInteractionEnabled = YES;
         _PandaZoneThubImgView.contentMode =  UIViewContentModeScaleAspectFill;
-        _PandaZoneThubImgView.layer.masksToBounds =  NO;
-        
-        UITapGestureRecognizer * PandaImgTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(PandaZoneThubImgViewTapClick)];
-        
-        [_PandaZoneThubImgView addGestureRecognizer:PandaImgTap];
+//        _PandaZoneThubImgView.layer.masksToBounds =  NO;
+//        
+//        UITapGestureRecognizer * PandaImgTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(PandaZoneThubImgViewTapClick)];
+//        
+//        [_PandaZoneThubImgView addGestureRecognizer:PandaImgTap];
         
     }
     return _PandaZoneThubImgView;
+}
+- (UIImageView *)PamdauserImgView{
+    if (!_PamdauserImgView) {
+        _PamdauserImgView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetWidth(_PandaZoneView.frame)-RealWidth(30), CGRectGetMidY(_PandaZanlb.frame), RealWidth(25), RealWidth(25))];
+        _PamdauserImgView.layer.cornerRadius = RealWidth(12.5);
+        _PamdauserImgView.layer.masksToBounds = YES;
+        _PamdauserImgView.userInteractionEnabled = YES;
+        
+        UITapGestureRecognizer * PandauserImgTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(PamdauserImgViewClick)];
+        [_PamdauserImgView addGestureRecognizer:PandauserImgTap];
+        
+    }
+    return _PamdauserImgView;
 }
 -(void)PandaZoneThubImgViewTapClick{
     //图浏览
@@ -95,7 +107,7 @@
         _PandaZanlb.font = [UIFont systemFontOfSize:13];
         _PandaZanlb.userInteractionEnabled = YES;
         NSTextAttachment * aatment = [[NSTextAttachment alloc]init];
-        aatment.image = [UIImage imageNamed:@"icon-coment"];
+        aatment.image = [UIImage imageNamed:@"panda_zansel"];
         aatment.bounds  = CGRectMake(0, -3, RealWidth(14), RealWidth(14));
         NSAttributedString * attbute = [NSAttributedString attributedStringWithAttachment:aatment];
         NSMutableAttributedString * amutube = [[NSMutableAttributedString alloc]initWithString:@" 123"];
@@ -108,21 +120,23 @@
     }
     return _PandaZanlb;
 }
+
 - (void)setPandaModel:(PandaZoneModel *)pandaModel{
     _pandaModel = pandaModel;
+    [_PamdauserImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.imgurl]];
     [_PandaZoneThubImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.imgArr.firstObject]];
     _PandaTitle.text = pandaModel.title;
     CGRect TitleRect = [pandaModel.title cxl_sizeWithMoreString:[UIFont systemFontOfSize:14] maxWidth:RealWidth(160)];
     _PandaTitle.size = TitleRect.size;
     _PandaComentlb.y = CGRectGetMaxY(_PandaTitle.frame)+RealWidth(8);
     _PandaZanlb.y = CGRectGetMaxY(_PandaTitle.frame)+RealWidth(8);
+    _PamdauserImgView.y = CGRectGetMaxY(_PandaTitle.frame)+RealWidth(5);
     _PandaZoneView.height = CGRectGetMaxY(_PandaZanlb.frame)+RealWidth(10);
     pandaModel.CellHeight = CGRectGetHeight(_PandaZoneView.frame);
 
 }
 #pragma mark--PandaComentlbClick
 -(void)PandaComentlbClick:(UITapGestureRecognizer *)myTap{
-    NSLog(@"sssss");
     //评论
     [self.delegate PandaZoneCollectionViewCellWithIndex:self.tag btnIndex:1];
 }
@@ -132,5 +146,8 @@
     NSLog(@"%s",__func__);
     [self.delegate PandaZoneCollectionViewCellWithIndex:self.tag btnIndex:2];
 }
+-(void)PamdauserImgViewClick{
+    [self.delegate PandaZoneCollectionViewCellWithIndex:self.tag btnIndex:3];
 
+}
 @end

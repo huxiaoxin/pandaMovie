@@ -51,7 +51,7 @@
         _PandaNamelb.textColor = [UIColor whiteColor];
         _PandaNamelb.font = [UIFont boldSystemFontOfSize:15];
         _PandaNamelb.textAlignment = NSTextAlignmentCenter;
-        _PandaNamelb.text = @"悬崖之上";
+        _PandaNamelb.text = @"";
     }
     return _PandaNamelb;
 }
@@ -61,7 +61,7 @@
         _PandaDetailb.textColor = [UIColor colorWithHexString:@"9F9FA5"];
         _PandaDetailb.font = [UIFont boldSystemFontOfSize:10];
         _PandaDetailb.textAlignment = NSTextAlignmentCenter;
-        _PandaDetailb.text = @"上映7天 5.71亿";
+        _PandaDetailb.text = @"";
     }
     return _PandaDetailb;
 }
@@ -71,7 +71,7 @@
         _PandaZonhelb.textColor = [UIColor colorWithHexString:@"FD8007"];
         _PandaZonhelb.font = [UIFont boldSystemFontOfSize:15];
         _PandaZonhelb.textAlignment = NSTextAlignmentCenter;
-        _PandaZonhelb.text = @"161.40万";
+        _PandaZonhelb.text = @"";
     }
     return _PandaZonhelb;
 }
@@ -81,7 +81,7 @@
         _PandaRatelb.textColor = [UIColor whiteColor];
         _PandaRatelb.font = [UIFont boldSystemFontOfSize:15];
         _PandaRatelb.textAlignment = NSTextAlignmentCenter;
-        _PandaRatelb.text = @"35.34%";
+        _PandaRatelb.text = @"";
     }
     return _PandaRatelb;
 }
@@ -91,9 +91,17 @@
         _PandaRoomNumlb.textColor = [UIColor whiteColor];
         _PandaRoomNumlb.font = [UIFont boldSystemFontOfSize:15];
         _PandaRoomNumlb.textAlignment = NSTextAlignmentCenter;
-        _PandaRoomNumlb.text = @"99851";
+        _PandaRoomNumlb.text = @"";
     }
     return _PandaRoomNumlb;
+}
+- (void)setPandaModel:(PandaangdanModel *)pandaModel{
+    _pandaModel = pandaModel;
+    _PandaNamelb.text =  pandaModel.name;
+    _PandaDetailb.text =  pandaModel.info;
+    _PandaZonhelb.text =  pandaModel.zh_money;
+    _PandaRatelb.text =  pandaModel.pf_rate;
+    _PandaRoomNumlb.text = pandaModel.pp_num;
 }
 -(void)layoutSubviews{
     _PandaTopimgView.frame = CGRectMake(RealWidth(10), self.bounds.size.height/2-RealWidth(10), RealWidth(20), RealWidth(20));
@@ -103,6 +111,5 @@
     _PandaZonhelb.frame = CGRectMake(self.bounds.size.width/4+RealWidth(20), 0, self.bounds.size.width/4-RealWidth(20), self.bounds.size.height);
     _PandaRatelb.frame = CGRectMake(CGRectGetMaxX(_PandaZonhelb.frame)+RealWidth(20), 0, self.bounds.size.width/4-RealWidth(20), self.bounds.size.height);
     _PandaRoomNumlb.frame = CGRectMake(CGRectGetMaxX(_PandaRatelb.frame)+RealWidth(20), 0, self.bounds.size.width/4-RealWidth(20), self.bounds.size.height);
-
 }
 @end

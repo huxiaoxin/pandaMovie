@@ -18,7 +18,6 @@
 - (UIImageView *)PandaTopImgView{
     if (!_PandaTopImgView) {
         _PandaTopImgView = [[UIImageView alloc]initWithFrame:CGRectZero];
-        _PandaTopImgView.backgroundColor = [UIColor whiteColor];
     }
     return _PandaTopImgView;
 }

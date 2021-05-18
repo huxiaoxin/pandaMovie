@@ -63,7 +63,7 @@
         _PandaZoneTableView.delegate = self;
         _PandaZoneTableView.dataSource = self;
         _PandaZoneTableView.separatorStyle =  UITableViewCellSelectionStyleNone;
-        _PandaZoneTableView.backgroundColor = [UIColor whiteColor];
+        _PandaZoneTableView.backgroundColor = [UIColor clearColor];
         _PandaZoneTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(PandaSendHeaderClicks)];
         [_PandaZoneTableView.mj_header beginRefreshing];
     }
@@ -128,17 +128,18 @@
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView * SectionView = [UIView new];
-    SectionView.backgroundColor = [UIColor whiteColor];
-    SectionView.backgroundColor = [UIColor whiteColor];
+    SectionView.backgroundColor = [UIColor clearColor];
     UILabel * PandaSendZoenAllComentlb = [[UILabel alloc]initWithFrame:CGRectMake(K(20), K(10), K(200), K(20))];
     PandaSendZoenAllComentlb.font = KBlFont(14);
     PandaSendZoenAllComentlb.text = @"全部评论";
+    PandaSendZoenAllComentlb.textColor = [UIColor whiteColor];
     [SectionView addSubview:PandaSendZoenAllComentlb];
     return SectionView;
 }
 -(void)PandaSendHeaderClicks{
     MJWeakSelf;
-    NSArray * dataArr = [WHC_ModelSqlite query:[PandaComentListModel class] where:[NSString stringWithFormat:@"PandaZoneID = '%ld'",(long)self.pandaModel.PandaZoneID]];
+    NSArray * dataArr = [WHC_ModelSqlite query:[PandaComentListModel class] where:[NSString stringWithFormat:@"ZoneID = '%ld'",(long)self.pandaModel.PandaZoneID]];
+    NSLog(@"-------%ld",dataArr.count);
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (weakSelf.PandaZonedataArr.count > 0) {
             [weakSelf.PandaZonedataArr removeAllObjects];
@@ -147,7 +148,7 @@
         if (weakSelf.PandaZonedataArr.count == 0) {
             [LCProgressHUD showInfoMsg:@"暂无数据"];
             LYEmptyView * emtyView = [LYEmptyView emptyViewWithImage:nil titleStr:@"暂无数据" detailStr:nil];
-            emtyView.contentViewOffset = K(100  );
+            emtyView.contentViewOffset = K(150);
             weakSelf.PandaZoneTableView.ly_emptyView = emtyView;
         }
         [weakSelf.PandaZoneTableView reloadData];

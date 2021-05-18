@@ -6,7 +6,7 @@
 //
 
 #import "PandaAboutusViewController.h"
-
+#import <WebKit/WebKit.h>
 @interface PandaAboutusViewController ()
 
 @end
@@ -15,8 +15,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+    self.gk_navTitle = @"关于我们";
+    WKWebViewConfiguration * FilmFacouCofig  = [[WKWebViewConfiguration alloc]init];
+    WKWebView * FilmFacouWeb = [[WKWebView alloc]initWithFrame:CGRectMake(0, NaviH, SCREEN_Width, SCREEN_Height-NaviH-GK_SAFEAREA_BTM) configuration:FilmFacouCofig];
+    FilmFacouWeb.scrollView.showsVerticalScrollIndicator =  NO;
+    [self.view addSubview:FilmFacouWeb];
+    NSString * FilmFacoStr  = [[NSBundle mainBundle] pathForResource:@"FilmFactory" ofType:@"html"];
+    [FilmFacouWeb loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:FilmFacoStr]]];}
 
 /*
 #pragma mark - Navigation

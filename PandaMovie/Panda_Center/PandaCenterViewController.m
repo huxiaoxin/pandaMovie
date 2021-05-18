@@ -140,6 +140,7 @@
     [[GKNavigationBarConfigure sharedInstance] updateConfigure:^(GKNavigationBarConfigure *configure) {
         configure.backgroundColor = [UIColor whiteColor];
         configure.backStyle = GKNavigationBarBackStyleBlack;
+        configure.titleColor = [UIColor blackColor];
     }];
     PandaCenterChangeInfoController  * pandaInfoVc = [[PandaCenterChangeInfoController alloc]init];
     pandaInfoVc.hidesBottomBarWhenPushed = YES;

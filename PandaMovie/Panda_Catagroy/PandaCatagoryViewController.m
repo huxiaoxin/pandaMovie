@@ -8,6 +8,8 @@
 #import "PandaCatagoryViewController.h"
 #import "PandanCatagroyTableViewCell.h"
 #import "PandaSystemMsgViewController.h"
+#import "PadaCatagoryweizhiModel.h"
+#import "PandaCatagarotDetailController.h"
 @interface PandaCatagoryViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView *  PandaCatagoryTableView;
 @property(nonatomic,strong) NSMutableArray * PandaCatagoryDataArr;
@@ -23,7 +25,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gk_navTitle = @"电影";
+    self.gk_navTitle = @"活动";
     [self.view addSubview:self.PandaCatagoryTableView];
     
     
@@ -42,7 +44,7 @@
     pandaTextMent.image = [UIImage imageNamed:@"location"];
     pandaTextMent.bounds =  CGRectMake(0, 0, RealWidth(20), RealWidth(20));
     NSAttributedString * pandaAttbute = [NSAttributedString attributedStringWithAttachment:pandaTextMent];
-    NSMutableAttributedString * pandaMutableAttbute = [[NSMutableAttributedString alloc]initWithString:@"上海"];
+    NSMutableAttributedString * pandaMutableAttbute = [[NSMutableAttributedString alloc]initWithString:@"北京"];
     [pandaMutableAttbute addAttribute:NSBaselineOffsetAttributeName value:@(5) range:NSMakeRange(0, 2)];
     [pandaMutableAttbute insertAttributedString:pandaAttbute atIndex:0];
     PandaLeftlb.attributedText = pandaMutableAttbute;
@@ -67,7 +69,7 @@
     
 }
 -(void)PandaleftTapClick{
-    [LCProgressHUD showInfoMsg:@"目前只开放上海城市"];
+    [LCProgressHUD showInfoMsg:@"目前只开放北京城市"];
 }
 - (UITableView *)PandaCatagoryTableView{
     if (!_PandaCatagoryTableView) {
@@ -84,7 +86,7 @@
     return _PandaCatagoryTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.PandaCatagoryDataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * PandaIdentifer  = @"PandanCatagroyTableViewCell";
@@ -92,14 +94,27 @@
     if (PandaCell == nil) {
         PandaCell = [[PandanCatagroyTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:PandaIdentifer];
     }
+    PandaCell.pandaModel = self.PandaCatagoryDataArr[indexPath.row];
     return PandaCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return RealWidth(160);
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PandaCatagarotDetailController  *  pandaDetailVc = [[PandaCatagarotDetailController alloc]init];
+    pandaDetailVc.hidesBottomBarWhenPushed = YES;
+    pandaDetailVc.pandaItem = self.PandaCatagoryDataArr[indexPath.row];
+    [self.navigationController pushViewController:pandaDetailVc animated:YES];
+}
 -(void)PandaCatagoryTableViewHeaderClick{
     MJWeakSelf;
+    NSArray * pandaArr = [WHC_ModelSqlite query:[PadaCatagoryweizhiModel class]];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (weakSelf.PandaCatagoryDataArr.count > 0) {
+            [weakSelf.PandaCatagoryDataArr removeAllObjects];
+        }
+        weakSelf.PandaCatagoryDataArr = pandaArr.mutableCopy;
+        [weakSelf.PandaCatagoryTableView reloadData];
         [weakSelf.PandaCatagoryTableView.mj_header endRefreshing];
     });
 }

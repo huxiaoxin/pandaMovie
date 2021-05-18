@@ -162,6 +162,7 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [[GKNavigationBarConfigure sharedInstance] updateConfigure:^(GKNavigationBarConfigure *configure) {
         configure.backgroundColor =  LGDViewBJColor;
+        configure.backgroundColor =  LGDViewBJColor;
     }];
 }
 /*

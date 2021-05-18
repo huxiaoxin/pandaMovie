@@ -10,6 +10,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
+        self.backgroundColor = [UIColor clearColor];
         self.selectionStyle =  UITableViewCellSelectionStyleNone;
         UIView * PandaInfoBtomline = [[UIView alloc]initWithFrame:CGRectMake(K(15), K(49), SCREEN_Width-K(30), K(1))];
         PandaInfoBtomline.backgroundColor = LGDLightGaryColor;
@@ -17,7 +18,7 @@
         
         UILabel * PandaInfoFirstlb  = [[UILabel alloc]initWithFrame:CGRectMake(K(15), 0, K(200), K(49))];
         PandaInfoFirstlb.font = KSysFont(15);
-        PandaInfoFirstlb.textColor = LGDBLackColor;
+        PandaInfoFirstlb.textColor = [UIColor whiteColor];
         [self.contentView addSubview:PandaInfoFirstlb];
         _PandaInfoFirstlb = PandaInfoFirstlb;
         
@@ -32,7 +33,7 @@
 -(void)setFilmItem:(PandaZoneJubaoModel *)FilmItem{
     _FilmItem = FilmItem;
     _PandaInfoFirstlb.text = FilmItem.PandaText;
-    _PandaInfoDeeplb.image = [UIImage imageNamed:FilmItem.PandaStatus ? @"xuanzhong1" : @"xuanzhongyuandian"];
+    _PandaInfoDeeplb.image = [UIImage imageNamed:FilmItem.PandaStatus ? @"xuanzhong-sel" : @"xuanzhong"];
     
 }
 @end

@@ -105,8 +105,14 @@
     [HUPhotoBrowser showFromImageView:pandaCell.PandaZoneThubImgView withURLStrings:pandaModel.imgArr atIndex:0];
     }else if (btnindex == 1){
     //评论
-    }else{
+        PandaZoneDetailController * PandaZoneDetailVc = [[PandaZoneDetailController alloc]init];
+        PandaZoneDetailVc.hidesBottomBarWhenPushed = YES;
+        PandaZoneDetailVc.pandaModel = pandaModel;
+        [self.navigationController pushViewController:PandaZoneDetailVc animated:YES];
+    }else if (btnindex == 2){
     //点赞
+    }else if (btnindex == 3){
+    //聊天
     }
 
 }
@@ -120,7 +126,7 @@
         weakSelf.PandaZoneDataArr = pandaDataArr.mutableCopy;
         [CATransaction setDisableActions:YES];
         [weakSelf.PandaZoneCollectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
-         [CATransaction commit];
+        [CATransaction commit];
         [weakSelf.PandaZoneCollectionView.mj_header endRefreshing];
     });
 }

@@ -21,11 +21,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateSelected];
-    NSArray * XiaoxinPaper_nomalArr = @[@"M_shouyenomal",@"dongtainomal",@"xiaoxinomal",@"fangxiangnomal",@"wodenomal"];
-    NSArray * XiaoxinPaper_selArr = @[@"M_shouyesel",@"dongtaisel",@"xiaoxisel",@"fangxiangsel",@"wodesel"];
-    NSArray  * FilmFactoryTitleArr = @[@"首页",@"动态",@"消息",@"首映",@"我的"];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateSelected];
+    NSArray * XiaoxinPaper_nomalArr = @[@"panda_homenomal",@"panda_yuyuenomal",@"panda_zonenoaml",@"panda_msgnoaml",@"panda_centernomal"];
+    NSArray * XiaoxinPaper_selArr = @[@"panda_homesel",@"panda_yuyuesel",@"panda_zonesel",@"panda_msgsel",@"panda_centersel"];
+    NSArray  * FilmFactoryTitleArr = @[@"首页",@"活动",@"动态",@"消息",@"我的"];
     for (int index = 0 ; index < self.XiaoxinPaperClassArr.count ; index ++) {
         UIViewController * Xiaoxinpaper_Vc = [(UIViewController *)[NSClassFromString(_XiaoxinPaperClassArr[index]) alloc]init];
         UIImage *Xiaoxinpaper_Nomal = [UIImage imageNamed:XiaoxinPaper_nomalArr[index]];
@@ -45,9 +45,9 @@
     Xiaoxinpaper_Config.gk_navItemLeftSpace = K(15);
   
     self.viewControllers = _XiaoxinPaperGlbalClassArr;
-    self.tabBar.barTintColor = LGDMianColor;
-    //这里的self是UITabBarController，代码根据各自的TabBar定义而定
-    self.tabBar.tintColor = LGDMianColor;
+    self.tabBar.barTintColor = LGDViewBJColor;
+    //这里的self是UITabBarController，LGDViewBJColor根据各自的TabBar定义而定
+    self.tabBar.tintColor = LGDViewBJColor;
     self.tabBar.translucent =NO;
 }
 

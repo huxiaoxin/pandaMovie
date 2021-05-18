@@ -21,6 +21,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.backgroundColor = [UIColor clearColor];
+        self.selectionStyle =   UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.PandaContentView];
         [self.contentView addSubview:self.PandaThubImgView];
         
@@ -52,6 +53,8 @@
         _PandaThubImgView.layer.cornerRadius = RealWidth(5);
         _PandaThubImgView.layer.masksToBounds = YES;
         _PandaThubImgView.backgroundColor = LGDLightGaryColor;
+        _PandaThubImgView.contentMode =  UIViewContentModeScaleAspectFill;
+        
     }
     return _PandaThubImgView;
 }
@@ -110,5 +113,16 @@
         _PandaCollteceBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     }
     return _PandaCollteceBtn;
+}
+- (void)setPandaModel:(PadaCatagoryweizhiModel *)pandaModel{
+    _pandaModel = pandaModel;
+    [_PandaThubImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.FilmThubImgView] placeholderImage:[UIImage imageNamed:@""]];
+    _PandaNamelb.text =  pandaModel.title;
+    _PandaInfolb.text = [NSString stringWithFormat:@"%@",pandaModel.titleDesc];
+    _PandaArticlb.text = [NSString stringWithFormat:@"%@ | %@",pandaModel.tageOne ,pandaModel.tagTwo];
+    [_PandaStar setCurrentStar:pandaModel.coinNum];
+    _PandaNumlb.text = [NSString stringWithFormat:@"%.1f",pandaModel.ComentCoinNum];
+    
+    
 }
 @end

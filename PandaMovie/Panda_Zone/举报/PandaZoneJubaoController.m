@@ -48,12 +48,8 @@
     [super viewDidLoad];
     self.gk_navTitle = @"举报";
     self.PandaZonejubaoStatus  =NO;
-    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.PandaZonejubaoTableView];
-    
-    
-    self.view.backgroundColor = LGDLightGaryColor;
-    
+
     UIView * PandaMoreView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, K(35))];
     PandaMoreView.backgroundColor = LGDLightGaryColor;
     
@@ -68,7 +64,7 @@
     UIView * PandaCommitingView  = [[UIView alloc]initWithFrame:CGRectMake(0, 0, K(80), K(40))];
     UIButton * PandaCommitingbtn  =[[UIButton alloc]initWithFrame:CGRectMake(K(20), K(10), K(40), K(20))];
     [PandaCommitingbtn setTitle:@"提交" forState:UIControlStateNormal];
-    [PandaCommitingbtn setTitleColor:LGDBLackColor forState:UIControlStateNormal];
+    [PandaCommitingbtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     PandaCommitingbtn.titleLabel.font = KSysFont(13);
     [PandaCommitingbtn addTarget:self action:@selector(PandaCommitingbtnClick) forControlEvents:UIControlEventTouchUpInside];
     [PandaCommitingView addSubview:PandaCommitingbtn];
