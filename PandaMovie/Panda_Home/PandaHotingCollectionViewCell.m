@@ -61,6 +61,7 @@
         _PandaStarView = [[WWStarView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandaThubImgView.frame)+RealWidth(5), CGRectGetMaxY(_PandaTimelb.frame)+RealWidth(10), RealWidth(200)-CGRectGetMaxX(_PandaThubImgView.frame)-RealWidth(15), RealWidth(13)) numberOfStars:5 currentStar:4 rateStyle:WholeStar isAnination:YES andamptyImageName:@"xingxing-nomal" fullImageName:@"xingxing" finish:^(CGFloat currentStar) {
             
         }];
+        _PandaStarView.userInteractionEnabled = NO;
     }
     return _PandaStarView;
 }
@@ -68,10 +69,10 @@
     if (!_PandaColltecdBtn) {
         _PandaColltecdBtn = [[UIButton alloc]initWithFrame:CGRectMake(RealWidth(200)-RealWidth(50), CGRectGetMaxY(_PandaStarView.frame)+RealWidth(7), RealWidth(40), RealWidth(15))];
         [_PandaColltecdBtn setTitle:@"收藏" forState:UIControlStateNormal];
-        [_PandaColltecdBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_PandaColltecdBtn setTitleColor:LGDMianColor forState:UIControlStateNormal];
         _PandaColltecdBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
         _PandaColltecdBtn.titleLabel.font = [UIFont systemFontOfSize:10];
-        _PandaColltecdBtn.layer.borderColor = [UIColor redColor].CGColor;
+        _PandaColltecdBtn.layer.borderColor = LGDMianColor.CGColor;
         _PandaColltecdBtn.layer.borderWidth = RealWidth(1);
     }
     return _PandaColltecdBtn;
@@ -86,5 +87,13 @@
     }
     return _PandaThubImgView;
 }
-
+- (void)setPandaModel:(PandaMovieModel *)pandaModel{
+    _pandaModel = pandaModel;
+    _PandaToptitle.text =  pandaModel.famous;
+    _PandaCenterTypelb.text = pandaModel.filmtype;
+    _PandaTimelb.text = pandaModel.articlList;
+    
+    [_PandaThubImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.imgTubUrl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    [_PandaStarView setCurrentStar:pandaModel.total_Num];
+}
 @end

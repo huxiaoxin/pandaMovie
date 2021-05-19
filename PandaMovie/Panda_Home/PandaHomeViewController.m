@@ -13,12 +13,14 @@
 #import "PandaHotNewsViewController.h"
 #import "PandaGoodFilmViewController.h"
 #import "PandaHomeNewsTableViewCell.h"
-#import "LYHSTockHttpRequestTool.h"
 #import "PandaHotComentViewController.h"
 #import "QRCodeReaderViewController.h"
-#import "ShuyunHomeNewsModel.h"
-#import "GuoJiQIhuoNewsDetailViewController.h"
-@interface PandaHomeViewController ()<UITableViewDelegate,UITableViewDataSource,PandaHomeHeaderViewDelegate,PandaHomeNavViewDelegate,QRCodeReaderDelegate>
+#import "PandaHomenewsModel.h"
+#import "PandaHotNewsDetailController.h"
+#import "PandaMoviewDetailViewController.h"
+#import "PandaSearchingResultViewController.h"
+#import <PYSearch.h>
+@interface PandaHomeViewController ()<UITableViewDelegate,UITableViewDataSource,PandaHomeHeaderViewDelegate,PandaHomeNavViewDelegate,QRCodeReaderDelegate,PYSearchViewControllerDelegate>
 {
     QRCodeReaderViewController * _reader;
 }
@@ -26,6 +28,9 @@
 @property(nonatomic,strong) PandaHomeHeaderView * PandaHeader;
 @property(nonatomic,strong) PandaHomeNavView              * PandaNavView;
 @property(nonatomic,strong) NSMutableArray * PandaDataArr;
+@property(nonatomic,strong) NSArray  *  PandaWatchingDataArr;
+@property(nonatomic,strong) NSArray  *  PandaWatchedDataArr;
+
 @end
 
 @implementation PandaHomeViewController
@@ -89,30 +94,47 @@
     return RealWidth(100);
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    GuoJiQIhuoNewsDetailViewController * GuoJiDetialVc = [[GuoJiQIhuoNewsDetailViewController alloc]init];
-    GuoJiDetialVc.GuoJiItem = self.PandaDataArr[indexPath.row];
+    PandaHotNewsDetailController * GuoJiDetialVc = [[PandaHotNewsDetailController alloc]init];
+    GuoJiDetialVc.pandaitem = self.PandaDataArr[indexPath.row];
+    GuoJiDetialVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:GuoJiDetialVc animated:YES];
 }
 #pragma mark--刷新
 -(void)PandaHomeTableViewHeaderClick{
+    
+    NSArray * dataArr = [WHC_ModelSqlite query:[PandaMovieModel class]];
+    NSDictionary * dictionary =   [self getJsonDataJsonname:@"pandaMoview"];
     MJWeakSelf;
-    NSMutableDictionary * WindWoundHomeParmter = [[NSMutableDictionary alloc]initWithDictionary:@{@"channel":@"科技",@"num":@"10",@"start":@"0"}];
-    [LYHSTockHttpRequestTool NewpostHttpRequestWithURL:@"http://jisunews.market.alicloudapi.com/news/get" Parameters:WindWoundHomeParmter Success:^(id  _Nonnull object) {
-        NSArray * WindWoundHomeData =[[object objectForKey:@"result"]  objectForKey:@"list"];
-        NSMutableArray * WindWoundHomeTemp= [[NSMutableArray alloc]init];
-        for (NSDictionary * WindWoundHomeDics in WindWoundHomeData) {
-            ShuyunHomeNewsModel * WindWoundHomeItem = [ShuyunHomeNewsModel BaseinitWithDic:WindWoundHomeDics];
-            if (![WindWoundHomeItem.content containsString:@"https://interface.sina.cn/wap_api/video_location.d.html"]) {
-                [WindWoundHomeTemp addObject:WindWoundHomeItem];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSArray * PandaHoemdata =[[[dictionary objectForKey:@"result"] objectForKey:@"result"] objectForKey:@"list"];
+        NSMutableArray * PandaHoemTempArr= [[NSMutableArray alloc]init];
+        for (NSDictionary * PandaHoemresponeDic in PandaHoemdata) {
+            PandaHomenewsModel * PandaHoemritem = [PandaHomenewsModel BaseinitWithDic:PandaHoemresponeDic];
+            if (![PandaHoemritem.content containsString:@"https://interface.sina.cn/wap_api/video_location.d.html"]) {
+                [PandaHoemTempArr addObject:PandaHoemritem];
             }
         }
-        weakSelf.PandaDataArr = WindWoundHomeTemp;
+        weakSelf.PandaWatchingDataArr = [dataArr subarrayWithRange:NSMakeRange(3, 6)];
+        weakSelf.PandaWatchedDataArr = [dataArr subarrayWithRange:NSMakeRange(7, 12)];
+        weakSelf.PandaHeader.pandaWatchingArr = weakSelf.PandaWatchingDataArr;
+        weakSelf.PandaHeader.pandaWatedArr = weakSelf.PandaWatchedDataArr;
+        weakSelf.PandaDataArr = PandaHoemTempArr;
         [weakSelf.PandaHomeTableView reloadData];
         [weakSelf.PandaHomeTableView.mj_header endRefreshing];
-    } Failure:^(id  _Nonnull fail) {
-        [LCProgressHUD showFailure:fail];
-        [weakSelf.PandaHomeTableView.mj_header endRefreshing];
-    }];
+    });
+  
+}
+- (id)getJsonDataJsonname:(NSString *)jsonname
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:jsonname ofType:@"json"];
+    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
+    NSError *error;
+    id jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    if (!jsonData || error) {
+        return nil;
+    } else {
+        return jsonObj;
+    }
 }
 #pragma mark--PandaHomeHeaderViewDelegate
 -(void)PandaHomeHeaderViewWithBtnClickIndex:(NSInteger)btnIndex{
@@ -129,6 +151,10 @@
         HotNewsVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:HotNewsVc animated:YES];
     }else{
+        if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+            [self PandanShowLoginVc];   
+            return;
+        }
         PandaKefuViewController * pandaKefuVc = [[PandaKefuViewController alloc]init];
         pandaKefuVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:pandaKefuVc animated:YES];
@@ -139,13 +165,49 @@
     NSArray *types = @[AVMetadataObjectTypeQRCode];
     _reader        = [QRCodeReaderViewController readerWithMetadataObjectTypes:types];
     _reader.delegate = self;
+    MJWeakSelf;
     [_reader setCompletionWithBlock:^(NSString *resultAsString) {
-    [self dismissViewControllerAnimated:YES completion:^{
-    NSLog(@"%@", resultAsString);
+    [weakSelf dismissViewControllerAnimated:YES completion:^{
     }];
     }];
     
     [self presentViewController:_reader animated:YES completion:NULL];
+}
+-(void)PandaHomeNavViewSearchResult{
+    PYSearchViewController * pandaSearchVc = [PYSearchViewController searchViewControllerWithHotSearches:@[@"速度与激情9",@"人之怒",@"007:无暇赴死",@"黑寡妇",@"电锯惊魂9"] searchBarPlaceholder:@"快速搜索"];
+    pandaSearchVc.searchBar.backgroundColor = [UIColor whiteColor];
+    pandaSearchVc.delegate = self;
+    pandaSearchVc.hotSearchStyle  = PYHotSearchStyleColorfulTag;
+    
+    UINavigationController * PandaRootVc = [UINavigationController rootVC:pandaSearchVc];
+    PandaRootVc.navigationBar.barTintColor = LGDViewBJColor;
+    [self presentViewController:PandaRootVc animated:YES completion:^{
+    
+    }];
+}
+- (void)searchViewController:(PYSearchViewController *)searchViewController
+      didSearchWithSearchBar:(UISearchBar *)searchBar
+                  searchText:(NSString *)searchText{
+    NSInteger searchID;
+    if ([searchText isEqualToString:@"速度与激情9"]) {
+        searchID  = 0;
+    }else if ([searchText isEqualToString:@"人之怒"]){
+        searchID  = 17;
+    }else if ([searchText isEqualToString:@"007:无暇赴死"]){
+        searchID  = 22;
+    }else if ([searchText isEqualToString:@"黑寡妇"]){
+        searchID  = 20;
+    }else {
+        searchID  = 21;
+    }
+    MJWeakSelf;
+    [searchViewController dismissViewControllerAnimated:NO completion:^{
+        PandaSearchingResultViewController * pandaSearchVc = [[PandaSearchingResultViewController alloc]init];
+        pandaSearchVc.pandaSearchText = searchText;
+        pandaSearchVc.pandaSearchID = searchID;
+        pandaSearchVc.hidesBottomBarWhenPushed = YES;
+        [weakSelf.navigationController pushViewController:pandaSearchVc animated:YES];
+    }];
 }
 #pragma mark - QRCodeReader Delegate Methods
 

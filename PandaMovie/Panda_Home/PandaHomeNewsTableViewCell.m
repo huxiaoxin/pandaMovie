@@ -53,11 +53,11 @@
     }
     return self;
 }
-- (void)setWindtrendItem:(ShuyunHomeNewsModel *)windtrendItem{
+- (void)setWindtrendItem:(PandaHomenewsModel *)windtrendItem{
     _windtrendItem =  windtrendItem;
         _WindwoundNewsTitle.text = windtrendItem.title;
         _WindwoundTimelb.text = windtrendItem.time;
-        [_WindwoundNewsImgView sd_setImageWithURL:[NSURL URLWithString:windtrendItem.imgUrl]];
+    [_WindwoundNewsImgView sd_setImageWithURL:[NSURL URLWithString:windtrendItem.imgUrl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
 }
 @end
 

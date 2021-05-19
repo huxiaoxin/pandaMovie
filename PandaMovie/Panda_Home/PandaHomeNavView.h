@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol PandaHomeNavViewDelegate <NSObject>
 
 -(void)PandaHomeNavViewWithScanAction;
-
+-(void)PandaHomeNavViewSearchResult;
 @end
 @interface PandaHomeNavView : UIView
 @property(nonatomic,weak) id <PandaHomeNavViewDelegate>delegate;

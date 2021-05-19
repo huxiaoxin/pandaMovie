@@ -31,10 +31,9 @@
 }
 - (UIImageView *)PandauserImgView{
     if (!_PandauserImgView) {
-        _PandauserImgView = [[UIImageView alloc]initWithFrame:CGRectMake(RealWidth(10), RealWidth(10), RealWidth(38), RealWidth(38))];
+        _PandauserImgView = [[UIImageView alloc]initWithFrame:CGRectMake(RealWidth(10), RealWidth(10), RealWidth(45), RealWidth(45))];
         _PandauserImgView.layer.cornerRadius = RealWidth(8);
         _PandauserImgView.layer.masksToBounds = YES;
-        _PandauserImgView.backgroundColor = [UIColor blueColor];
     }
     return _PandauserImgView;
 }
@@ -49,7 +48,7 @@
 }
 - (UILabel *)PandaContentlb{
     if (!_PandaContentlb) {
-        _PandaContentlb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandauserImgView.frame)+RealWidth(10), CGRectGetMaxY(_Pandausernamelb.frame)+RealWidth(4), RealWidth(350), RealWidth(15))];
+        _PandaContentlb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandauserImgView.frame)+RealWidth(10), CGRectGetMaxY(_Pandausernamelb.frame)+RealWidth(8), RealWidth(300), RealWidth(15))];
         _PandaContentlb.textColor = [UIColor whiteColor];
         _PandaContentlb.font = [UIFont systemFontOfSize:13];
         _PandaContentlb.text = @"大佬，什么时候可以约拍呀～～";
@@ -78,5 +77,14 @@
         _PandaRedTimelb.textAlignment = NSTextAlignmentRight;
     }
     return _PandaRedTimelb;
+}
+- (void)setMovieModel:(PandaMovieMsgModel *)movieModel{
+    _movieModel = movieModel;
+    [_PandauserImgView sd_setImageWithURL:[NSURL URLWithString:movieModel.imgurl]];
+    _Pandausernamelb.text =  movieModel.topname;
+    _PandaContentlb.text = movieModel.content;
+    _PandaRedNumlb.hidden = ! movieModel.isShowRed;
+    _PandaRedNumlb.text = [NSString stringWithFormat:@"%ld",movieModel.redNum];
+    _PandaRedTimelb.text =  movieModel.time;
 }
 @end

@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PandaHomeHeaderView : UIView
 @property(nonatomic,assign) CGFloat PandanHeaderHeight;
 @property(nonatomic,weak) id <PandaHomeHeaderViewDelegate>delegate;
+@property(nonatomic,copy) NSArray * pandaWatchingArr;
+@property(nonatomic,copy) NSArray * pandaWatedArr;
+
 @end
 
 NS_ASSUME_NONNULL_END

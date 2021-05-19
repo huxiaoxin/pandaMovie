@@ -69,7 +69,7 @@
         [LCProgressHUD showInfoMsg:@"说点什么吧~"];
         return;
     }
-//    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+//    if (![FilmFactoryToolModel PandaMoviewuserIsLogin]) {
 //        [self FilmFactoryBaseShowLoginVc];
 //        return;
 //    }

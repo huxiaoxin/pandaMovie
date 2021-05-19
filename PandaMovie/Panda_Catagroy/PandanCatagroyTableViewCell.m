@@ -90,6 +90,7 @@
         _PandaStar = [[WWStarView alloc]initWithFrame:CGRectMake(RealWidth(110), CGRectGetMaxY(_PandaArticlb.frame)+RealWidth(10), RealWidth(100), RealWidth(15)) numberOfStars:5 currentStar:4 rateStyle:WholeStar isAnination:YES andamptyImageName:@"xingxing-nomal" fullImageName:@"xingxing" finish:^(CGFloat currentStar) {
             
         }];
+        _PandaStar.userInteractionEnabled = NO;
     }
     return _PandaStar;
 }
@@ -111,8 +112,12 @@
         [_PandaCollteceBtn setTitle:@"收藏" forState:UIControlStateNormal];
         _PandaCollteceBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
         _PandaCollteceBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+        [_PandaCollteceBtn addTarget:self action:@selector(PandaCollteceBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _PandaCollteceBtn;
+}
+-(void)PandaCollteceBtnClick{
+    [self.delegate PandanCatagroyTableViewCellWithBtnClickCellInex:self.tag];
 }
 - (void)setPandaModel:(PadaCatagoryweizhiModel *)pandaModel{
     _pandaModel = pandaModel;
@@ -122,7 +127,14 @@
     _PandaArticlb.text = [NSString stringWithFormat:@"%@ | %@",pandaModel.tageOne ,pandaModel.tagTwo];
     [_PandaStar setCurrentStar:pandaModel.coinNum];
     _PandaNumlb.text = [NSString stringWithFormat:@"%.1f",pandaModel.ComentCoinNum];
-    
-    
+    if ([PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        if (pandaModel.isCollted) {
+            [_PandaCollteceBtn setTitle:@"已收藏" forState:UIControlStateNormal];
+        }else{
+            [_PandaCollteceBtn setTitle:@"收藏" forState:UIControlStateNormal];
+        }
+    }else{
+        [_PandaCollteceBtn setTitle:@"收藏" forState:UIControlStateNormal];
+    }
 }
 @end

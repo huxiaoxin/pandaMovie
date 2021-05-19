@@ -115,14 +115,18 @@
     });
 }
 -(void)PandaCommitingbtnClick{
-    int FilmZoneMorIndx = 0;
+    int PandaZoneIndex = 0;
     for (PandaZoneJubaoModel * PandaCommitingitme in self.PandaZonejubaoDatas) {
         if (PandaCommitingitme.PandaStatus) {
-            FilmZoneMorIndx+=1;
+            PandaZoneIndex+=1;
         }
     }
-    if (FilmZoneMorIndx == 0) {
+    if (PandaZoneIndex == 0) {
         [LCProgressHUD showInfoMsg:@"请选择举报类型"];
+        return;
+    }
+    if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        [self PandanShowLoginVc];
         return;
     }
     [LCProgressHUD showLoading:@""];
@@ -131,14 +135,7 @@
         [self.navigationController popViewControllerAnimated:YES];
     });
 
-//    if ([FilmFactoryAccountComponent checkLogin:YES]){
-//        [LCProgressHUD showLoading:@""];
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            [LCProgressHUD showSuccess:@"感谢支持~,举报结果我们核实后会24h内通知到您"];
-//            [self.navigationController popViewControllerAnimated:YES];
-//        });
-//
-//    }
+
 
     
 }

@@ -8,9 +8,7 @@
 #import "PandaCenterHeaderView.h"
 @interface  PandaCenterHeaderView ()
 @property(nonatomic,strong) UIView      * PandaContentView;
-@property(nonatomic,strong) UIImageView * PandauserImgView;
-@property(nonatomic,strong) UILabel     * Pandausernamelb;
-@property(nonatomic,strong) UILabel     * PandaCardlb;
+
 @end
 @implementation PandaCenterHeaderView
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -36,7 +34,6 @@
         _PandauserImgView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetWidth(_PandaContentView.frame)-RealWidth(75), RealWidth(20), RealWidth(60), RealWidth(60))];
         _PandauserImgView.layer.cornerRadius = RealWidth(8);
         _PandauserImgView.layer.masksToBounds = YES;
-        _PandauserImgView.backgroundColor = [UIColor redColor];
         _PandauserImgView.userInteractionEnabled = YES;
         
         UITapGestureRecognizer * PadauserImgTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(PandauserImgViewClick)];

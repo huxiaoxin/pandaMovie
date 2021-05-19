@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PandaMovieModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PandaGoodFilmTableViewCell : UITableViewCell
-
+@property(nonatomic,strong) PandaMovieModel * pandamodel;
 @end
 
 NS_ASSUME_NONNULL_END

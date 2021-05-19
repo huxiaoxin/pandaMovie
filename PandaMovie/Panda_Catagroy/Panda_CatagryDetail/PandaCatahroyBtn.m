@@ -17,7 +17,7 @@
 -(UILabel *)PandaBtomlb{
     if (!_PandaBtomlb) {
         _PandaBtomlb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandaCatagryTopImgView.frame)+K(3.5), CGRectGetMidY(_PandaCatagryTopImgView.frame)-K(9.25), K(78), K(18.5))];
-        _PandaBtomlb.textColor = LGDBLackColor;
+        _PandaBtomlb.textColor = [UIColor whiteColor];
         _PandaBtomlb.font = KSysFont(13);
     }
     return _PandaBtomlb;

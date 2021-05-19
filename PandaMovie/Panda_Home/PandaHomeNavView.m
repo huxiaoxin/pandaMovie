@@ -22,8 +22,8 @@
 }
 - (UIImageView *)pandaImgView{
     if (!_pandaImgView) {
-        _pandaImgView = [[UIImageView alloc]initWithFrame:CGRectMake(RealWidth(10), GK_STATUSBAR_HEIGHT+RealWidth(5), RealWidth(30), RealWidth(30))];
-        _pandaImgView.backgroundColor = [UIColor whiteColor];
+        _pandaImgView = [[UIImageView alloc]initWithFrame:CGRectMake(RealWidth(10), GK_STATUSBAR_HEIGHT+RealWidth(2), RealWidth(30), RealWidth(30))];
+        _pandaImgView.image = [UIImage imageNamed:@"homelogo"];
     }
     return _pandaImgView;
 }
@@ -42,8 +42,8 @@
         Textholderlb.font = [UIFont systemFontOfSize:12];
         Textholderlb.text = @"搜你所搜，看你所看";
         [TextFieldsearchiView addSubview:Textholderlb];
-        
-        
+        UITapGestureRecognizer * PandaSearchiTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pandaSearchViewClick)];
+        [_pandaSearchView addGestureRecognizer:PandaSearchiTap];
     }
     return _pandaSearchView;
 }
@@ -58,5 +58,8 @@
 }
 -(void)pandaRightbtnClick{
     [self.delegate PandaHomeNavViewWithScanAction];
+}
+-(void)pandaSearchViewClick{
+    [self.delegate PandaHomeNavViewSearchResult];
 }
 @end

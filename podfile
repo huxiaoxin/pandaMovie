@@ -29,5 +29,6 @@ pod 'RITLPhotos', '~> 2.3.3'
 pod 'XHInputView', '~> 1.1.1'
 pod 'IQKeyboardManager'
 pod 'QRCodeReaderViewController', :git => 'https://github.com/zhengjinghua/MQRCodeReaderViewController.git'
+pod "PYSearch"
 
 end 

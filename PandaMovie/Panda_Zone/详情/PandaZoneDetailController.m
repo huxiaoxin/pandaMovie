@@ -98,8 +98,11 @@
         [self.navigationController pushViewController:jubaoVc animated:YES];
     }else{
        
+        if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+            [self PandanShowLoginVc];
+            return;
+        }
 
-//        if ([FilmFactoryAccountComponent checkLogin:YES]){
      
             UIAlertController * PandaSendeAlteVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"您确定要屏蔽(%@)该用户吗？",comentModel.name] preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction * sureActoin = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -113,7 +116,6 @@
             [PandaSendeAlteVc addAction:thinkingActoin];
             [self presentViewController:PandaSendeAlteVc animated:YES completion:nil];
 
-//        }
 
     }
 }
@@ -139,7 +141,6 @@
 -(void)PandaSendHeaderClicks{
     MJWeakSelf;
     NSArray * dataArr = [WHC_ModelSqlite query:[PandaComentListModel class] where:[NSString stringWithFormat:@"ZoneID = '%ld'",(long)self.pandaModel.PandaZoneID]];
-    NSLog(@"-------%ld",dataArr.count);
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (weakSelf.PandaZonedataArr.count > 0) {
             [weakSelf.PandaZonedataArr removeAllObjects];
@@ -159,7 +160,10 @@
 -(void)FilmFacorryZoneDetailheaderWithBtnIndex:(NSInteger)btnIndex{
 
     if (btnIndex == 0) {
-//        if ([FilmFactoryAccountComponent checkLogin:YES]){
+        if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+            [self PandanShowLoginVc];
+            return;
+        }
             //拉黑
               UIAlertController * PandaSendeAlteVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"您确定要屏蔽(%@)该用户吗？",self.pandaModel.username] preferredStyle:UIAlertControllerStyleAlert];
               UIAlertAction * sureActoin = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -174,7 +178,6 @@
               [self presentViewController:PandaSendeAlteVc animated:YES completion:nil];
 
         
-//        }
     }else{
         PandaZoneJubaoController * jubaoVc = [[PandaZoneJubaoController alloc]init];
         [self.navigationController pushViewController:jubaoVc animated:YES];
@@ -190,9 +193,11 @@
     });
 }
 -(void)PandaSendComentBtnClick{
-    
+    if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        [self PandanShowLoginVc];
+        return;
+    }
 
-//    if ([FilmFactoryAccountComponent checkLogin:YES]){
         MJWeakSelf;
         [XHInputView showWithStyle:InputViewStyleLarge configurationBlock:^(XHInputView *inputView) {
             inputView.sendButtonBackgroundColor =  LGDMianColor;
@@ -207,11 +212,6 @@
             }
         }];
 
-//    }
-    
-    
-    
-
 }
 -(NSString*)getCurrentTimes{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -225,8 +225,8 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LCProgressHUD showSuccess:@"评论成功"];
         PandaComentListModel * PandaSenditem  =[[PandaComentListModel alloc]init];
-        PandaSenditem.imgurl = @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201509%2F20%2F20150920105348_38Ewf.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622122578&t=b958e581d60c7e075d8725af3bbd6127";
-        PandaSenditem.name = @"Account_1251";
+        PandaSenditem.imgurl = @"https://p.qqan.com/up/2021-4/16194921988015974.jpg";
+        PandaSenditem.name = [PandaMovieLoginAccoutModel PandaMoViewgetuserName];
         PandaSenditem.time = [self getCurrentTimes];
         PandaSenditem.content  = Text;
         PandaSenditem.ZoneID = self.pandaModel.PandaZoneID;

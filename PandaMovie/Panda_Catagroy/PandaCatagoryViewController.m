@@ -10,7 +10,7 @@
 #import "PandaSystemMsgViewController.h"
 #import "PadaCatagoryweizhiModel.h"
 #import "PandaCatagarotDetailController.h"
-@interface PandaCatagoryViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface PandaCatagoryViewController ()<UITableViewDelegate,UITableViewDataSource,PandanCatagroyTableViewCellDelegate>
 @property(nonatomic,strong) UITableView *  PandaCatagoryTableView;
 @property(nonatomic,strong) NSMutableArray * PandaCatagoryDataArr;
 @end
@@ -58,10 +58,15 @@
     self.gk_navRightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:PandaMsgBtn];
 
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PandaMovieLoginSucced) name:@"PandaMovieLoginSucced" object:nil];
+
     
     // Do any additional setup after loading the view.
 }
+-(void)PandaMovieLoginSucced{
+    
+}
+
 -(void)PandaMsgBtnClick{
     PandaSystemMsgViewController * pandasysTemVc = [[PandaSystemMsgViewController alloc]init];
     pandasysTemVc.hidesBottomBarWhenPushed = YES;
@@ -94,6 +99,8 @@
     if (PandaCell == nil) {
         PandaCell = [[PandanCatagroyTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:PandaIdentifer];
     }
+    PandaCell.delegate =  self;
+    PandaCell.tag = indexPath.row;
     PandaCell.pandaModel = self.PandaCatagoryDataArr[indexPath.row];
     return PandaCell;
 }
@@ -117,6 +124,25 @@
         [weakSelf.PandaCatagoryTableView reloadData];
         [weakSelf.PandaCatagoryTableView.mj_header endRefreshing];
     });
+}
+-(void)PandanCatagroyTableViewCellWithBtnClickCellInex:(NSInteger)cellIndex{
+    PadaCatagoryweizhiModel * pandaModel = self.PandaCatagoryDataArr[cellIndex];
+    
+    if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        [self PandanShowLoginVc];
+        return;
+    }
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
+    pandaModel.isCollted = !pandaModel.isCollted;
+        [WHC_ModelSqlite update:[PadaCatagoryweizhiModel class] value:[NSString stringWithFormat:@"isCollted = '%@'",@(pandaModel.isCollted)] where:[NSString stringWithFormat:@"LoactionID = '%ld'",pandaModel.LoactionID]];
+    [self.PandaCatagoryTableView reloadData];
+    });
+    
+    
+    
+    
 }
 /*
 #pragma mark - Navigation

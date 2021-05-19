@@ -13,7 +13,7 @@
         CGFloat ShuyunWidth = SCREEN_Width/5;
         _PandaBtomlb  = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_PandaTopImgView.frame)+K(2), ShuyunWidth, K(16.5))];
         _PandaBtomlb.textAlignment = NSTextAlignmentCenter;
-        _PandaBtomlb.textColor = [UIColor colorWithHexString:@"#333333"];
+        _PandaBtomlb.textColor = [UIColor whiteColor];
         _PandaBtomlb.font = KSysFont(12);
     
         

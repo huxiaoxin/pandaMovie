@@ -39,7 +39,7 @@
 }
 - (NSMutableArray *)PandaDataArr{
     if (!_PandaDataArr) {
-        _PandaDataArr = [[NSMutableArray alloc]initWithArray:@[@[@"我的发布",@"我的预约",@"我的收藏"],@[@"清除缓存",@"意见反馈"],@[@"关于我们",@"版本号"]]];
+        _PandaDataArr = [[NSMutableArray alloc]initWithArray:@[@[@"我的发布",@"我的预约",@"我的收藏"],@[@"清除缓存",@"意见反馈"],@[@"关于我们",@"版本号",@"退出登录"]]];
     }
     return _PandaDataArr;
 }
@@ -76,14 +76,26 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
+            if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+                [self PandanShowLoginVc];
+                return;
+            }
             PandaMySendZoneViewController * pandaSendVc = [[PandaMySendZoneViewController alloc]init];
             pandaSendVc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:pandaSendVc animated:YES];
         }else if (indexPath.row == 1){
+            if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+                [self PandanShowLoginVc];
+                return;
+            }
             PandaMyyuYueViewController * padaYuyueVc = [[PandaMyyuYueViewController alloc]init];
             padaYuyueVc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:padaYuyueVc animated:YES];
         }else{
+            if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+                [self PandanShowLoginVc];
+                return;
+            }
             PandaMyCollecedViewController * pandaMyVc = [[PandaMyCollecedViewController alloc]init];
             pandaMyVc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:pandaMyVc animated:YES];
@@ -101,9 +113,30 @@
             PandaAboutusViewController * pandaVc = [[PandaAboutusViewController alloc]init];
             pandaVc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:pandaVc animated:YES];
-        }else{
-            
+        }else if (indexPath.row == 2 ){
+            if ([PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+                [LCProgressHUD showLoading:@""];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [LCProgressHUD hide];
+                [PandaMovieLoginAccoutModel PandaMoviewLoginOutAction];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"PandaMoviewLoginout" object:nil];
+                [self PandaRealoaduserInfo];
+                });
+            }
+
         }
+    }
+}
+-(void)PandaRealoaduserInfo{
+
+    if ([PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        [self.pandaHeaderView.PandauserImgView sd_setImageWithURL:[NSURL URLWithString:@"https://p.qqan.com/up/2021-4/16194921988015974.jpg"] placeholderImage:[UIImage imageNamed:@""]];
+        self.pandaHeaderView.Pandausernamelb.text = [PandaMovieLoginAccoutModel PandaMoViewgetuserName];
+        self.pandaHeaderView.PandaCardlb.text   = @"ID:100001";
+    }else{
+        self.pandaHeaderView.PandauserImgView.image = [UIImage imageNamed:@"homelogo"];
+        self.pandaHeaderView.Pandausernamelb.text = @"未登录";
+        self.pandaHeaderView.PandaCardlb.text   = @"ID:";
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -137,15 +170,18 @@
 }
 #pragma mark--PandaCenterHeaderViewDelegate
 -(void)PandaCenterHeaderViewWithChangeInfo{
-    [[GKNavigationBarConfigure sharedInstance] updateConfigure:^(GKNavigationBarConfigure *configure) {
-        configure.backgroundColor = [UIColor whiteColor];
-        configure.backStyle = GKNavigationBarBackStyleBlack;
-        configure.titleColor = [UIColor blackColor];
-    }];
+    if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        [self PandanShowLoginVc];
+        return;
+    }
+
     PandaCenterChangeInfoController  * pandaInfoVc = [[PandaCenterChangeInfoController alloc]init];
     pandaInfoVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:pandaInfoVc animated:YES];
     
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [self PandaRealoaduserInfo];
 }
 /*
 #pragma mark - Navigation

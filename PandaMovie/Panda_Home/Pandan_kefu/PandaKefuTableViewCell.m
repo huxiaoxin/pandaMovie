@@ -95,9 +95,55 @@
     }
     return _FilmChatReVICE_uiimaname;
 }
+- (void)setPandaModel:(PandaMsgDetailModel *)pandaModel{
+    _pandaModel =  pandaModel;
+    [_FilmChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://p.qqan.com/up/2021-4/16194921988015974.jpg"]];
+    
+    [_FilmChatReVICE_userImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.imgUrl]];
+    
+    if (pandaModel.msgisMe) {
+        _FilmChatReVICE_paopaoIMgView.hidden = YES;
+        _FilmChatReVICE_userImgView.hidden = YES;
+        _FilmChatReVICE_contelb.hidden = YES;
+        
+        _FilmChatSEND_paopaoImgView.hidden = NO;
+        _FilmChatSEND_userImgView.hidden = NO;
+        _FilmChatSEND_Contentlb.hidden = NO;
+        
+        [_FilmChatSEND_Contentlb setText:pandaModel.msgname];
+        CGRect contetnRect =  [pandaModel.msgname cxl_sizeWithMoreString:[UIFont systemFontOfSize:15] maxWidth:SCREEN_Width-RealWidth(150)];
+        
+        _FilmChatSEND_Contentlb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
+        
+        _FilmChatSEND_paopaoImgView.frame = CGRectMake(SCREEN_Width-contetnRect.size.width-RealWidth(45+15+25), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
+        pandaModel.CellHeight =  CGRectGetMaxY(_FilmChatSEND_paopaoImgView.frame)+RealWidth(30);
+        
+    }else{
+        
+        _FilmChatReVICE_paopaoIMgView.hidden = NO;
+        _FilmChatReVICE_userImgView.hidden = NO;
+        _FilmChatReVICE_contelb.hidden = NO;
+        
+        _FilmChatSEND_paopaoImgView.hidden = YES;
+        _FilmChatSEND_userImgView.hidden = YES;
+        _FilmChatSEND_Contentlb.hidden = YES;
+        
+        
+        [_FilmChatReVICE_contelb setText:pandaModel.msgname];
+        CGRect contetnRect =  [pandaModel.msgname cxl_sizeWithMoreString:[UIFont systemFontOfSize:15] maxWidth:SCREEN_Width-RealWidth(150)];
+        
+        _FilmChatReVICE_contelb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
+        
+        _FilmChatReVICE_paopaoIMgView.frame = CGRectMake(CGRectGetMaxX(_FilmChatReVICE_userImgView.frame)+RealWidth(10), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
+        pandaModel.CellHeight =  CGRectGetMaxY(_FilmChatReVICE_paopaoIMgView.frame)+RealWidth(30);
+        
+    }
+    
+}
+
 -(void)setPdModell:(FilmChatDetailMoel *)pdModell{
     _pdModell =  pdModell;
-    [_FilmChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201505%2F17%2F20150517101126_SFy2U.jpeg&refer=http%3A%2F%2Fimg3.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1619531738&t=5a22670d588cfd9b0d5f6719b04e22bf"]];
+    [_FilmChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://p.qqan.com/up/2021-4/16194921988015974.jpg"]];
     _FilmChatReVICE_userImgView.image = [UIImage imageNamed:@"kefutouxiangdefuben"];
     if (pdModell.msgisMe) {
         _FilmChatReVICE_paopaoIMgView.hidden = YES;

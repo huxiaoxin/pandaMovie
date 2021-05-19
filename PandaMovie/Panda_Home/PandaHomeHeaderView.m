@@ -144,14 +144,20 @@
 }
 #pragma mark--UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 100;
+    if (collectionView == self.PandanHotingCollectionView) {
+        return _pandaWatchingArr.count;
+    }else{
+        return _pandaWatedArr.count;
+    }
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (collectionView == self.PandanHotingCollectionView) {
         PandaHotingCollectionViewCell * hotingCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PandaHotingCollectionViewCell" forIndexPath:indexPath];
+        hotingCell.pandaModel = _pandaWatchingArr[indexPath.row];
         return hotingCell;
     }else{
         PandaCommonCollectionViewCell * commonCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PandaCommonCollectionViewCell" forIndexPath:indexPath];
+        commonCell.padanModel = _pandaWatedArr[indexPath.row];
     return commonCell;
     }
 
@@ -164,5 +170,13 @@
     lb.font = [UIFont boldSystemFontOfSize:20];
     return lb;
 }
-
+- (void)setPandaWatchingArr:(NSArray *)pandaWatchingArr{
+    _pandaWatchingArr = pandaWatchingArr;
+    [_PandanHotingCollectionView reloadData];
+    
+}
+- (void)setPandaWatedArr:(NSArray *)pandaWatedArr{
+    _pandaWatedArr  =  pandaWatedArr;
+    [_PandanCommonCollectionView reloadData];
+}
 @end

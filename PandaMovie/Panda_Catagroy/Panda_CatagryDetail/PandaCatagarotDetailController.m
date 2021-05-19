@@ -20,14 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navTitle =  @"详情";
-    self.view.backgroundColor =[UIColor whiteColor];
-    [self.view addSubview:self.pandaDetailTableView];
-    self.pandaDetailHeader.mj_h = self.pandaDetailHeader.PandaDetailHeaderHeight;
-    _pandaDetailTableView.tableHeaderView = self.pandaDetailHeader;
-    _pandaDetailTableView.tableFooterView = self.pandaDetaiFooter;
-    [self.view addSubview:self.pandaDetaDataBtn];
+
     
-    //
+    
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
+        [self.view addSubview:self.pandaDetailTableView];
+        self.pandaDetailHeader.mj_h = self.pandaDetailHeader.PandaDetailHeaderHeight;
+        self->_pandaDetailTableView.tableHeaderView = self.pandaDetailHeader;
+        self->_pandaDetailTableView.tableFooterView = self.pandaDetaiFooter;
+        [self.view addSubview:self.pandaDetaDataBtn];
+    });
+    
     
     self.gk_navItemRightSpace = 15;
     UIButton * pandaDetaLoactionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -38,7 +43,7 @@
 }
 #pragma mark--FilmFacotryLocationDetailHeaderDelegate
 -(void)PandaCatagroyDetailHeaderViewBtnClick:(UIButton *)myBtn{
-    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+    if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
         [self PandanShowLoginVc];
         return;
     }
@@ -91,7 +96,7 @@
         _pandaDetaDataBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
         _pandaDetaDataBtn.titleLabel.font = [UIFont systemFontOfSize:K(15)];
         [_pandaDetaDataBtn addTarget:self action:@selector(pandaDetaDataBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        if ([FilmFactoryToolModel FilmFactoryisLogin]) {
+        if ([PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
             if (self.pandaItem.isBaoming) {
                 [_pandaDetaDataBtn setBackgroundColor:LGDGaryColor];
                 [_pandaDetaDataBtn setTitle:@"已参与" forState:UIControlStateNormal];
@@ -132,7 +137,7 @@
 }
 - (UITableView *)pandaDetailTableView{
     if (!_pandaDetailTableView) {
-        _pandaDetailTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NaviH, SCREEN_Width, SCREEN_Height-NaviH-K(80)) style:UITableViewStylePlain];
+        _pandaDetailTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NaviH, SCREEN_Width, SCREEN_Height-NaviH-K(60)) style:UITableViewStylePlain];
         _pandaDetailTableView.showsVerticalScrollIndicator = NO;
         _pandaDetailTableView.showsHorizontalScrollIndicator = NO;
         _pandaDetailTableView.separatorStyle = UITableViewCellSelectionStyleNone;
@@ -159,7 +164,7 @@
     return RealWidth(30);
 }
 -(void)pandaDetaDataBtnClick{
-    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+    if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
         [self PandanShowLoginVc];
         return;
     }

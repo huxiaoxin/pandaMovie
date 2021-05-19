@@ -28,7 +28,7 @@
         _PandasysteTimelb.textAlignment = NSTextAlignmentCenter;
         _PandasysteTimelb.font = [UIFont systemFontOfSize:K(13)];
         _PandasysteTimelb.textColor = [UIColor whiteColor];
-        _PandasysteTimelb.text = @"2021-04-26 12:00:00";
+        _PandasysteTimelb.text = @"2021-05-29 12:00:00";
         _PandasysteTimelb.layer.cornerRadius = K(12.5);
         _PandasysteTimelb.layer.masksToBounds = YES;
         _PandasysteTimelb.backgroundColor  =  LGDGaryColor;
@@ -55,7 +55,7 @@
         attment.image = [UIImage imageNamed:@"hongdian"];
         attment.bounds = CGRectMake(0, 0, K(10), K(10));
         NSAttributedString * Attbute = [NSAttributedString attributedStringWithAttachment:attment];
-        NSString  * TottalTitleStr = @"  关于5月3号企鹅追剧维护公告";
+        NSString  * TottalTitleStr = @"  关于5月29号熊猫追剧维护公告";
         NSMutableAttributedString * Attmuteble = [[NSMutableAttributedString alloc]initWithString:TottalTitleStr];
         [Attmuteble insertAttributedString:Attbute atIndex:0];
         _PandasysteFirstlb.attributedText = Attmuteble;

@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PandaMovieModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PandaHotingCollectionViewCell : UICollectionViewCell
-
+@property(nonatomic,strong) PandaMovieModel * pandaModel;
 @end
 
 NS_ASSUME_NONNULL_END

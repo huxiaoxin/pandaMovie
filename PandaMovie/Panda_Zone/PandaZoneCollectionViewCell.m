@@ -106,13 +106,13 @@
         _PandaZanlb.textColor = [UIColor whiteColor];
         _PandaZanlb.font = [UIFont systemFontOfSize:13];
         _PandaZanlb.userInteractionEnabled = YES;
-        NSTextAttachment * aatment = [[NSTextAttachment alloc]init];
-        aatment.image = [UIImage imageNamed:@"panda_zansel"];
-        aatment.bounds  = CGRectMake(0, -3, RealWidth(14), RealWidth(14));
-        NSAttributedString * attbute = [NSAttributedString attributedStringWithAttachment:aatment];
-        NSMutableAttributedString * amutube = [[NSMutableAttributedString alloc]initWithString:@" 123"];
-        [amutube insertAttributedString:attbute atIndex:0];
-        _PandaZanlb.attributedText = amutube;
+//        NSTextAttachment * aatment = [[NSTextAttachment alloc]init];
+//        aatment.image = [UIImage imageNamed:@"panda_zansel"];
+//        aatment.bounds  = CGRectMake(0, -3, RealWidth(14), RealWidth(14));
+//        NSAttributedString * attbute = [NSAttributedString attributedStringWithAttachment:aatment];
+//        NSMutableAttributedString * amutube = [[NSMutableAttributedString alloc]initWithString:@" 123"];
+//        [amutube insertAttributedString:attbute atIndex:0];
+//        _PandaZanlb.attributedText = amutube;
     
         UITapGestureRecognizer *  PandaComentTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(PandaZanlbClick:)];
         [_PandaZanlb addGestureRecognizer:PandaComentTap];
@@ -120,7 +120,15 @@
     }
     return _PandaZanlb;
 }
-
+-(NSMutableAttributedString *)lbConfiguWithImg:(NSString *)imgStr lbtext:(NSString *)lbStr{
+    NSTextAttachment * aatment = [[NSTextAttachment alloc]init];
+    aatment.image = [UIImage imageNamed:imgStr];
+    aatment.bounds  = CGRectMake(0, -3, RealWidth(14), RealWidth(14));
+    NSAttributedString * attbute = [NSAttributedString attributedStringWithAttachment:aatment];
+    NSMutableAttributedString * amutube = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@" %@",lbStr]];
+    [amutube insertAttributedString:attbute atIndex:0];
+    return amutube;
+}
 - (void)setPandaModel:(PandaZoneModel *)pandaModel{
     _pandaModel = pandaModel;
     [_PamdauserImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.imgurl]];
@@ -133,6 +141,19 @@
     _PamdauserImgView.y = CGRectGetMaxY(_PandaTitle.frame)+RealWidth(5);
     _PandaZoneView.height = CGRectGetMaxY(_PandaZanlb.frame)+RealWidth(10);
     pandaModel.CellHeight = CGRectGetHeight(_PandaZoneView.frame);
+    
+    NSString  * imgZantext;
+    
+    if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        imgZantext = @"panda_zan";
+    }else{
+        if (pandaModel.isZan) {
+            imgZantext = @"panda_zansel";
+        }else{
+            imgZantext = @"panda_zan";
+        }
+    }
+    _PandaZanlb.attributedText = [self lbConfiguWithImg:imgZantext lbtext:[NSString stringWithFormat:@"%ld",(long)pandaModel.zanNum]];
 
 }
 #pragma mark--PandaComentlbClick

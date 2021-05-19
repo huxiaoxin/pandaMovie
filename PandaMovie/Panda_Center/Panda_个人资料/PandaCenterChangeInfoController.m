@@ -28,18 +28,15 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gk_navTitle = @"修改信息";
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.gk_navTitle = @"修改信息";    
     
     UIView * PandaCommitView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, K(80), K(60))];
     UIButton * PandaCommitBtn = [[UIButton alloc]initWithFrame:CGRectMake(K(20), K(12), K(40), K(20))];
     [PandaCommitBtn setTitle:@"提交" forState:UIControlStateNormal];
-    [PandaCommitBtn setTitleColor:LGDBLackColor forState:UIControlStateNormal];
+    [PandaCommitBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     PandaCommitBtn.titleLabel.font =[UIFont systemFontOfSize:14];
     [PandaCommitBtn addTarget:self action:@selector(PandaCommitBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [PandaCommitView addSubview:PandaCommitBtn];
-    
     self.gk_navRightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:PandaCommitView];
     
     UIView * PandaInfoInputView = [[UIView alloc]initWithFrame:CGRectMake(K(15), NaviH+K(15), SCREEN_Width-K(30), K(40))];

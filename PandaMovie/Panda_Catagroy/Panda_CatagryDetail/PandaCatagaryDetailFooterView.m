@@ -10,14 +10,14 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         
-        UIView * pandaDetailBtomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, K(109+29))];
-        pandaDetailBtomView.backgroundColor = [UIColor whiteColor];
+        UIView * pandaDetailBtomView = [[UIView alloc]initWithFrame:CGRectMake(RealWidth(10), RealWidth(10), SCREEN_Width-RealWidth(20), K(109+29+10))];
+        pandaDetailBtomView.backgroundColor = [UIColor colorWithHexString:@"292945"];
         [self addSubview:pandaDetailBtomView];
         
 
         UIView * pandaDetailBtomline = [[UIView alloc]initWithFrame:CGRectMake(K(16), K(6.5), SCREEN_Width-K(32), K(1))];
         pandaDetailBtomline.backgroundColor =  LGDLightGaryColor;
-        [pandaDetailBtomView addSubview:pandaDetailBtomline];
+//        [pandaDetailBtomView addSubview:pandaDetailBtomline];
         
         PandaCatahroyBtn * pandaDetailbtn = [[PandaCatahroyBtn alloc]initWithFrame:CGRectMake(K(17), CGRectGetMaxY(pandaDetailBtomline.frame)+K(11.5), K(87+15), K(35))];
         pandaDetailbtn.PandaCatagryTopImgView.image = [UIImage imageNamed:@"diban"];
@@ -25,7 +25,7 @@
         [pandaDetailBtomView addSubview:pandaDetailbtn];
         
         
-        PandaCatahroyBtn * pandaDetailbtn2 = [[PandaCatahroyBtn alloc]initWithFrame:CGRectMake(K(30)+CGRectGetMaxX(pandaDetailbtn.frame), CGRectGetMaxY(pandaDetailBtomline.frame)+K(11.5), K(87+15), K(35))];
+        PandaCatahroyBtn * pandaDetailbtn2 = [[PandaCatahroyBtn alloc]initWithFrame:CGRectMake(K(30)+CGRectGetMaxX(pandaDetailbtn.frame), CGRectGetMaxY(pandaDetailBtomline.frame)+K(11.5), K(87), K(35))];
         pandaDetailbtn2.PandaCatagryTopImgView.image = [UIImage imageNamed:@"dengguang"];
         pandaDetailbtn2.PandaBtomlb.text = @"灯光吊灯";
         [pandaDetailBtomView addSubview:pandaDetailbtn2];
@@ -37,7 +37,7 @@
 
         UIView * pandaDetailBtomline1 = [[UIView alloc]initWithFrame:CGRectMake(K(16), CGRectGetMaxY(pandaDetailbtn3.frame)+K(8), SCREEN_Width-K(32), K(1))];
         pandaDetailBtomline1.backgroundColor =  LGDLightGaryColor;
-        [pandaDetailBtomView addSubview:pandaDetailBtomline1];
+//        [pandaDetailBtomView addSubview:pandaDetailBtomline1];
 
         NSArray * ImgArr =  @[@"免费无线",@"停车场",@"附近餐厅",@"便利店"];
     

@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 @interface PandaCenterHeaderView : UIView
 @property(nonatomic,weak) id <PandaCenterHeaderViewDelegate>delegate;
+@property(nonatomic,strong) UIImageView * PandauserImgView;
+@property(nonatomic,strong) UILabel     * Pandausernamelb;
+@property(nonatomic,strong) UILabel     * PandaCardlb;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -13,6 +13,8 @@
 #import "PandaZoneDetailController.h"
 #import "PandaSendZoneToolController.h"
 #import <HUPhotoBrowser.h>
+#import "PandaMsgDetailViewController.h"
+#import "PandaMovieMsgModel.h"
 @interface PandaZoneViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,JRWaterFallLayoutDelegate,PandaZoneCollectionViewCellDelegate>
 @property(nonatomic,strong) UICollectionView * PandaZoneCollectionView;
 @property(nonatomic,strong) NSMutableArray   * PandaZoneDataArr;
@@ -36,11 +38,18 @@
     [PandaSednBtn setImage:[UIImage imageNamed:@"send_icon"] forState:UIControlStateNormal];
     [PandaSednBtn addTarget:self action:@selector(PandaSednBtnClick) forControlEvents:UIControlEventTouchUpInside];
     self.gk_navRightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:PandaSednBtn];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PandaMovieLoginSucced) name:@"PandaMovieLoginSucced" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PandaMoviewLoginout) name:@"PandaMoviewLoginout" object:nil];
+
     // Do any additional setup after loading the view.
 }
+-(void)PandaMovieLoginSucced{
+    [_PandaZoneCollectionView.mj_header beginRefreshing];
+}
+-(void)PandaMoviewLoginout{
+    [_PandaZoneCollectionView.mj_header beginRefreshing];
+}
 -(void)PandaSednBtnClick{
-    NSLog(@"%s",__func__);
     
     [[GKNavigationBarConfigure sharedInstance] updateConfigure:^(GKNavigationBarConfigure *configure) {
         configure.backgroundColor =  [UIColor whiteColor];
@@ -111,8 +120,46 @@
         [self.navigationController pushViewController:PandaZoneDetailVc animated:YES];
     }else if (btnindex == 2){
     //点赞
+        if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+            [self PandanShowLoginVc];
+            return;
+        }
+        [LCProgressHUD showLoading:@""];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [LCProgressHUD hide];
+            pandaModel.isZan = !pandaModel.isZan;
+            if (pandaModel.isZan) {
+                pandaModel.zanNum +=1;
+            }else{
+                pandaModel.zanNum -=1;
+            }
+     [WHC_ModelSqlite update:[PandaZoneModel class] value:[NSString stringWithFormat:@"isZan  = '%@'",@(pandaModel.isZan)] where:[NSString stringWithFormat:@"PandaZoneID = '%ld'",pandaModel.PandaZoneID]];
+        [WHC_ModelSqlite update:[PandaZoneModel class] value:[NSString stringWithFormat:@"zanNum  = '%@'",@(pandaModel.zanNum)] where:[NSString stringWithFormat:@"PandaZoneID = '%ld'",pandaModel.PandaZoneID]];
+        [self.PandaZoneCollectionView reloadData];
+        });
+
+        
     }else if (btnindex == 3){
     //聊天
+        if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+            [self PandanShowLoginVc];
+            return;
+        }
+        
+        PandaMovieMsgModel * msgModel = [[PandaMovieMsgModel alloc]init];
+        msgModel.ChatID = pandaModel.PandaZoneID;
+        msgModel.imgurl = pandaModel.imgurl;
+        msgModel.topname = pandaModel.username;
+        msgModel.time =    pandaModel.time;
+        PandaMsgDetailViewController * msgDetailVc = [[PandaMsgDetailViewController alloc]init];
+        msgDetailVc.hidesBottomBarWhenPushed = YES;
+        msgDetailVc.pandModel = msgModel;
+        [self.navigationController pushViewController:msgDetailVc animated:YES];
+        
+        
+        
+        
+        
     }
 
 }

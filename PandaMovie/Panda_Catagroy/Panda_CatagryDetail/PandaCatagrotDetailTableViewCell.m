@@ -7,7 +7,7 @@
 @implementation PandaCatagrotDetailTableViewCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self =[super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.backgroundColor =[UIColor whiteColor];
+        self.backgroundColor =[UIColor clearColor];
         [self.contentView addSubview:self.pandaFirstTitle];
         self.selectionStyle =  UITableViewCellSelectionStyleNone;
         

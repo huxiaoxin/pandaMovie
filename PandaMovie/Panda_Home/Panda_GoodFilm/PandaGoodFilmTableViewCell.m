@@ -61,19 +61,8 @@
     if (!_PandaTimeComminglb) {
         _PandaTimeComminglb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandaThubImgView.frame)+RealWidth(5), CGRectGetMaxY(_PandaEngilshNamelb.frame)+RealWidth(5), GK_SCREEN_WIDTH-CGRectGetMaxX(_PandaThubImgView.frame)-RealWidth(10), RealWidth(15))];
         _PandaEngilshNamelb.font = [UIFont systemFontOfSize:13];
-        _PandaEngilshNamelb.textColor = [UIColor colorWithHexString:@"9F9FA5"];
-        NSString * PandaFirstStr = @"还有";
-        NSString * PandaSeconStr = @"3";
-        NSString * PandaThreeStr = @"天上映";
-        NSString * PandaFoureStr = @" 中国大陆";
-        NSString * pandaTotaolStr = [NSString stringWithFormat:@"%@%@%@%@",PandaFirstStr,PandaSeconStr,PandaThreeStr,PandaFoureStr];
-        NSMutableAttributedString * PandaMutableAttbure = [[NSMutableAttributedString alloc]initWithString:pandaTotaolStr];
-        [PandaMutableAttbure addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(0, pandaTotaolStr.length)];
-        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(0, PandaFirstStr.length)];
-        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"FD8007"] range:NSMakeRange(PandaFirstStr.length, PandaSeconStr.length)];
-        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(PandaFirstStr.length+PandaSeconStr.length, PandaThreeStr.length)];
-        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(PandaFirstStr.length+PandaSeconStr.length+PandaThreeStr.length, PandaFoureStr.length)];
-        _PandaTimeComminglb.attributedText = PandaMutableAttbure;
+        _PandaEngilshNamelb.textColor = [UIColor colorWithHexString:@"FD8007"];
+       
     }
     return _PandaTimeComminglb;
 }
@@ -91,19 +80,50 @@
         _PandaWatchNumlb = [[UILabel alloc]initWithFrame:CGRectMake(GK_SCREEN_WIDTH-RealWidth(120), CGRectGetMinY(_PandaThubImgView.frame)+RealWidth(5), RealWidth(110), RealWidth(15))];
         _PandaWatchNumlb.textAlignment = NSTextAlignmentRight;
       
-        NSString * PandaFirstStr =  @"3亿";
-        NSString * PandaSecondStr = @"  想看";
-        NSString * pandaThreeStr = [NSString stringWithFormat:@"%@%@",PandaFirstStr,PandaSecondStr];
-        NSMutableAttributedString * PandaAtttbure = [[NSMutableAttributedString alloc]initWithString:pandaThreeStr];
-        [PandaAtttbure addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:16] range:NSMakeRange(0, PandaFirstStr.length)];
-        [PandaAtttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"FD8007"] range:NSMakeRange(0, PandaFirstStr.length)];
 
-        [PandaAtttbure addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(PandaFirstStr.length, PandaSecondStr.length)];
-        [PandaAtttbure addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(PandaFirstStr.length, PandaSecondStr.length)];
-
-        _PandaWatchNumlb.attributedText = PandaAtttbure;
-        
     }
     return _PandaWatchNumlb;
+}
+- (void)setPandamodel:(PandaMovieModel *)pandamodel{
+    _pandamodel = pandamodel;
+    [_PandaThubImgView sd_setImageWithURL:[NSURL URLWithString:pandamodel.imgTubUrl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _PandaEngilshNamelb.text = pandamodel.englishNae;
+    _PandaArticlb.text = pandamodel.articlList;
+
+    if (pandamodel.shangyinNum == 0) {
+        NSString * pandaTotaolStr = @"已经上映";
+        NSMutableAttributedString * PandaMutableAttbure = [[NSMutableAttributedString alloc]initWithString:pandaTotaolStr];
+        [PandaMutableAttbure addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(0, pandaTotaolStr.length)];
+        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(0, pandaTotaolStr.length)];
+        _PandaTimeComminglb.attributedText = PandaMutableAttbure;
+    }else{
+        NSString * PandaFirstStr = @"还有";
+        NSString * PandaSeconStr = [NSString stringWithFormat:@"%ld",pandamodel.shangyinNum];
+        NSString * PandaThreeStr = @"天上映";
+        NSString * PandaFoureStr = @" 中国大陆";
+        NSString * pandaTotaolStr = [NSString stringWithFormat:@"%@%@%@%@",PandaFirstStr,PandaSeconStr,PandaThreeStr,PandaFoureStr];
+        NSMutableAttributedString * PandaMutableAttbure = [[NSMutableAttributedString alloc]initWithString:pandaTotaolStr];
+        [PandaMutableAttbure addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(0, pandaTotaolStr.length)];
+        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(0, PandaFirstStr.length)];
+        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"FD8007"] range:NSMakeRange(PandaFirstStr.length, PandaSeconStr.length)];
+        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(PandaFirstStr.length+PandaSeconStr.length, PandaThreeStr.length)];
+        [PandaMutableAttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"9F9FA5"] range:NSMakeRange(PandaFirstStr.length+PandaSeconStr.length+PandaThreeStr.length, PandaFoureStr.length)];
+        _PandaTimeComminglb.attributedText = PandaMutableAttbure;
+    }
+    
+    
+    
+    NSString * PandaFirstStr =  pandamodel.watchingNum;
+    NSString * PandaSecondStr = @"  想看";
+    NSString * pandaThreeStr = [NSString stringWithFormat:@"%@%@",PandaFirstStr,PandaSecondStr];
+    NSMutableAttributedString * PandaAtttbure = [[NSMutableAttributedString alloc]initWithString:pandaThreeStr];
+    [PandaAtttbure addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:16] range:NSMakeRange(0, PandaFirstStr.length)];
+    [PandaAtttbure addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"FD8007"] range:NSMakeRange(0, PandaFirstStr.length)];
+
+    [PandaAtttbure addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:13] range:NSMakeRange(PandaFirstStr.length, PandaSecondStr.length)];
+    [PandaAtttbure addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(PandaFirstStr.length, PandaSecondStr.length)];
+
+    _PandaWatchNumlb.attributedText = PandaAtttbure;
+    _PandaToplb.text =  pandamodel.famous;
 }
 @end

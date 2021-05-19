@@ -15,10 +15,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navTitle = @"报名详情";
-    self.view.backgroundColor = LGDLightGaryColor;
     
     UIView * pandaJonitFirstView = [[UIView alloc]initWithFrame:CGRectMake(0, NaviH+K(10), SCREEN_Width, K(80))];
-    pandaJonitFirstView.backgroundColor = [UIColor whiteColor];
+    pandaJonitFirstView.backgroundColor = [UIColor colorWithHexString:@"292945"];
     [self.view addSubview:pandaJonitFirstView];
     
     UIImageView * pandaJonitThubImgView =[[UIImageView alloc]initWithFrame:CGRectMake(K(15), K(10), K(60), K(60))];
@@ -28,7 +27,7 @@
     [pandaJonitThubImgView sd_setImageWithURL:[NSURL URLWithString:self.pandaModel.FilmThubImgView]];
     UILabel * pandaJonitToplb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(pandaJonitThubImgView.frame)+K(10), K(10), SCREEN_Width-CGRectGetMaxX(pandaJonitThubImgView.frame)-K(20), K(60))];
     pandaJonitToplb.numberOfLines =  0;
-    pandaJonitToplb.textColor = [UIColor blackColor];
+    pandaJonitToplb.textColor = [UIColor whiteColor];
     pandaJonitToplb.font = [UIFont systemFontOfSize:13];
     pandaJonitToplb.text = self.pandaModel.title;
     [pandaJonitFirstView addSubview:pandaJonitToplb];
@@ -36,18 +35,18 @@
     
     
     UIView * pandaDeepView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(pandaJonitFirstView.frame)+K(10), SCREEN_Width, K(160))];
-    pandaDeepView.backgroundColor=  [UIColor whiteColor];
+    pandaDeepView.backgroundColor=  [UIColor colorWithHexString:@"292945"];
     [self.view addSubview:pandaDeepView];
     
     
-    UILabel * pandaRealNamelb=  [self pandaLbconfigerWithTtile:@"真实姓名" lbFrame:CGRectMake(K(10), 0, K(100), K(40))];
+    UILabel * pandaRealNamelb=  [self pandaLbconfigerWithTtile:@"真实姓名:" lbFrame:CGRectMake(K(10), 0, K(100), K(40))];
     [pandaDeepView addSubview:pandaRealNamelb];
     
     UITextField * pandaJonitTextField = [self pandaLbConfigtextFieldWithHoder:@"请输入真实姓名" FieldFrame:CGRectMake(CGRectGetMaxX(pandaRealNamelb.frame), 0, SCREEN_Width-CGRectGetMaxX(pandaRealNamelb.frame), K(40))];
     [pandaDeepView addSubview:pandaJonitTextField];
     _pandaJonitTextField = pandaJonitTextField;
     
-    UILabel * pandaCompanylb=  [self pandaLbconfigerWithTtile:@"公司名称" lbFrame:CGRectMake(K(10), CGRectGetMaxY(pandaRealNamelb.frame), K(100), K(40))];
+    UILabel * pandaCompanylb=  [self pandaLbconfigerWithTtile:@"公司名称:" lbFrame:CGRectMake(K(10), CGRectGetMaxY(pandaRealNamelb.frame), K(100), K(40))];
     [pandaDeepView addSubview:pandaCompanylb];
     
     UITextField * pandaJonitTextField1 = [self pandaLbConfigtextFieldWithHoder:@"请输入公司名称" FieldFrame:CGRectMake(CGRectGetMaxX(pandaRealNamelb.frame), CGRectGetMaxY(pandaRealNamelb.frame), SCREEN_Width-CGRectGetMaxX(pandaCompanylb.frame), K(40))];
@@ -55,7 +54,7 @@
     _pandaJonitTextField1 = pandaJonitTextField1;
     
     
-    UILabel * pandaphonelb=  [self pandaLbconfigerWithTtile:@"联系电话" lbFrame:CGRectMake(K(10), CGRectGetMaxY(pandaCompanylb.frame), K(100), K(40))];
+    UILabel * pandaphonelb=  [self pandaLbconfigerWithTtile:@"联系电话:" lbFrame:CGRectMake(K(10), CGRectGetMaxY(pandaCompanylb.frame), K(100), K(40))];
     [pandaDeepView addSubview:pandaphonelb];
     
     UITextField * pandaJonitTextField2 = [self pandaLbConfigtextFieldWithHoder:@"请输入手机号" FieldFrame:CGRectMake(CGRectGetMaxX(pandaCompanylb.frame), CGRectGetMaxY(pandaCompanylb.frame), SCREEN_Width-CGRectGetMaxX(pandaphonelb.frame), K(40))];
@@ -63,7 +62,7 @@
     _pandaJonitTextField2 = pandaJonitTextField2;
     
     
-    UILabel * pandapholderlb=  [self pandaLbconfigerWithTtile:@"备注" lbFrame:CGRectMake(K(10), CGRectGetMaxY(pandaphonelb.frame), K(100), K(40))];
+    UILabel * pandapholderlb=  [self pandaLbconfigerWithTtile:@"备注:" lbFrame:CGRectMake(K(10), CGRectGetMaxY(pandaphonelb.frame), K(100), K(40))];
     [pandaDeepView addSubview:pandapholderlb];
     
     UITextField * pandaJonitTextField3 = [self pandaLbConfigtextFieldWithHoder:@"如有特殊需求可填写在这儿" FieldFrame:CGRectMake(CGRectGetMaxX(pandaphonelb.frame), CGRectGetMaxY(pandaphonelb.frame), SCREEN_Width-CGRectGetMaxX(pandapholderlb.frame), K(40))];
@@ -116,8 +115,9 @@
 -(UILabel *)pandaLbconfigerWithTtile:(NSString *)titleStr lbFrame:(CGRect)lbFrame{
     NSString * configStr = [NSString stringWithFormat:@"  %@",titleStr];
     UILabel * lb = [[UILabel alloc]initWithFrame:lbFrame];
+    lb.textColor = [UIColor whiteColor];
     NSTextAttachment  * attment = [[NSTextAttachment alloc]init];
-    attment.image = [UIImage imageNamed:@"jiufuqianbaoicon14"];
+    attment.image = [UIImage imageNamed:@"hongdian"];
     attment.bounds = CGRectMake(0, 0, K(10), K(10));
     NSAttributedString * attbu = [NSAttributedString attributedStringWithAttachment:attment];
     NSMutableAttributedString * lbAttb  =[[NSMutableAttributedString alloc]initWithString:configStr];

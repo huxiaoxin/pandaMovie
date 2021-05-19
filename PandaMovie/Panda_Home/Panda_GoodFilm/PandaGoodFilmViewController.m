@@ -7,6 +7,7 @@
 
 #import "PandaGoodFilmViewController.h"
 #import "PandaGoodFilmTableViewCell.h"
+#import "PandaMovieModel.h"
 @interface PandaGoodFilmViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView    *  PandaHotTableView;
 @property(nonatomic,strong) NSMutableArray * PandaHotDataArr;
@@ -40,7 +41,7 @@
     return _PandaHotTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.PandaHotDataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * PandaHotIdentifer = @"PandaGoodFilmTableViewCell";
@@ -48,6 +49,7 @@
     if (PandaCell == nil) {
         PandaCell = [[PandaGoodFilmTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:PandaHotIdentifer];
     }
+    PandaCell.pandamodel = self.PandaHotDataArr[indexPath.row];
     return PandaCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -55,7 +57,13 @@
 }
 -(void)PandaHotTableViewHeaderClick{
     MJWeakSelf;
+    NSArray * dataArr = [WHC_ModelSqlite query:[PandaMovieModel class]];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (weakSelf.PandaHotDataArr.count > 0) {
+            [weakSelf.PandaHotDataArr removeAllObjects];
+        }
+        weakSelf.PandaHotDataArr = dataArr.mutableCopy;
+        [weakSelf.PandaHotTableView reloadData];
         [weakSelf.PandaHotTableView.mj_header endRefreshing];
     });
 }
