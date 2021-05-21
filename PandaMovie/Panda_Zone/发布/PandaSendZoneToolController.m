@@ -141,15 +141,12 @@
         return;
     }
     
-    //    if ([FilmFactoryAccountComponent checkLogin:YES]) {
-    //        [LCProgressHUD showLoading:@""];
-    //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    //            [LCProgressHUD showSuccess:@"发布成功,请等待平台审核后显示!"];
-    //            [self dismissViewControllerAnimated:YES completion:nil];
-    //        });
-    //
-    //    }
+  
     
+    if (![PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        [self PandanShowLoginVc];
+        return;
+    }
     [LCProgressHUD showLoading:@""];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LCProgressHUD showSuccess:@"发布成功,请等待平台审核后显示!"];

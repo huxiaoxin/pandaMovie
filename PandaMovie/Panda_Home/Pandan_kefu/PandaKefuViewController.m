@@ -7,7 +7,7 @@
 
 #import "PandaKefuViewController.h"
 #import "PandaKefuTableViewCell.h"
-#import "FilmChatDetailMoel.h"
+#import "PandaMoviewKefuModel.h"
 #import "FilmChatZoneChatDetailToolsView.h"
 @interface PandaKefuViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView    * PandaKefuTableView;
@@ -21,7 +21,7 @@
 - (NSMutableArray *)PandaKefudataArr{
     if (!_PandaKefudataArr) {
     _PandaKefudataArr = [NSMutableArray array];
-        FilmChatDetailMoel * chatModel =  [[FilmChatDetailMoel alloc]init];
+        PandaMoviewKefuModel * chatModel =  [[PandaMoviewKefuModel alloc]init];
         chatModel.msgname = @"您好～我是今天值班的客服，小周，请问有什么可以帮您？";
         chatModel.userID = 9999;
         chatModel.imgUrl = @"";
@@ -53,7 +53,7 @@
             [LCProgressHUD showLoading:@""];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [LCProgressHUD hide];
-                FilmChatDetailMoel  * models = [[FilmChatDetailMoel alloc]init];
+                PandaMoviewKefuModel  * models = [[PandaMoviewKefuModel alloc]init];
                 models.msgname = textView.text;
                 models.userID = 9999;
                 models.msgisMe = YES;
@@ -63,7 +63,7 @@
                 textView.text = nil;
                 [weakSelf.PandaKefuTableView reloadData];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    FilmChatDetailMoel  * models = [[FilmChatDetailMoel alloc]init];
+                    PandaMoviewKefuModel  * models = [[PandaMoviewKefuModel alloc]init];
                     models.msgname = self.isFirstSend == NO ? @"抱歉，小周无法理解你说的问题哦～，你可以说今天是周几😄" : @"很抱歉，无法理解你说的问题，如果有疑问，可以拨打我们的人工客服电话400-600-5872";
                     models.userID = 9999;
                     models.msgisMe = NO;
@@ -103,7 +103,7 @@
     return pandaCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    FilmChatDetailMoel * chatModel = self.PandaKefudataArr[indexPath.row];
+    PandaMoviewKefuModel * chatModel = self.PandaKefudataArr[indexPath.row];
     return chatModel.CellHeight;
 }
 /*

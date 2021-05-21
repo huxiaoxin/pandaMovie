@@ -86,9 +86,9 @@
 }
 - (void)setPandamodel:(PandaMovieModel *)pandamodel{
     _pandamodel = pandamodel;
-    [_PandaThubImgView sd_setImageWithURL:[NSURL URLWithString:pandamodel.imgTubUrl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
-    _PandaEngilshNamelb.text = pandamodel.englishNae;
-    _PandaArticlb.text = pandamodel.articlList;
+    [_PandaThubImgView sd_setImageWithURL:[NSURL URLWithString:pandamodel.pandaMoiveThuburl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _PandaEngilshNamelb.text = pandamodel.PandaMoviewengishName;
+    _PandaArticlb.text = pandamodel.PandaMoviewArtiss;
 
     if (pandamodel.shangyinNum == 0) {
         NSString * pandaTotaolStr = @"已经上映";
@@ -124,6 +124,6 @@
     [PandaAtttbure addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(PandaFirstStr.length, PandaSecondStr.length)];
 
     _PandaWatchNumlb.attributedText = PandaAtttbure;
-    _PandaToplb.text =  pandamodel.famous;
+    _PandaToplb.text =  pandamodel.PandaMoviewName;
 }
 @end

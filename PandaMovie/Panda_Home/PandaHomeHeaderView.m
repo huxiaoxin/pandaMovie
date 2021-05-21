@@ -12,7 +12,7 @@
 #import "PandaHomeBtn.h"
 #import "PandaHotingCollectionViewCell.h"
 #import "PandaCommonCollectionViewCell.h"
-@interface PandaHomeHeaderView ()<CHCardViewDelegate, CHCardViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource>
+@interface PandaHomeHeaderView ()<CHCardViewDelegate, CHCardViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,PandaHotingCollectionViewCellDelegate>
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) CHCardView * PandaCardView;
 @property(nonatomic,copy)     NSArray * PandaDataArr;
@@ -102,14 +102,13 @@
     // 网络数据
     [self.dataArray removeAllObjects];
     
-    NSArray *urls = @[@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201312%2F31%2F111859myvyiivetyftfz2n.jpg&refer=http%3A%2F%2Fattach.bbs.miui.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622689847&t=f69c0bb6cc5c39b30245acdfb00ad153",@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201311%2F23%2F215012oxqaawegw2v877i4.jpg&refer=http%3A%2F%2Fattach.bbs.miui.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622689847&t=c9666fd210e9f4f8ebd53bb61723cca6",@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fsoftbbs%2F1003%2F07%2Fc0%2F3134443_1267900790753_1024x1024soft.jpg&refer=http%3A%2F%2Fimg.pconline.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622689847&t=7221559345f83c3faf4ac496f30af55e",@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fwallpaper%2F1212%2F10%2Fc1%2F16491670_1355126816487.jpg&refer=http%3A%2F%2Fimg.pconline.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622689847&t=958f72a24d6d74c4cdcb5020b281722a",@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201303%2F18%2F233119quyrec7to3ws3rco.jpg&refer=http%3A%2F%2Fattach.bbs.miui.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622689847&t=a2745495ca84253cc5c249172d8d9ddf"];
+    NSArray *urls = @[@"https://img1.doubanio.com/view/photo/l/public/p2643157619.jpg",@"https://img2.doubanio.com/view/photo/l/public/p2634973392.jpg"];
     
     for (NSString *url in urls) {
         CHCardItemModel *itemModel = [[CHCardItemModel alloc] init];
         itemModel.imagename = url;
         [self.dataArray addObject:itemModel];
     }
-    [self.PandaCardView reloadData];
   
 }
 - (CHCardView *)PandaCardView{
@@ -122,7 +121,7 @@
 }
 #pragma mark--CHCardViewDataSource
 - (NSInteger)numberOfItemViewsInCardView:(CHCardView *)cardView{
-    return 4;
+    return self.dataArray.count;
 }
 - (CHCardItemView *)cardView:(CHCardView *)cardView itemViewAtIndex:(NSInteger)index{
     CHCardItemCustomView *itemView = [[CHCardItemCustomView alloc] initWithFrame:cardView.bounds];
@@ -137,7 +136,10 @@
     [self.PandaCardView reloadData];
 }
 #pragma mark--CHCardViewDelegate
-- (void)cardView:(CHCardView *)cardView didClickItemAtIndex:(NSInteger)index { }
+- (void)cardView:(CHCardView *)cardView didClickItemAtIndex:(NSInteger)index {
+    
+    [self.delegate PandaHomeHeaderViewWithBanarDidSelteceIndex:index];
+}
 
 -(void)pandabtnClick:(PandaHomeBtn *)pandabtn{
     [self.delegate PandaHomeHeaderViewWithBtnClickIndex:pandabtn.tag];
@@ -153,6 +155,8 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     if (collectionView == self.PandanHotingCollectionView) {
         PandaHotingCollectionViewCell * hotingCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PandaHotingCollectionViewCell" forIndexPath:indexPath];
+        hotingCell.tag  =  indexPath.row;
+        hotingCell.delegate  =self;
         hotingCell.pandaModel = _pandaWatchingArr[indexPath.row];
         return hotingCell;
     }else{
@@ -162,7 +166,14 @@
     }
 
 }
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    if (collectionView == self.PandanHotingCollectionView) {
+        [self.delegate PandaHomeHeaderViewCollectionDidSeltcWith:_pandaWatchingArr[indexPath.row]];
+    }else{
+        [self.delegate PandaHomeHeaderViewCollectionDidSeltcWith:_pandaWatedArr[indexPath.row]];
 
+    }
+}
 -(UILabel *)PandaConfigText:(NSString *)text lbFrame:(CGRect)lbFrame{
     UILabel * lb = [[UILabel alloc]initWithFrame:lbFrame];
     lb.text=  text;
@@ -173,10 +184,30 @@
 - (void)setPandaWatchingArr:(NSArray *)pandaWatchingArr{
     _pandaWatchingArr = pandaWatchingArr;
     [_PandanHotingCollectionView reloadData];
-    
+    [self.PandaCardView reloadData];
+
 }
 - (void)setPandaWatedArr:(NSArray *)pandaWatedArr{
     _pandaWatedArr  =  pandaWatedArr;
     [_PandanCommonCollectionView reloadData];
+}
+#pragma mark--PandaHotingCollectionViewCellDelegate
+-(void)PandaHotingCollectionViewCellBtnDidClickWithCellIndex:(NSInteger)CellIndex{
+
+    
+    if ([PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        [LCProgressHUD showLoading:@""];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [LCProgressHUD hide];
+            PandaMovieModel * model =self->_pandaWatchingArr[CellIndex];
+            model.PandaMoview_isCollected = !model.PandaMoview_isCollected;
+            [WHC_ModelSqlite update:[PandaMovieModel class] value:[NSString stringWithFormat:@"isColletcd ='%@'",@(model.PandaMoview_isCollected)] where:[NSString stringWithFormat:@"FilmID ='%ld'",model.PandaMovie_ID]];
+            [self.PandanCommonCollectionView reloadData];
+            [self.delegate PandaHomeHeaderViewShowRefaeTableVew];
+
+        });
+    }else{
+        [self.delegate PandaHomeHeaderViewShowLoginVC];
+    }
 }
 @end

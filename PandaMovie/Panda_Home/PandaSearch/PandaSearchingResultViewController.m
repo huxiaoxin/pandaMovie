@@ -8,6 +8,7 @@
 #import "PandaSearchingResultViewController.h"
 #import "PandaGoodFilmTableViewCell.h"
 #import "PandaMovieModel.h"
+#import "PandaMoviewDetailViewController.h"
 @interface PandaSearchingResultViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView    *  PandaHotTableView;
 @property(nonatomic,strong) NSMutableArray * PandaHotDataArr;
@@ -54,6 +55,12 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return RealWidth(110);
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PandaMoviewDetailViewController * pandDetialVc = [[PandaMoviewDetailViewController alloc]init];
+    pandDetialVc.hidesBottomBarWhenPushed = YES;
+    pandDetialVc.padaItem = self.PandaHotDataArr[indexPath.row];
+    [self.navigationController pushViewController:pandDetialVc animated:YES];
 }
 -(void)PandaHotTableViewHeaderClick{
     MJWeakSelf;

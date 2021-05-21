@@ -136,7 +136,7 @@
     }else{
         self.pandaHeaderView.PandauserImgView.image = [UIImage imageNamed:@"homelogo"];
         self.pandaHeaderView.Pandausernamelb.text = @"未登录";
-        self.pandaHeaderView.PandaCardlb.text   = @"ID:";
+        self.pandaHeaderView.PandaCardlb.text   = @"ID:0.0";
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

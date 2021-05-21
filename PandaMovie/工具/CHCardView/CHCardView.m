@@ -67,9 +67,14 @@
     return self.frame.size;
 }
 
+- (CHCardItemView *)extracted:(NSInteger)index {
+    CHCardItemView *itemView = [self.dataSource cardView:self itemViewAtIndex:index];
+    return itemView;
+}
+
 - (CHCardItemView *)itemViewAtIndex:(NSInteger)index {
     if ([self.dataSource respondsToSelector:@selector(cardView:itemViewAtIndex:)]) {
-        CHCardItemView *itemView = [self.dataSource cardView:self itemViewAtIndex:index];
+        CHCardItemView * itemView = [self extracted:index];
         if (itemView == nil) {
             return [[CHCardItemView alloc] init];
         } else {

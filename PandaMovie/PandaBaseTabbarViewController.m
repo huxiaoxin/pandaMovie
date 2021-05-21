@@ -1,50 +1,50 @@
 #import "PandaBaseTabbarViewController.h"
 
 @interface PandaBaseTabbarViewController ()
-@property(nonatomic,strong) NSMutableArray  * XiaoxinPaperClassArr;
-@property(nonatomic,strong) NSMutableArray * XiaoxinPaperGlbalClassArr;
+@property(nonatomic,strong) NSMutableArray  * PandaMoviewClassArr;
+@property(nonatomic,strong) NSMutableArray * PandaMoviewGoladArr;
 @end
 
 @implementation PandaBaseTabbarViewController
 
--(NSMutableArray *)XiaoxinPaperClassArr{
-    if (!_XiaoxinPaperClassArr) {
-        _XiaoxinPaperClassArr = [NSMutableArray arrayWithArray:@[@"PandaHomeViewController",@"PandaCatagoryViewController",@"PandaZoneViewController",@"PandaMsgViewController",@"PandaCenterViewController"]];
+-(NSMutableArray *)PandaMoviewClassArr{
+    if (!_PandaMoviewClassArr) {
+        _PandaMoviewClassArr = [NSMutableArray arrayWithArray:@[@"PandaHomeViewController",@"PandaCatagoryViewController",@"PandaZoneViewController",@"PandaMsgViewController",@"PandaCenterViewController"]];
     }
-    return _XiaoxinPaperClassArr;
+    return _PandaMoviewClassArr;
 }
--(NSMutableArray *)XiaoxinPaperGlbalClassArr{
-    if (!_XiaoxinPaperGlbalClassArr) {
-        _XiaoxinPaperGlbalClassArr  = [NSMutableArray array];
+-(NSMutableArray *)PandaMoviewGoladArr{
+    if (!_PandaMoviewGoladArr) {
+        _PandaMoviewGoladArr  = [NSMutableArray array];
     }
-    return _XiaoxinPaperGlbalClassArr;
+    return _PandaMoviewGoladArr;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateSelected];
-    NSArray * XiaoxinPaper_nomalArr = @[@"panda_homenomal",@"panda_yuyuenomal",@"panda_zonenoaml",@"panda_msgnoaml",@"panda_centernomal"];
-    NSArray * XiaoxinPaper_selArr = @[@"panda_homesel",@"panda_yuyuesel",@"panda_zonesel",@"panda_msgsel",@"panda_centersel"];
-    NSArray  * FilmFactoryTitleArr = @[@"首页",@"活动",@"动态",@"消息",@"我的"];
-    for (int index = 0 ; index < self.XiaoxinPaperClassArr.count ; index ++) {
-        UIViewController * Xiaoxinpaper_Vc = [(UIViewController *)[NSClassFromString(_XiaoxinPaperClassArr[index]) alloc]init];
-        UIImage *Xiaoxinpaper_Nomal = [UIImage imageNamed:XiaoxinPaper_nomalArr[index]];
-        UIImage *Xiaoxinpaper_Seltecd = [UIImage imageNamed:XiaoxinPaper_selArr[index]];
-        Xiaoxinpaper_Vc.tabBarItem.image = [Xiaoxinpaper_Nomal imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        Xiaoxinpaper_Vc.tabBarItem.selectedImage = [Xiaoxinpaper_Seltecd imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        Xiaoxinpaper_Vc.tabBarItem.title =  FilmFactoryTitleArr[index];
-        UINavigationController  *WindwoundNav = [UINavigationController rootVC:Xiaoxinpaper_Vc translationScale:NO];
-        [self.XiaoxinPaperGlbalClassArr addObject:WindwoundNav];
+    NSArray * PandaMoviewNomalImgArr = @[@"panda_homenomal",@"panda_yuyuenomal",@"panda_zonenoaml",@"panda_msgnoaml",@"panda_centernomal"];
+    NSArray * PandaMoviewSelImgArr = @[@"panda_homesel",@"panda_yuyuesel",@"panda_zonesel",@"panda_msgsel",@"panda_centersel"];
+    NSArray  * PandaMoviewTitlArr = @[@"首页",@"活动",@"动态",@"消息",@"我的"];
+    for (int index = 0 ; index < self.PandaMoviewClassArr.count ; index ++) {
+        UIViewController * PandaMoviewVc = [(UIViewController *)[NSClassFromString(_PandaMoviewClassArr[index]) alloc]init];
+        UIImage *PandaMoviewNomal = [UIImage imageNamed:PandaMoviewNomalImgArr[index]];
+        UIImage *PandaMoviewSeltecd = [UIImage imageNamed:PandaMoviewSelImgArr[index]];
+        PandaMoviewVc.tabBarItem.image = [PandaMoviewNomal imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        PandaMoviewVc.tabBarItem.selectedImage = [PandaMoviewSeltecd imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        PandaMoviewVc.tabBarItem.title =  PandaMoviewTitlArr[index];
+        UINavigationController  *WindwoundNav = [UINavigationController rootVC:PandaMoviewVc translationScale:NO];
+        [self.PandaMoviewGoladArr addObject:WindwoundNav];
     }
-    GKNavigationBarConfigure *Xiaoxinpaper_Config = [GKNavigationBarConfigure sharedInstance];
-    [Xiaoxinpaper_Config setupDefaultConfigure];
-    Xiaoxinpaper_Config.backStyle = GKNavigationBarBackStyleWhite;
-    Xiaoxinpaper_Config.backgroundColor = LGDViewBJColor;
-    Xiaoxinpaper_Config.titleColor = [UIColor whiteColor];
-    Xiaoxinpaper_Config.titleFont = [UIFont boldSystemFontOfSize:18];
-    Xiaoxinpaper_Config.gk_navItemLeftSpace = K(15);
-  
-    self.viewControllers = _XiaoxinPaperGlbalClassArr;
+    GKNavigationBarConfigure *PandaMoviewConfiger = [GKNavigationBarConfigure sharedInstance];
+    [PandaMoviewConfiger setupDefaultConfigure];
+    PandaMoviewConfiger.backStyle = GKNavigationBarBackStyleWhite;
+    PandaMoviewConfiger.backgroundColor = LGDViewBJColor;
+    PandaMoviewConfiger.titleColor = [UIColor whiteColor];
+    PandaMoviewConfiger.titleFont = [UIFont boldSystemFontOfSize:18];
+    PandaMoviewConfiger.gk_navItemLeftSpace = K(15);
+    
+    self.viewControllers = _PandaMoviewGoladArr;
     self.tabBar.barTintColor = LGDViewBJColor;
     //这里的self是UITabBarController，LGDViewBJColor根据各自的TabBar定义而定
     self.tabBar.tintColor = LGDViewBJColor;
@@ -52,14 +52,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
 

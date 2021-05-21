@@ -68,14 +68,17 @@
 - (UIButton *)PandaColltecdBtn{
     if (!_PandaColltecdBtn) {
         _PandaColltecdBtn = [[UIButton alloc]initWithFrame:CGRectMake(RealWidth(200)-RealWidth(50), CGRectGetMaxY(_PandaStarView.frame)+RealWidth(7), RealWidth(40), RealWidth(15))];
-        [_PandaColltecdBtn setTitle:@"收藏" forState:UIControlStateNormal];
         [_PandaColltecdBtn setTitleColor:LGDMianColor forState:UIControlStateNormal];
         _PandaColltecdBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
         _PandaColltecdBtn.titleLabel.font = [UIFont systemFontOfSize:10];
         _PandaColltecdBtn.layer.borderColor = LGDMianColor.CGColor;
         _PandaColltecdBtn.layer.borderWidth = RealWidth(1);
+        [_PandaColltecdBtn addTarget:self action:@selector(PandaColltecdBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _PandaColltecdBtn;
+}
+-(void)PandaColltecdBtnClick{
+    [self.delegate PandaHotingCollectionViewCellBtnDidClickWithCellIndex:self.tag];
 }
 - (UIImageView *)PandaThubImgView{
     if (!_PandaThubImgView) {
@@ -89,11 +92,22 @@
 }
 - (void)setPandaModel:(PandaMovieModel *)pandaModel{
     _pandaModel = pandaModel;
-    _PandaToptitle.text =  pandaModel.famous;
-    _PandaCenterTypelb.text = pandaModel.filmtype;
-    _PandaTimelb.text = pandaModel.articlList;
+    _PandaToptitle.text =  pandaModel.PandaMoviewName;
+    _PandaCenterTypelb.text = pandaModel.PandaMoviewType;
+    _PandaTimelb.text = pandaModel.PandaMoviewArtiss;
     
-    [_PandaThubImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.imgTubUrl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    if ([PandaMovieLoginAccoutModel PandaMoviewuserIsLogin]) {
+        [_PandaColltecdBtn setTitle:pandaModel.PandaMoview_isCollected ? @"已收藏" : @"收藏" forState:UIControlStateNormal];
+        [_PandaColltecdBtn setBackgroundColor:pandaModel.PandaMoview_isCollected ? LGDMianColor : [UIColor clearColor]];
+        [_PandaColltecdBtn setTitleColor:pandaModel.PandaMoview_isCollected ? [UIColor whiteColor] : LGDMianColor forState:UIControlStateNormal];
+
+    }else{
+    [_PandaColltecdBtn setTitle:@"收藏" forState:UIControlStateNormal];
+        [_PandaColltecdBtn setBackgroundColor:[UIColor clearColor]];
+        [_PandaColltecdBtn setTitleColor:LGDMianColor forState:UIControlStateNormal];
+    }
+    
+    [_PandaThubImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.pandaMoiveThuburl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
     [_PandaStarView setCurrentStar:pandaModel.total_Num];
 }
 @end

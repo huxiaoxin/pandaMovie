@@ -20,6 +20,7 @@
 #import "PandaMoviewDetailViewController.h"
 #import "PandaSearchingResultViewController.h"
 #import <PYSearch.h>
+#import "PandaMoviewDetailViewController.h"
 @interface PandaHomeViewController ()<UITableViewDelegate,UITableViewDataSource,PandaHomeHeaderViewDelegate,PandaHomeNavViewDelegate,QRCodeReaderDelegate,PYSearchViewControllerDelegate>
 {
     QRCodeReaderViewController * _reader;
@@ -56,6 +57,15 @@
     [self.view addSubview:self.PandaHomeTableView];
     self.PandaHeader.height = self.PandaHeader.PandanHeaderHeight;
     _PandaHomeTableView.tableHeaderView  = self.PandaHeader;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PandaMovieLoginSucced) name:@"PandaMovieLoginSucced" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PandaMoviewLoginout) name:@"PandaMoviewLoginout" object:nil];
+}
+-(void)PandaMovieLoginSucced{
+    [self.PandaHomeTableView.mj_header beginRefreshing];
+}
+-(void)PandaMoviewLoginout{
+    [self.PandaHomeTableView.mj_header beginRefreshing];
 }
 - (PandaHomeHeaderView *)PandaHeader{
     if (!_PandaHeader) {
@@ -102,10 +112,12 @@
 #pragma mark--刷新
 -(void)PandaHomeTableViewHeaderClick{
     
+    [LCProgressHUD showLoading:@""];
     NSArray * dataArr = [WHC_ModelSqlite query:[PandaMovieModel class]];
     NSDictionary * dictionary =   [self getJsonDataJsonname:@"pandaMoview"];
     MJWeakSelf;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
         NSArray * PandaHoemdata =[[[dictionary objectForKey:@"result"] objectForKey:@"result"] objectForKey:@"list"];
         NSMutableArray * PandaHoemTempArr= [[NSMutableArray alloc]init];
         for (NSDictionary * PandaHoemresponeDic in PandaHoemdata) {
@@ -118,11 +130,11 @@
         weakSelf.PandaWatchedDataArr = [dataArr subarrayWithRange:NSMakeRange(7, 12)];
         weakSelf.PandaHeader.pandaWatchingArr = weakSelf.PandaWatchingDataArr;
         weakSelf.PandaHeader.pandaWatedArr = weakSelf.PandaWatchedDataArr;
-        weakSelf.PandaDataArr = PandaHoemTempArr;
+        weakSelf.PandaDataArr = [PandaHoemTempArr subarrayWithRange:NSMakeRange(3, 6)].mutableCopy;
         [weakSelf.PandaHomeTableView reloadData];
         [weakSelf.PandaHomeTableView.mj_header endRefreshing];
     });
-  
+    
 }
 - (id)getJsonDataJsonname:(NSString *)jsonname
 {
@@ -160,6 +172,34 @@
         [self.navigationController pushViewController:pandaKefuVc animated:YES];
     }
 }
+-(void)PandaHomeHeaderViewShowLoginVC{
+    [self PandanShowLoginVc];
+}
+-(void)PandaHomeHeaderViewShowRefaeTableVew{
+    [self.PandaHomeTableView.mj_header beginRefreshing];
+}
+-(void)PandaHomeHeaderViewCollectionDidSeltcWith:(PandaMovieModel *)panMode{
+    PandaMoviewDetailViewController * pandDetialVc = [[PandaMoviewDetailViewController alloc]init];
+    pandDetialVc.hidesBottomBarWhenPushed = YES;
+    pandDetialVc.padaItem = panMode;
+    [self.navigationController pushViewController:pandDetialVc animated:YES];
+    
+}
+-(void)PandaHomeHeaderViewWithBanarDidSelteceIndex:(NSInteger)index{
+    NSInteger pandaID;
+    if (index == 1) {
+        pandaID = 1;
+    }else{
+        pandaID = 4;
+    }
+    NSArray * dataArr = [WHC_ModelSqlite query:[PandaMovieModel class] where:[NSString stringWithFormat:@"FilmID = '%ld'",pandaID]];
+    PandaMovieModel * moViewModel =  dataArr.firstObject;
+    PandaMoviewDetailViewController * pandDetialVc = [[PandaMoviewDetailViewController alloc]init];
+    pandDetialVc.hidesBottomBarWhenPushed = YES;
+    pandDetialVc.padaItem = moViewModel;
+    [self.navigationController pushViewController:pandDetialVc animated:YES];
+    
+}
 #pragma mark--PandaHomeNavViewDelegate
 -(void)PandaHomeNavViewWithScanAction{
     NSArray *types = @[AVMetadataObjectTypeQRCode];
@@ -167,8 +207,8 @@
     _reader.delegate = self;
     MJWeakSelf;
     [_reader setCompletionWithBlock:^(NSString *resultAsString) {
-    [weakSelf dismissViewControllerAnimated:YES completion:^{
-    }];
+        [weakSelf dismissViewControllerAnimated:YES completion:^{
+        }];
     }];
     
     [self presentViewController:_reader animated:YES completion:NULL];
@@ -182,7 +222,7 @@
     UINavigationController * PandaRootVc = [UINavigationController rootVC:pandaSearchVc];
     PandaRootVc.navigationBar.barTintColor = LGDViewBJColor;
     [self presentViewController:PandaRootVc animated:YES completion:^{
-    
+        
     }];
 }
 - (void)searchViewController:(PYSearchViewController *)searchViewController

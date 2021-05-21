@@ -7,6 +7,7 @@
 
 #import "PandaMyCollecedViewController.h"
 #import "PandaGoodFilmTableViewCell.h"
+#import "PandaMoviewDetailViewController.h"
 @interface PandaMyCollecedViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView    *  PandaHotTableView;
 @property(nonatomic,strong) NSMutableArray * PandaHotDataArr;
@@ -40,7 +41,7 @@
     return _PandaHotTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.PandaHotDataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * PandaHotIdentifer = @"PandaGoodFilmTableViewCell";
@@ -48,14 +49,29 @@
     if (PandaCell == nil) {
         PandaCell = [[PandaGoodFilmTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:PandaHotIdentifer];
     }
+    PandaCell.pandamodel =  self.PandaHotDataArr[indexPath.row];
     return PandaCell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PandaMoviewDetailViewController * pandaDetailVc = [[PandaMoviewDetailViewController alloc]init];
+    pandaDetailVc.padaItem = self.PandaHotDataArr[indexPath.row];
+    [self.navigationController pushViewController:pandaDetailVc animated:YES];
+    
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return RealWidth(110);
 }
 -(void)PandaHotTableViewHeaderClick{
+    //iswantWatching
+    NSArray * watchArr = [WHC_ModelSqlite query:[PandaMovieModel class] where:[NSString stringWithFormat:@"iswantWatching = '%@'",@(YES)]];
+    
     MJWeakSelf;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (weakSelf.PandaHotDataArr.count > 0) {
+            [weakSelf.PandaHotDataArr removeAllObjects];
+        }
+        weakSelf.PandaHotDataArr = watchArr.mutableCopy;
+        [weakSelf.PandaHotTableView reloadData];
         [weakSelf.PandaHotTableView.mj_header endRefreshing];
     });
 }

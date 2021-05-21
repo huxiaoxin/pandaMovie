@@ -39,6 +39,12 @@
 		8A185461265363050047CDC8 /* PandaMovieLoginAccoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A185460265363050047CDC8 /* PandaMovieLoginAccoutModel.m */; };
 		8A1854832653A1C40047CDC8 /* PandaangdanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1854822653A1C40047CDC8 /* PandaangdanModel.m */; };
 		8A1854892653A4560047CDC8 /* NSTimer+KJSolve.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1854882653A4560047CDC8 /* NSTimer+KJSolve.m */; };
+		8A3A0FA9265602F5005B2F27 /* PandaMoviewStarViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A0FA7265602F5005B2F27 /* PandaMoviewStarViews.m */; };
+		8A3A0FB2265606E6005B2F27 /* PandaMoviewDetrailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A0FB1265606E6005B2F27 /* PandaMoviewDetrailHeader.m */; };
+		8A3A0FB8265607B6005B2F27 /* PandaMoviewDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A0FB7265607B6005B2F27 /* PandaMoviewDetailTableViewCell.m */; };
+		8A3A0FBE26560E56005B2F27 /* PandaMovielb.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A0FBD26560E56005B2F27 /* PandaMovielb.m */; };
+		8A3A0FC4265610AF005B2F27 /* PandaMoviewDetailArtoiclCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A0FC3265610AF005B2F27 /* PandaMoviewDetailArtoiclCell.m */; };
+		8A3A0FCD26561B4E005B2F27 /* PandaMoviewHotComentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A0FCC26561B4E005B2F27 /* PandaMoviewHotComentModel.m */; };
 		8A4826932640DFB800C385C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826922640DFB800C385C6 /* AppDelegate.m */; };
 		8A4826992640DFB800C385C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4826982640DFB800C385C6 /* ViewController.m */; };
 		8A48269C2640DFB800C385C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A48269A2640DFB800C385C6 /* Main.storyboard */; };
@@ -80,7 +86,7 @@
 		8ADB8F582642693600C61A29 /* PandaBangdanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F572642693600C61A29 /* PandaBangdanViewController.m */; };
 		8ADB8F622642694D00C61A29 /* PandaHotComentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F612642694D00C61A29 /* PandaHotComentViewController.m */; };
 		8ADB8F6826426AF700C61A29 /* PandaKefuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F6726426AF700C61A29 /* PandaKefuTableViewCell.m */; };
-		8ADB8F7726426B6300C61A29 /* FilmChatDetailMoel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F7626426B6300C61A29 /* FilmChatDetailMoel.m */; };
+		8ADB8F7726426B6300C61A29 /* PandaMoviewKefuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F7626426B6300C61A29 /* PandaMoviewKefuModel.m */; };
 		8ADB8F7D26426FFA00C61A29 /* FilmChatZoneChatDetailToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F7B26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.m */; };
 		8ADB8F832642813600C61A29 /* PandaBangdanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F822642813600C61A29 /* PandaBangdanTableViewCell.m */; };
 		8ADB8F902642895300C61A29 /* PandaHotNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADB8F8F2642895300C61A29 /* PandaHotNewsViewController.m */; };
@@ -204,6 +210,18 @@
 		8A1854822653A1C40047CDC8 /* PandaangdanModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaangdanModel.m; sourceTree = "<group>"; };
 		8A1854872653A4560047CDC8 /* NSTimer+KJSolve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+KJSolve.h"; sourceTree = "<group>"; };
 		8A1854882653A4560047CDC8 /* NSTimer+KJSolve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+KJSolve.m"; sourceTree = "<group>"; };
+		8A3A0FA7265602F5005B2F27 /* PandaMoviewStarViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaMoviewStarViews.m; sourceTree = "<group>"; };
+		8A3A0FA8265602F5005B2F27 /* PandaMoviewStarViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaMoviewStarViews.h; sourceTree = "<group>"; };
+		8A3A0FB0265606E6005B2F27 /* PandaMoviewDetrailHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaMoviewDetrailHeader.h; sourceTree = "<group>"; };
+		8A3A0FB1265606E6005B2F27 /* PandaMoviewDetrailHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaMoviewDetrailHeader.m; sourceTree = "<group>"; };
+		8A3A0FB6265607B6005B2F27 /* PandaMoviewDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaMoviewDetailTableViewCell.h; sourceTree = "<group>"; };
+		8A3A0FB7265607B6005B2F27 /* PandaMoviewDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaMoviewDetailTableViewCell.m; sourceTree = "<group>"; };
+		8A3A0FBC26560E56005B2F27 /* PandaMovielb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaMovielb.h; sourceTree = "<group>"; };
+		8A3A0FBD26560E56005B2F27 /* PandaMovielb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaMovielb.m; sourceTree = "<group>"; };
+		8A3A0FC2265610AF005B2F27 /* PandaMoviewDetailArtoiclCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaMoviewDetailArtoiclCell.h; sourceTree = "<group>"; };
+		8A3A0FC3265610AF005B2F27 /* PandaMoviewDetailArtoiclCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaMoviewDetailArtoiclCell.m; sourceTree = "<group>"; };
+		8A3A0FCB26561B4E005B2F27 /* PandaMoviewHotComentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaMoviewHotComentModel.h; sourceTree = "<group>"; };
+		8A3A0FCC26561B4E005B2F27 /* PandaMoviewHotComentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaMoviewHotComentModel.m; sourceTree = "<group>"; };
 		8A48268E2640DFB800C385C6 /* PandaMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4826912640DFB800C385C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A4826922640DFB800C385C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -288,8 +306,8 @@
 		8ADB8F612642694D00C61A29 /* PandaHotComentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaHotComentViewController.m; sourceTree = "<group>"; };
 		8ADB8F6626426AF700C61A29 /* PandaKefuTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaKefuTableViewCell.h; sourceTree = "<group>"; };
 		8ADB8F6726426AF700C61A29 /* PandaKefuTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PandaKefuTableViewCell.m; sourceTree = "<group>"; };
-		8ADB8F7526426B6300C61A29 /* FilmChatDetailMoel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmChatDetailMoel.h; sourceTree = "<group>"; };
-		8ADB8F7626426B6300C61A29 /* FilmChatDetailMoel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmChatDetailMoel.m; sourceTree = "<group>"; };
+		8ADB8F7526426B6300C61A29 /* PandaMoviewKefuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PandaMoviewKefuModel.h; sourceTree = "<group>"; };
+		8ADB8F7626426B6300C61A29 /* PandaMoviewKefuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PandaMoviewKefuModel.m; sourceTree = "<group>"; };
 		8ADB8F7B26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmChatZoneChatDetailToolsView.m; sourceTree = "<group>"; };
 		8ADB8F7C26426FF900C61A29 /* FilmChatZoneChatDetailToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmChatZoneChatDetailToolsView.h; sourceTree = "<group>"; };
 		8ADB8F812642813600C61A29 /* PandaBangdanTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PandaBangdanTableViewCell.h; sourceTree = "<group>"; };
@@ -424,6 +442,18 @@
 			children = (
 				8A10F9BF2654F54E003905D7 /* PandaMoviewDetailViewController.h */,
 				8A10F9C02654F54E003905D7 /* PandaMoviewDetailViewController.m */,
+				8A3A0FA8265602F5005B2F27 /* PandaMoviewStarViews.h */,
+				8A3A0FA7265602F5005B2F27 /* PandaMoviewStarViews.m */,
+				8A3A0FB0265606E6005B2F27 /* PandaMoviewDetrailHeader.h */,
+				8A3A0FB1265606E6005B2F27 /* PandaMoviewDetrailHeader.m */,
+				8A3A0FB6265607B6005B2F27 /* PandaMoviewDetailTableViewCell.h */,
+				8A3A0FB7265607B6005B2F27 /* PandaMoviewDetailTableViewCell.m */,
+				8A3A0FC2265610AF005B2F27 /* PandaMoviewDetailArtoiclCell.h */,
+				8A3A0FC3265610AF005B2F27 /* PandaMoviewDetailArtoiclCell.m */,
+				8A3A0FBC26560E56005B2F27 /* PandaMovielb.h */,
+				8A3A0FBD26560E56005B2F27 /* PandaMovielb.m */,
+				8A3A0FCB26561B4E005B2F27 /* PandaMoviewHotComentModel.h */,
+				8A3A0FCC26561B4E005B2F27 /* PandaMoviewHotComentModel.m */,
 			);
 			path = PadanMovieDetail;
 			sourceTree = "<group>";
@@ -710,8 +740,8 @@
 				8ADB8F4D2642691E00C61A29 /* PandaKefuViewController.m */,
 				8ADB8F6626426AF700C61A29 /* PandaKefuTableViewCell.h */,
 				8ADB8F6726426AF700C61A29 /* PandaKefuTableViewCell.m */,
-				8ADB8F7526426B6300C61A29 /* FilmChatDetailMoel.h */,
-				8ADB8F7626426B6300C61A29 /* FilmChatDetailMoel.m */,
+				8ADB8F7526426B6300C61A29 /* PandaMoviewKefuModel.h */,
+				8ADB8F7626426B6300C61A29 /* PandaMoviewKefuModel.m */,
 			);
 			path = Pandan_kefu;
 			sourceTree = "<group>";
@@ -1090,6 +1120,7 @@
 				8A4827552640E6AC00C385C6 /* PandaMsgViewController.m in Sources */,
 				8ADB8F9A2642899700C61A29 /* PandaGoodFilmViewController.m in Sources */,
 				8A4827492640E69E00C385C6 /* PandaCatagoryViewController.m in Sources */,
+				8A3A0FCD26561B4E005B2F27 /* PandaMoviewHotComentModel.m in Sources */,
 				8ADB8F6826426AF700C61A29 /* PandaKefuTableViewCell.m in Sources */,
 				8A4827102640E3E400C385C6 /* UILabel+CDGPSpaceLb.m in Sources */,
 				8ADB8FA326428CED00C61A29 /* PandaHotingCollectionViewCell.m in Sources */,
@@ -1129,6 +1160,7 @@
 				4A3427F2264FA1CE008DAF39 /* PandanCatagroyTableViewCell.m in Sources */,
 				8A48277A2640ECDA00C385C6 /* CHCardItemCustomView.m in Sources */,
 				8A4826A42640DFBA00C385C6 /* main.m in Sources */,
+				8A3A0FB2265606E6005B2F27 /* PandaMoviewDetrailHeader.m in Sources */,
 				8A4827802640F42C00C385C6 /* PandaHomeNavView.m in Sources */,
 				8AF3B7522652457600C0408D /* PandaZoneDetailheadeView.m in Sources */,
 				8A4827612640EB0000C385C6 /* PandaHomeHeaderView.m in Sources */,
@@ -1144,6 +1176,7 @@
 				8AF3B76726524FBB00C0408D /* PandaMsgTableViewCell.m in Sources */,
 				8AF3B7BE26526A5C00C0408D /* PandaMySendZoneViewController.m in Sources */,
 				4A3427F9264FA79F008DAF39 /* PandaSystemMsgViewController.m in Sources */,
+				8A3A0FC4265610AF005B2F27 /* PandaMoviewDetailArtoiclCell.m in Sources */,
 				8A4827432640E69400C385C6 /* PandaHomeViewController.m in Sources */,
 				8AF3B6DE2651FB3E00C0408D /* ZLCollectionViewBaseFlowLayout.m in Sources */,
 				8A48272D2640E4F700C385C6 /* AppDelegate+PandaSafe.m in Sources */,
@@ -1153,11 +1186,13 @@
 				8A48274F2640E6A500C385C6 /* PandaZoneViewController.m in Sources */,
 				4A5EB1C12642E2F500573BF3 /* PandaHotNewsCollectionCell.m in Sources */,
 				8AF3B7512652457600C0408D /* PandaZoneDetailController.m in Sources */,
-				8ADB8F7726426B6300C61A29 /* FilmChatDetailMoel.m in Sources */,
+				8ADB8F7726426B6300C61A29 /* PandaMoviewKefuModel.m in Sources */,
 				8ADB8F902642895300C61A29 /* PandaHotNewsViewController.m in Sources */,
 				8A185453265362CB0047CDC8 /* PandaMyTreetn.m in Sources */,
 				8AF3B6F626520DCF00C0408D /* UIView+HZXFrame.m in Sources */,
 				8ADB8FAF26429B6C00C61A29 /* PandaCommonCollectionViewCell.m in Sources */,
+				8A3A0FA9265602F5005B2F27 /* PandaMoviewStarViews.m in Sources */,
+				8A3A0FBE26560E56005B2F27 /* PandaMovielb.m in Sources */,
 				8A185457265362CB0047CDC8 /* PandaCatahroyBtn.m in Sources */,
 				8A10F9BA2654F37D003905D7 /* PandaMovieModel.m in Sources */,
 				4A3427E9264F968D008DAF39 /* PandaHomenewsModel.m in Sources */,
@@ -1169,6 +1204,7 @@
 				8AF3B6DD2651FB3E00C0408D /* ZLCollectionReusableView.m in Sources */,
 				8AF3B7B726526A3600C0408D /* PandaMyyuYueViewController.m in Sources */,
 				8AF3B6ED2651FC7700C0408D /* PandaZoneCollectionViewCell.m in Sources */,
+				8A3A0FB8265607B6005B2F27 /* PandaMoviewDetailTableViewCell.m in Sources */,
 				8A1854832653A1C40047CDC8 /* PandaangdanModel.m in Sources */,
 				8AF3B6DC2651FB3E00C0408D /* ZLCollectionViewHorzontalLayout.m in Sources */,
 				8A1854892653A4560047CDC8 /* NSTimer+KJSolve.m in Sources */,
@@ -1362,6 +1398,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 6QYLD8B4M8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PandaMovie/PrefixHeader.pch";
 				INFOPLIST_FILE = PandaMovie/Info.plist;
@@ -1370,7 +1408,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com-.PandaMovie";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pandaMovie.yy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1384,6 +1422,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 6QYLD8B4M8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PandaMovie/PrefixHeader.pch";
 				INFOPLIST_FILE = PandaMovie/Info.plist;
@@ -1392,7 +1432,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com-.PandaMovie";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pandaMovie.yy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -59,7 +59,7 @@
             myBtn.selected = NO;
         }
         
-        [WHC_ModelSqlite update:[PadaCatagoryweizhiModel class] value:[NSString stringWithFormat:@"isCollted ='%@'",[NSNumber numberWithBool:self.pandaItem.isCollted]] where:[NSString stringWithFormat:@"LoactionID ='%ld'",self.pandaItem.LoactionID]];
+        [WHC_ModelSqlite update:[PadaCatagoryweizhiModel class] value:[NSString stringWithFormat:@"isCollted ='%@'",[NSNumber numberWithBool:self.pandaItem.isCollted]] where:[NSString stringWithFormat:@"LoactionID ='%ld'",(long)self.pandaItem.LoactionID]];
     });
 }
 -(void)pandaDetaLoactionBtnClick{

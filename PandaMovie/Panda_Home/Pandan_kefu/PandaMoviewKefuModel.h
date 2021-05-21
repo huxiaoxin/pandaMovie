@@ -3,7 +3,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FilmChatDetailMoel : NSObject
+@interface PandaMoviewKefuModel : NSObject
 @property(nonatomic,copy) NSString * msgname;
 @property(nonatomic,assign) NSInteger  userID;
 @property(nonatomic,copy) NSString *imgUrl;

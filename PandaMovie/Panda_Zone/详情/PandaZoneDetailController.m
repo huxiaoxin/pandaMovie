@@ -120,7 +120,7 @@
     }
 }
 -(void)PandaSendZoenCofigure:(PandaComentListModel *)comentModel{
-    [WHC_ModelSqlite delete:[PandaComentListModel class] where:[NSString stringWithFormat:@"ZoneID = '%ld' and ComentID = '%ld'",(long)comentModel.ZoneID,comentModel.ComentID]];
+    [WHC_ModelSqlite delete:[PandaComentListModel class] where:[NSString stringWithFormat:@"ZoneID = '%ld' and ComentID = '%ld'",(long)comentModel.ZoneID,(long)comentModel.ComentID]];
     [LCProgressHUD showLoading:@""];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LCProgressHUD showSuccess:@"屏蔽成功"];

@@ -180,7 +180,7 @@
     [LCProgressHUD showLoading:@""];
     MJWeakSelf;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if ([self->_PandaPhoneTextField.text isEqualToString:@"15068761251"] && [self->_PandaPasswordTextField.text isEqualToString:@"test001"]) {
+        if ([self->_PandaPhoneTextField.text isEqualToString:@"15068761251"] && [self->_PandaPasswordTextField.text isEqualToString:@"0986"]) {
             [PandaMovieLoginAccoutModel PandaMovieLoginsuccedAction];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"PandaMovieLoginSucced" object:nil];
             

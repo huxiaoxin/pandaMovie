@@ -7,8 +7,10 @@
 
 #import "PandaMyyuYueViewController.h"
 #import "PandanCatagroyTableViewCell.h"
+#import "PadaCatagoryweizhiModel.h"
 #import "PandaSystemMsgViewController.h"
-@interface PandaMyyuYueViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "PandaCatagarotDetailController.h"
+@interface PandaMyyuYueViewController ()<UITableViewDelegate,UITableViewDataSource,PandanCatagroyTableViewCellDelegate>
 @property(nonatomic,strong) UITableView *  PandaCatagoryTableView;
 @property(nonatomic,strong) NSMutableArray * PandaCatagoryDataArr;
 @end
@@ -46,7 +48,7 @@
     return _PandaCatagoryTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.PandaCatagoryDataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * PandaIdentifer  = @"PandanCatagroyTableViewCell";
@@ -54,16 +56,43 @@
     if (PandaCell == nil) {
         PandaCell = [[PandanCatagroyTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:PandaIdentifer];
     }
+    PandaCell.delegate = self;
+    PandaCell.tag = indexPath.row;
+    PandaCell.pandaModel  =self.PandaCatagoryDataArr[indexPath.row];
     return PandaCell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PandaCatagarotDetailController * pandaDetailVc = [[PandaCatagarotDetailController alloc]init];
+    pandaDetailVc.pandaItem = self.PandaCatagoryDataArr[indexPath.row];
+    
+    [self.navigationController pushViewController:pandaDetailVc animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return RealWidth(160);
 }
 -(void)PandaCatagoryTableViewHeaderClick{
     MJWeakSelf;
+    NSArray * dataArr = [WHC_ModelSqlite query:[PadaCatagoryweizhiModel class] where:[NSString stringWithFormat:@"isBaoming = '%@'",@(YES)]];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (self.PandaCatagoryDataArr.count > 0) {
+            [self.PandaCatagoryDataArr removeAllObjects];
+        }
+        self.PandaCatagoryDataArr = dataArr.mutableCopy;
+        [self.PandaCatagoryTableView reloadData];
         [weakSelf.PandaCatagoryTableView.mj_header endRefreshing];
     });
+}
+-(void)PandanCatagroyTableViewCellWithBtnClickCellInex:(NSInteger)cellIndex{
+    PadaCatagoryweizhiModel * weizhiModle = self.PandaCatagoryDataArr[cellIndex];
+    weizhiModle.isCollted = !weizhiModle.isCollted;
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
+        [WHC_ModelSqlite update:[PadaCatagoryweizhiModel class] value:[NSString stringWithFormat:@"isCollted ='%@'",@(weizhiModle.isCollted)] where:[NSString stringWithFormat:@"LoactionID = '%ld'",weizhiModle.LoactionID]];
+        [self.PandaCatagoryTableView reloadData];
+    });
+    
+    
 }
 /*
 #pragma mark - Navigation

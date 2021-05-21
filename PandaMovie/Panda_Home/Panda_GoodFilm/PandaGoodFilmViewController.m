@@ -8,6 +8,7 @@
 #import "PandaGoodFilmViewController.h"
 #import "PandaGoodFilmTableViewCell.h"
 #import "PandaMovieModel.h"
+#import "PandaMoviewDetailViewController.h"
 @interface PandaGoodFilmViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView    *  PandaHotTableView;
 @property(nonatomic,strong) NSMutableArray * PandaHotDataArr;
@@ -54,6 +55,12 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return RealWidth(110);
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PandaMoviewDetailViewController  * PandaDetailVc =  [[PandaMoviewDetailViewController alloc]init];
+    PandaDetailVc.hidesBottomBarWhenPushed = YES;
+    PandaDetailVc.padaItem = self.PandaHotDataArr[indexPath.row];
+    [self.navigationController pushViewController:PandaDetailVc animated:YES];
 }
 -(void)PandaHotTableViewHeaderClick{
     MJWeakSelf;

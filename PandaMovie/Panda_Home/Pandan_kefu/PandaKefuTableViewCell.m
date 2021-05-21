@@ -1,16 +1,16 @@
 
 #import "PandaKefuTableViewCell.h"
 @interface PandaKefuTableViewCell ()
-@property(nonatomic,strong) UIImageView * FilmChatSEND_paopaoImgView;
-@property(nonatomic,strong) UIImageView * FilmChatSEND_userImgView;
-@property(nonatomic,strong) UILabel * FilmChatSEND_Contentlb;
-@property(nonatomic,strong) UIImage * FilmChatSEND_uiimageName;
+@property(nonatomic,strong) UIImageView * pandaMovieChatSEND_paopaoImgView;
+@property(nonatomic,strong) UIImageView * pandaMoviewChatSEND_userImgView;
+@property(nonatomic,strong) UILabel * pandaMoiewChatSEND_Contentlb;
+@property(nonatomic,strong) UIImage * PanaaMoviewChatSEND_uiimageName;
 
 
-@property(nonatomic,strong) UIImageView * FilmChatReVICE_paopaoIMgView;
-@property(nonatomic,strong) UIImageView * FilmChatReVICE_userImgView;
-@property(nonatomic,strong) UILabel * FilmChatReVICE_contelb;
-@property(nonatomic,strong) UIImage * FilmChatReVICE_uiimaname;
+@property(nonatomic,strong) UIImageView * PandaMoviewChatReVICE_paopaoIMgView;
+@property(nonatomic,strong) UIImageView * PandaMoviewChatReVICE_userImgView;
+@property(nonatomic,strong) UILabel * PandaMoviewChatReVICE_contelb;
+@property(nonatomic,strong) UIImage * PadnaMoviewChatReVICE_uiimaname;
 
 
 @end
@@ -20,166 +20,166 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.backgroundColor = [UIColor clearColor];
         
-        [self.contentView addSubview:self.FilmChatSEND_userImgView];
-        [self addSubview:self.FilmChatSEND_paopaoImgView];
-        [_FilmChatSEND_paopaoImgView addSubview:self.FilmChatSEND_Contentlb];
+        [self.contentView addSubview:self.pandaMoviewChatSEND_userImgView];
+        [self addSubview:self.pandaMovieChatSEND_paopaoImgView];
+        [_pandaMovieChatSEND_paopaoImgView addSubview:self.pandaMoiewChatSEND_Contentlb];
         
-        [self.contentView addSubview:self.FilmChatReVICE_userImgView];
-        [self addSubview:self.FilmChatReVICE_paopaoIMgView];
-        [_FilmChatReVICE_paopaoIMgView addSubview:self.FilmChatReVICE_contelb];
+        [self.contentView addSubview:self.PandaMoviewChatReVICE_userImgView];
+        [self addSubview:self.PandaMoviewChatReVICE_paopaoIMgView];
+        [_PandaMoviewChatReVICE_paopaoIMgView addSubview:self.PandaMoviewChatReVICE_contelb];
     }
     return self;
 }
--(UIImageView *)FilmChatReVICE_userImgView{
-    if (!_FilmChatReVICE_userImgView) {
-        _FilmChatReVICE_userImgView = [[UIImageView alloc]initWithFrame:CGRectMake(RealWidth(15), RealWidth(10), RealWidth(45), RealWidth(45))];
-        _FilmChatReVICE_userImgView.layer.cornerRadius = RealWidth(22.5);
-        _FilmChatReVICE_userImgView.layer.masksToBounds = YES;
+-(UIImageView *)PandaMoviewChatReVICE_userImgView{
+    if (!_PandaMoviewChatReVICE_userImgView) {
+        _PandaMoviewChatReVICE_userImgView = [[UIImageView alloc]initWithFrame:CGRectMake(RealWidth(15), RealWidth(10), RealWidth(45), RealWidth(45))];
+        _PandaMoviewChatReVICE_userImgView.layer.cornerRadius = RealWidth(22.5);
+        _PandaMoviewChatReVICE_userImgView.layer.masksToBounds = YES;
     }
-    return _FilmChatReVICE_userImgView;
+    return _PandaMoviewChatReVICE_userImgView;
 }
--(UIImageView *)FilmChatSEND_userImgView{
-    if (!_FilmChatSEND_userImgView) {
-        _FilmChatSEND_userImgView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_Width-RealWidth(60), RealWidth(10), RealWidth(45), RealWidth(45))];
-        _FilmChatSEND_userImgView.layer.cornerRadius = RealWidth(22.5);
-        _FilmChatSEND_userImgView.layer.masksToBounds = YES;
+-(UIImageView *)pandaMoviewChatSEND_userImgView{
+    if (!_pandaMoviewChatSEND_userImgView) {
+        _pandaMoviewChatSEND_userImgView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_Width-RealWidth(60), RealWidth(10), RealWidth(45), RealWidth(45))];
+        _pandaMoviewChatSEND_userImgView.layer.cornerRadius = RealWidth(22.5);
+        _pandaMoviewChatSEND_userImgView.layer.masksToBounds = YES;
     }
-    return _FilmChatSEND_userImgView;
+    return _pandaMoviewChatSEND_userImgView;
 }
 
-- (UIImageView *)FilmChatReVICE_paopaoIMgView{
-    if (!_FilmChatReVICE_paopaoIMgView) {
-        _FilmChatReVICE_paopaoIMgView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_FilmChatReVICE_userImgView.frame)+RealWidth(15), CGRectGetMidY(_FilmChatReVICE_userImgView.frame), 0, 0)];
-        _FilmChatReVICE_paopaoIMgView.image = self.FilmChatReVICE_uiimaname;
+- (UIImageView *)PandaMoviewChatReVICE_paopaoIMgView{
+    if (!_PandaMoviewChatReVICE_paopaoIMgView) {
+        _PandaMoviewChatReVICE_paopaoIMgView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_PandaMoviewChatReVICE_userImgView.frame)+RealWidth(15), CGRectGetMidY(_PandaMoviewChatReVICE_userImgView.frame), 0, 0)];
+        _PandaMoviewChatReVICE_paopaoIMgView.image = self.PadnaMoviewChatReVICE_uiimaname;
     }
-    return _FilmChatReVICE_paopaoIMgView;
+    return _PandaMoviewChatReVICE_paopaoIMgView;
 }
-- (UIImageView *)FilmChatSEND_paopaoImgView{
-    if (!_FilmChatSEND_paopaoImgView) {
-        _FilmChatSEND_paopaoImgView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_Width-CGRectGetWidth(_FilmChatSEND_paopaoImgView.frame)-RealWidth(15)-RealWidth(170), CGRectGetMidY(_FilmChatSEND_userImgView.frame), RealWidth(160), RealWidth(30))];
-        _FilmChatSEND_paopaoImgView.image = self.FilmChatSEND_uiimageName;
+- (UIImageView *)pandaMovieChatSEND_paopaoImgView{
+    if (!_pandaMovieChatSEND_paopaoImgView) {
+        _pandaMovieChatSEND_paopaoImgView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_Width-CGRectGetWidth(_pandaMovieChatSEND_paopaoImgView.frame)-RealWidth(15)-RealWidth(170), CGRectGetMidY(_pandaMoviewChatSEND_userImgView.frame), RealWidth(160), RealWidth(30))];
+        _pandaMovieChatSEND_paopaoImgView.image = self.PanaaMoviewChatSEND_uiimageName;
     }
-    return _FilmChatSEND_paopaoImgView;
+    return _pandaMovieChatSEND_paopaoImgView;
 }
--(UILabel *)FilmChatReVICE_contelb{
-    if (!_FilmChatReVICE_contelb) {
-        _FilmChatReVICE_contelb = [[UILabel alloc]init];
-        _FilmChatReVICE_contelb.numberOfLines = 0;
-        _FilmChatReVICE_contelb.textColor = [UIColor blackColor];
-        _FilmChatReVICE_contelb.font = [UIFont systemFontOfSize:15];
+-(UILabel *)PandaMoviewChatReVICE_contelb{
+    if (!_PandaMoviewChatReVICE_contelb) {
+        _PandaMoviewChatReVICE_contelb = [[UILabel alloc]init];
+        _PandaMoviewChatReVICE_contelb.numberOfLines = 0;
+        _PandaMoviewChatReVICE_contelb.textColor = [UIColor blackColor];
+        _PandaMoviewChatReVICE_contelb.font = [UIFont systemFontOfSize:15];
     }
-    return _FilmChatReVICE_contelb;
+    return _PandaMoviewChatReVICE_contelb;
 }
--(UILabel *)FilmChatSEND_Contentlb{
-    if (!_FilmChatSEND_Contentlb) {
-        _FilmChatSEND_Contentlb = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
-        _FilmChatSEND_Contentlb.numberOfLines = 0;
-        _FilmChatSEND_Contentlb.textColor = [UIColor whiteColor];
-        _FilmChatSEND_Contentlb.font = [UIFont systemFontOfSize:15];
+-(UILabel *)pandaMoiewChatSEND_Contentlb{
+    if (!_pandaMoiewChatSEND_Contentlb) {
+        _pandaMoiewChatSEND_Contentlb = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
+        _pandaMoiewChatSEND_Contentlb.numberOfLines = 0;
+        _pandaMoiewChatSEND_Contentlb.textColor = [UIColor whiteColor];
+        _pandaMoiewChatSEND_Contentlb.font = [UIFont systemFontOfSize:15];
     }
-    return _FilmChatSEND_Contentlb;
+    return _pandaMoiewChatSEND_Contentlb;
 }
-- (UIImage *)FilmChatSEND_uiimageName {
-    if (_FilmChatSEND_uiimageName == nil) {
+- (UIImage *)PanaaMoviewChatSEND_uiimageName {
+    if (_PanaaMoviewChatSEND_uiimageName == nil) {
         UIImage *image = [UIImage imageNamed:@"chat_blube"];
         CGSize size = image.size;
-        _FilmChatSEND_uiimageName = [image stretchableImageWithLeftCapWidth:size.width/2 topCapHeight:size.height*0.8];
+        _PanaaMoviewChatSEND_uiimageName = [image stretchableImageWithLeftCapWidth:size.width/2 topCapHeight:size.height*0.8];
     }
-    return _FilmChatSEND_uiimageName;
+    return _PanaaMoviewChatSEND_uiimageName;
 }
-- (UIImage *)FilmChatReVICE_uiimaname{
-    if (!_FilmChatReVICE_uiimaname) {
+- (UIImage *)PadnaMoviewChatReVICE_uiimaname{
+    if (!_PadnaMoviewChatReVICE_uiimaname) {
         UIImage *image  = [UIImage imageNamed:@"wzm_chat_bj1"];
         CGSize size = image.size;
-        _FilmChatReVICE_uiimaname = [image stretchableImageWithLeftCapWidth:size.width/2 topCapHeight:size.height*0.8];
+        _PadnaMoviewChatReVICE_uiimaname = [image stretchableImageWithLeftCapWidth:size.width/2 topCapHeight:size.height*0.8];
     }
-    return _FilmChatReVICE_uiimaname;
+    return _PadnaMoviewChatReVICE_uiimaname;
 }
 - (void)setPandaModel:(PandaMsgDetailModel *)pandaModel{
     _pandaModel =  pandaModel;
-    [_FilmChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://p.qqan.com/up/2021-4/16194921988015974.jpg"]];
+    [_pandaMoviewChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://p.qqan.com/up/2021-4/16194921988015974.jpg"]];
     
-    [_FilmChatReVICE_userImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.imgUrl]];
+    [_PandaMoviewChatReVICE_userImgView sd_setImageWithURL:[NSURL URLWithString:pandaModel.imgUrl]];
     
     if (pandaModel.msgisMe) {
-        _FilmChatReVICE_paopaoIMgView.hidden = YES;
-        _FilmChatReVICE_userImgView.hidden = YES;
-        _FilmChatReVICE_contelb.hidden = YES;
+        _PandaMoviewChatReVICE_paopaoIMgView.hidden = YES;
+        _PandaMoviewChatReVICE_userImgView.hidden = YES;
+        _PandaMoviewChatReVICE_contelb.hidden = YES;
         
-        _FilmChatSEND_paopaoImgView.hidden = NO;
-        _FilmChatSEND_userImgView.hidden = NO;
-        _FilmChatSEND_Contentlb.hidden = NO;
+        _pandaMovieChatSEND_paopaoImgView.hidden = NO;
+        _pandaMoviewChatSEND_userImgView.hidden = NO;
+        _pandaMoiewChatSEND_Contentlb.hidden = NO;
         
-        [_FilmChatSEND_Contentlb setText:pandaModel.msgname];
+        [_pandaMoiewChatSEND_Contentlb setText:pandaModel.msgname];
         CGRect contetnRect =  [pandaModel.msgname cxl_sizeWithMoreString:[UIFont systemFontOfSize:15] maxWidth:SCREEN_Width-RealWidth(150)];
         
-        _FilmChatSEND_Contentlb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
+        _pandaMoiewChatSEND_Contentlb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
         
-        _FilmChatSEND_paopaoImgView.frame = CGRectMake(SCREEN_Width-contetnRect.size.width-RealWidth(45+15+25), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
-        pandaModel.CellHeight =  CGRectGetMaxY(_FilmChatSEND_paopaoImgView.frame)+RealWidth(30);
+        _pandaMovieChatSEND_paopaoImgView.frame = CGRectMake(SCREEN_Width-contetnRect.size.width-RealWidth(45+15+25), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
+        pandaModel.CellHeight =  CGRectGetMaxY(_pandaMovieChatSEND_paopaoImgView.frame)+RealWidth(30);
         
     }else{
         
-        _FilmChatReVICE_paopaoIMgView.hidden = NO;
-        _FilmChatReVICE_userImgView.hidden = NO;
-        _FilmChatReVICE_contelb.hidden = NO;
+        _PandaMoviewChatReVICE_paopaoIMgView.hidden = NO;
+        _PandaMoviewChatReVICE_userImgView.hidden = NO;
+        _PandaMoviewChatReVICE_contelb.hidden = NO;
         
-        _FilmChatSEND_paopaoImgView.hidden = YES;
-        _FilmChatSEND_userImgView.hidden = YES;
-        _FilmChatSEND_Contentlb.hidden = YES;
+        _pandaMovieChatSEND_paopaoImgView.hidden = YES;
+        _pandaMoviewChatSEND_userImgView.hidden = YES;
+        _pandaMoiewChatSEND_Contentlb.hidden = YES;
         
         
-        [_FilmChatReVICE_contelb setText:pandaModel.msgname];
+        [_PandaMoviewChatReVICE_contelb setText:pandaModel.msgname];
         CGRect contetnRect =  [pandaModel.msgname cxl_sizeWithMoreString:[UIFont systemFontOfSize:15] maxWidth:SCREEN_Width-RealWidth(150)];
         
-        _FilmChatReVICE_contelb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
+        _PandaMoviewChatReVICE_contelb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
         
-        _FilmChatReVICE_paopaoIMgView.frame = CGRectMake(CGRectGetMaxX(_FilmChatReVICE_userImgView.frame)+RealWidth(10), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
-        pandaModel.CellHeight =  CGRectGetMaxY(_FilmChatReVICE_paopaoIMgView.frame)+RealWidth(30);
+        _PandaMoviewChatReVICE_paopaoIMgView.frame = CGRectMake(CGRectGetMaxX(_PandaMoviewChatReVICE_userImgView.frame)+RealWidth(10), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
+        pandaModel.CellHeight =  CGRectGetMaxY(_PandaMoviewChatReVICE_paopaoIMgView.frame)+RealWidth(30);
         
     }
     
 }
 
--(void)setPdModell:(FilmChatDetailMoel *)pdModell{
+-(void)setPdModell:(PandaMoviewKefuModel *)pdModell{
     _pdModell =  pdModell;
-    [_FilmChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://p.qqan.com/up/2021-4/16194921988015974.jpg"]];
-    _FilmChatReVICE_userImgView.image = [UIImage imageNamed:@"kefutouxiangdefuben"];
+    [_pandaMoviewChatSEND_userImgView sd_setImageWithURL:[NSURL URLWithString:@"https://p.qqan.com/up/2021-4/16194921988015974.jpg"]];
+    _PandaMoviewChatReVICE_userImgView.image = [UIImage imageNamed:@"kefutouxiangdefuben"];
     if (pdModell.msgisMe) {
-        _FilmChatReVICE_paopaoIMgView.hidden = YES;
-        _FilmChatReVICE_userImgView.hidden = YES;
-        _FilmChatReVICE_contelb.hidden = YES;
+        _PandaMoviewChatReVICE_paopaoIMgView.hidden = YES;
+        _PandaMoviewChatReVICE_userImgView.hidden = YES;
+        _PandaMoviewChatReVICE_contelb.hidden = YES;
         
-        _FilmChatSEND_paopaoImgView.hidden = NO;
-        _FilmChatSEND_userImgView.hidden = NO;
-        _FilmChatSEND_Contentlb.hidden = NO;
+        _pandaMovieChatSEND_paopaoImgView.hidden = NO;
+        _pandaMoviewChatSEND_userImgView.hidden = NO;
+        _pandaMoiewChatSEND_Contentlb.hidden = NO;
         
-        [_FilmChatSEND_Contentlb setText:pdModell.msgname];
+        [_pandaMoiewChatSEND_Contentlb setText:pdModell.msgname];
         CGRect contetnRect =  [pdModell.msgname cxl_sizeWithMoreString:[UIFont systemFontOfSize:15] maxWidth:SCREEN_Width-RealWidth(150)];
         
-        _FilmChatSEND_Contentlb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
+        _pandaMoiewChatSEND_Contentlb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
         
-        _FilmChatSEND_paopaoImgView.frame = CGRectMake(SCREEN_Width-contetnRect.size.width-RealWidth(45+15+25), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
-        pdModell.CellHeight =  CGRectGetMaxY(_FilmChatSEND_paopaoImgView.frame)+RealWidth(30);
+        _pandaMovieChatSEND_paopaoImgView.frame = CGRectMake(SCREEN_Width-contetnRect.size.width-RealWidth(45+15+25), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
+        pdModell.CellHeight =  CGRectGetMaxY(_pandaMovieChatSEND_paopaoImgView.frame)+RealWidth(30);
         
     }else{
         
-        _FilmChatReVICE_paopaoIMgView.hidden = NO;
-        _FilmChatReVICE_userImgView.hidden = NO;
-        _FilmChatReVICE_contelb.hidden = NO;
+        _PandaMoviewChatReVICE_paopaoIMgView.hidden = NO;
+        _PandaMoviewChatReVICE_userImgView.hidden = NO;
+        _PandaMoviewChatReVICE_contelb.hidden = NO;
         
-        _FilmChatSEND_paopaoImgView.hidden = YES;
-        _FilmChatSEND_userImgView.hidden = YES;
-        _FilmChatSEND_Contentlb.hidden = YES;
+        _pandaMovieChatSEND_paopaoImgView.hidden = YES;
+        _pandaMoviewChatSEND_userImgView.hidden = YES;
+        _pandaMoiewChatSEND_Contentlb.hidden = YES;
         
         
-        [_FilmChatReVICE_contelb setText:pdModell.msgname];
+        [_PandaMoviewChatReVICE_contelb setText:pdModell.msgname];
         CGRect contetnRect =  [pdModell.msgname cxl_sizeWithMoreString:[UIFont systemFontOfSize:15] maxWidth:SCREEN_Width-RealWidth(150)];
         
-        _FilmChatReVICE_contelb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
+        _PandaMoviewChatReVICE_contelb.frame = CGRectMake(RealWidth(10), RealWidth(10), contetnRect.size.width, contetnRect.size.height);
         
-        _FilmChatReVICE_paopaoIMgView.frame = CGRectMake(CGRectGetMaxX(_FilmChatReVICE_userImgView.frame)+RealWidth(10), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
-        pdModell.CellHeight =  CGRectGetMaxY(_FilmChatReVICE_paopaoIMgView.frame)+RealWidth(30);
+        _PandaMoviewChatReVICE_paopaoIMgView.frame = CGRectMake(CGRectGetMaxX(_PandaMoviewChatReVICE_userImgView.frame)+RealWidth(10), RealWidth(15), contetnRect.size.width+RealWidth(20), contetnRect.size.height+RealWidth(20));
+        pdModell.CellHeight =  CGRectGetMaxY(_PandaMoviewChatReVICE_paopaoIMgView.frame)+RealWidth(30);
         
     }
     

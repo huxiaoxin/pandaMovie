@@ -41,7 +41,7 @@
 }
 - (void)setPadanModel:(PandaMovieModel *)padanModel{
     _padanModel = padanModel;
-    [_PandaThubImgView  sd_setImageWithURL:[NSURL URLWithString:padanModel.imgTubUrl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
-    _PandaBtomlb.text =  padanModel.famous;
+    [_PandaThubImgView  sd_setImageWithURL:[NSURL URLWithString:padanModel.pandaMoiveThuburl] placeholderImage:[UIImage imageNamed:@"zhanweitu"]];
+    _PandaBtomlb.text =  padanModel.PandaMoviewName;
 }
 @end
